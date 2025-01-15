@@ -1,0 +1,31 @@
+{
+    "id": "A59E1C63",
+    "path": "~/Documents/GitHub/HungChiChao.github.io/about.qmd",
+    "project_path": "about.qmd",
+    "type": "quarto_markdown",
+    "hash": "163800156",
+    "contents": "",
+    "dirty": false,
+    "created": 1736932961609.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "cursorPosition": "4,17",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "2:0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1736933302,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1736933302354,
+    "read_only": false,
+    "read_only_alternatives": []
+}

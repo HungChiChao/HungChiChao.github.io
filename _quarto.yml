@@ -5,6 +5,7 @@ website:
   title: "HungChiChao.github.io"
   navbar:
     right:
+      - research.qmd
       - about.qmd
       - icon: github
         href: https://github.com/
