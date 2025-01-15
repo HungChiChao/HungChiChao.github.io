@@ -3,9 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "HungChiChao.github.io"
+  title: "HungChiChao"
   navbar:
-    right:
+    left:
+      - blog.qmd
       - research.qmd
       - about.qmd
       - icon: github
