@@ -6,13 +6,13 @@ website:
   title: "HungChiChao"
   navbar:
     left:
-      - blog.qmd
-      - research.qmd
+      - text: "Home"
+        href: index.qmd
       - about.qmd
+      - research.qmd
+      - blog.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/HungChiChao
 format:
   html:
     theme: cosmo

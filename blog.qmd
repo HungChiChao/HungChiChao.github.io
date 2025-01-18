@@ -6,5 +6,5 @@ listing:
   type: default
   categories: true
   sort-ui: false
-  filter-ui: false
+  filter-ui: true
 ---

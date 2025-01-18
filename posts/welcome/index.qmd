@@ -1,12 +1,23 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "開張！"
+author: "H.C.C"
 date: "2025-01-12"
-categories: [news]
+description: "文字如氣泡般浮出水面"
 ---
 
-This is the first post in a Quarto blog. Welcome!
+![](JapanSky.jpeg)
 
-![](thumbnail.jpg)
+## 
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統[Quarto](https://quarto.org)架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。
+
+## 計畫
+
+這個blog目前主要分成四個主題：
+
+-   研究生系列：關於讀研究所經歷的大小事
+-   台北生活系列：關於在台北賃居走跳的故事
+-   加州回憶系列：關於去年在UC Berkeley交換的紀錄
+-   經濟小白系列：一些關於經濟學的東西
+
+有任何建議歡迎告訴我！
