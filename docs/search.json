@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n隨筆之一\n\n\n\n\n\n\n\nlife\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n隨筆之一\n\n\n\n\n\n\n\nlife\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\nLinear Regression\n\n\n\n\n\n\n\nmetrics\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,11 +14,18 @@
     "text": "I’m a student at the National Taiwan University."
   },
   {
-    "objectID": "posts/test/index.html",
-    "href": "posts/test/index.html",
-    "title": "隨筆之一",
+    "objectID": "posts/Econometrics/index.html",
+    "href": "posts/Econometrics/index.html",
+    "title": "Linear Regression",
     "section": "",
-    "text": "一些走路時的想法。\n西門町的街道上擠滿了人。你把腳踏車停好，往人群中走去。星期天的晚上，你的目標是西門的誠品，去找一本台大誠品缺貨的書。周遭的喧鬧讓你有些不習慣、又有些懷念。意外地其實你很喜歡，喜歡在這樣的路上看霓虹燈閃爍、人群湧動，在紅綠燈的明滅間如潮水般的來來回回。\n結果仍然缺貨，你只好在書店裡稍微閒晃。雖然不甘心，但你並不後悔沒有先在App上查詢庫存，只因為你其實享受這樣說走就走的小旅行（如果能夠接受濫用「旅行」這個字的話）。這也是為什麼你喜歡台北。在你人生中的其他階段都不曾有用過的放縱的自由。你喜歡騎車吹城市的晚風，喜歡你的衣襬隨風鼓動，喜歡看城市的燈光流瀉，喜歡老台北的屋簷在老舊的日光燈管的色澤。這讓你想看一部王家衛的電影（竟然一部都沒看過）。有時候你也想著是否有機會與人攜手同遊，或是與一群人在街道間橫衝直撞，拿著相機紀錄每個荒誕的瞬間。\n總有種感覺是這樣的日子不會持續太久，可是你也已經放棄了要去留住什麼。夜晚如是，城市如是，你逕自地走，在一切都還未老去的時候。"
+    "text": "\\[\n\\hat Y = X'\\hat \\beta = PY\n\\]"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "research.html",
@@ -28,11 +35,11 @@
     "text": "Here is my ressearch page."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/test/index.html",
+    "href": "posts/test/index.html",
+    "title": "隨筆之一",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "一些走路時的想法。\n西門町的街道上擠滿了人。你把腳踏車停好，往人群中走去。星期天的晚上，你的目標是西門的誠品，去找一本台大誠品缺貨的書。周遭的喧鬧讓你有些不習慣、又有些懷念。意外地其實你很喜歡，喜歡在這樣的路上看霓虹燈閃爍、人群湧動，在紅綠燈的明滅間如潮水般的來來回回。\n結果仍然缺貨，你只好在書店裡稍微閒晃。雖然不甘心，但你並不後悔沒有先在App上查詢庫存，只因為你其實享受這樣說走就走的小旅行（如果能夠接受濫用「旅行」這個字的話）。這也是為什麼你喜歡台北。在你人生中的其他階段都不曾有用過的放縱的自由。你喜歡騎車吹城市的晚風，喜歡你的衣襬隨風鼓動，喜歡看城市的燈光流瀉，喜歡老台北的屋簷在老舊的日光燈管的色澤。這讓你想看一部王家衛的電影（竟然一部都沒看過）。有時候你也想著是否有機會與人攜手同遊，或是與一群人在街道間橫衝直撞，拿著相機紀錄每個荒誕的瞬間。\n總有種感覺是這樣的日子不會持續太久，可是你也已經放棄了要去留住什麼。夜晚如是，城市如是，你逕自地走，在一切都還未老去的時候。"
   },
   {
     "objectID": "posts/welcome/index.html",
