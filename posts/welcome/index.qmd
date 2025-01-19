@@ -2,7 +2,7 @@
 title: "開張！"
 author: "H.C.C"
 date: "2025-01-12"
-description: "文字如氣泡般浮出水面"
+description: "文字如氣泡般湧現"
 ---
 
 ![](JapanSky.jpeg)
