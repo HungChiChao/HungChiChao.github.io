@@ -3,7 +3,6 @@ title: "隨筆之一"
 author: "H.C.C"
 date: "2025-01-15"
 categories: [life]
-draft: true
 ---
 
 一些走路時的想法。

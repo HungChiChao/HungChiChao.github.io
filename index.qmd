@@ -10,7 +10,7 @@ Welcome to my website.
 
 ## Stars
 
-[新手觀星指南](https://hungchichao.github.io/docs/findyourstar.pdf)：大二在寫作中心「科學說人話：科普寫作」課的作業
+[新手觀星指南](./stars/findyourstar.pdf)：大二在寫作中心「科學說人話：科普寫作」課的作業
 
 ## Photography
 
