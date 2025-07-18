@@ -3,3 +3,5 @@ title: "Research"
 ---
 
 Here is my ressearch page.
+
+[Gurobi](gurobi.qmd)

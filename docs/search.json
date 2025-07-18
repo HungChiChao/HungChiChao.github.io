@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "解釋\n\n\n\n\n\n\n\nNTU\n\n\n\n\n研究生系列 2\n\n\n\n\n\n\nFeb 11, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\n使用Zotero和Better BibTex生成引用書目\n\n\n\n\n\n\n\nTools\n\n\n\n\n研究生系列二\n\n\n\n\n\n\nJan 27, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\n關於當經原TA的一些心得\n\n\n\n\n\n\n\nNTU\n\n\n\n\n研究生系列 1\n\n\n\n\n\n\nJan 19, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\n開張！\n\n\n\n\n\n文字如氣泡般湧現\n\n\n\n\n\n\nJan 12, 2025\n\n\nH.C.C\n\n\n\n\n\n\nNo matching items"
+    "text": "使用Zotero和Better BibTex生成引用書目\n\n\n\n\n\n\n\nTools\n\n\n\n\n研究生系列二\n\n\n\n\n\n\nJan 27, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\n關於當經原TA的一些心得\n\n\n\n\n\n\n\nNTU\n\n\n\n\n研究生系列 1\n\n\n\n\n\n\nJan 19, 2025\n\n\nH.C.C\n\n\n\n\n\n\n  \n\n\n\n\n開張！\n\n\n\n\n\n文字如氣泡般湧現\n\n\n\n\n\n\nJan 12, 2025\n\n\nH.C.C\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -49,18 +49,11 @@
     "text": "計畫\n這個blog目前主要分成四個主題：\n\n研究生系列：關於讀研究所經歷的大小事\n台北生活系列：關於在台北賃居走跳的故事\n加州回憶系列：關於去年在UC Berkeley交換的紀錄\n經濟小白系列：一些關於經濟學的東西\n\n有任何建議歡迎告訴我！"
   },
   {
-    "objectID": "posts/0212/index.html",
-    "href": "posts/0212/index.html",
-    "title": "解釋",
-    "section": "",
-    "text": "下山之後，又回到台北這種濕濕綿綿的雨。\n傍晚六點離開辦公室。雨不大，還能保持鞋子的乾燥在路上行走。工作尚未結束，只是不願再留在辦公室。我需要新鮮空氣，哪怕充滿潮濕的氣息。\n去連鎖咖啡廳寫計量經濟學的筆記。蠻好笑的，寫給學生的課程筆記也可以作為一種Escapism。\n還記得大二的時候，駱班計量經濟的助教表現慘不忍睹。在教室就看著她盯著自己的小抄在黑板上推導Gauss Markov定理推了一節課，自己好像也不確定自己在寫什麼，我自然什麼也沒看懂。\n我覺得有一天我要自己來做計量助教。誰知到總算當上計量助教，老闆把助教課取消了。不用站在台上推導Gauss Markov了。所以說其實寫這些note也是一種自作多情。\n\n\\[\n\\operatorname{Var}(Y) =  \\operatorname{Var}(\\operatorname{E}[Y\\mid X]) + \\operatorname{E}[\\operatorname{Var}(Y\\mid X)].\n\\]\n所有的變化，即能解釋的部分、不能解釋的部分的和。(Law of Total Variance.)\n\n跟我同研究室的L以前是社工系的。後來雙經濟考上經研所。他說他一直覺得經濟系都是一些不善表達情感的人，像是我。\n我想為自己辯駁，但發現他說的沒錯。對我來說，把自己攤開來在別人面前是如此的困難。我猜我在潛意識中有這種想法，是跟其他人談論自己的同時也是在自己的人生辯護。當你訴說自己，確保你的人生、你的抉擇、甚至你的情緒的合理性的舉證責任就在你身上。但對於我為什麼是現在的我，我不擅解釋、無從解釋。\n「你的人生不合邏輯」，確實，好似殺人放火一般，十惡不赦的罪。\n試著要釐清一切的結局就是無止盡的精神內耗。\n\n前陣子在家的時候，讀了一點點的「莊子」，有一句話特別引起我的注意。在「養生主」裡，庖丁游刃有餘地將牛之解體之後，「躊躇滿志，善刀而藏之」。如果說我們的精神是刀，在人世間批砍著前進，那莊子的人生建議是要收拾自己的心，不要隨時「與物相刃相靡」。不是所有事情都需要解釋，不是所有事都要想通，就放著吧。\n要開學了，還是期待自己的生活會再變得更好一點。希望我能固定去運動，固定找人吃飯，平時多去學校以外的地方走走。"
-  },
-  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Here is my ressearch page."
+    "text": "Here is my ressearch page.\nGurobi"
   },
   {
     "objectID": "posts/0124/index.html",
@@ -110,5 +103,26 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "gurobi.html",
+    "href": "gurobi.html",
+    "title": "README_script.qmd",
+    "section": "",
+    "text": "This is the documentation for R codes that works on tax filing efficiency."
+  },
+  {
+    "objectID": "gurobi.html#intro-to-gurobi",
+    "href": "gurobi.html#intro-to-gurobi",
+    "title": "README_script.qmd",
+    "section": "1.1 Intro to Gurobi",
+    "text": "1.1 Intro to Gurobi\nInstallation.\nSee\n\nInstalling the R package\nCRAN- Gurobi Installation Guide\n\n\nlibrary(gurobi)\n\nWarning: package 'gurobi' was built under R version 4.5.0\n\n\nLoading required package: slam\n\n\nA Gurobi model are composed of the following components.\n\nconstraint matrix A\nsense of each constraint sense\nright hand side of the constraints rhs\ncoefficients of the objective function obj\nmodel sense\nvariable type\n\nHere is an simple example provide by Installing the R package.\n\\[\n\\begin{aligned}\n\\max_{x_1, x_2, x_3} \\quad & x_1 + x_2 + 2x_3 \\\\\n\\text{s.t.} \\quad\n& x_1 + 2x_2 + 3x_3 \\leq 4 \\\\\n& x_1 + x_2 \\geq 1 \\\\\n& x_1, x_2, x_3 \\in \\{0, 1\\}\n\\end{aligned}\n\\]\nThe following code solve the problem.\n\n# create optimization problem\nmodel &lt;- list()\nmodel$obj        &lt;- c(1, 1, 2)\nmodel$modelsense &lt;- \"max\"\nmodel$rhs        &lt;- c(4, 1)\nmodel$sense      &lt;- c(\"&lt;\", \"&gt;\")\nmodel$vtype      &lt;- \"B\"\nmodel$A          &lt;- matrix(c(1, 2, 3, 1, 1, 0), nrow = 2, ncol = 3,\n                           byrow = TRUE)\n\n# solve the optimization problem using Gurobi\nresult &lt;- gurobi(model, list())\n\nSet parameter Username\nSet parameter LicenseID to value 2689162\nAcademic license - for non-commercial use only - expires 2026-07-18\nGurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 23.1.0 23B81)\n\nCPU model: Apple M1\nThread count: 8 physical cores, 8 logical processors, using up to 8 threads\n\nNon-default parameters:\nLogToConsole  0\n\nOptimize a model with 2 rows, 3 columns and 5 nonzeros\nModel fingerprint: 0xba2d0add\nVariable types: 0 continuous, 3 integer (3 binary)\nCoefficient statistics:\n  Matrix range     [1e+00, 3e+00]\n  Objective range  [1e+00, 2e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 4e+00]\nFound heuristic solution: objective 2.0000000\nPresolve removed 2 rows and 3 columns\nPresolve time: 0.01s\nPresolve: All rows and columns removed\n\nExplored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)\nThread count was 1 (of 8 available processors)\n\nSolution count 2: 3 2 \n\nOptimal solution found (tolerance 1.00e-04)\nBest objective 3.000000000000e+00, best bound 3.000000000000e+00, gap 0.0000%\n\nprint(result$objval) # objective\n\n[1] 3\n\nprint(result$x)\n\n[1] 1 0 1"
+  },
+  {
+    "objectID": "gurobi.html#solving-optimal-tax-filing-strategy",
+    "href": "gurobi.html#solving-optimal-tax-filing-strategy",
+    "title": "README_script.qmd",
+    "section": "Solving Optimal Tax Filing Strategy",
+    "text": "Solving Optimal Tax Filing Strategy\nThe following function create a gurobi model and solve the model. The input data should be a data.table like:\n\nlibrary(data.table)\n\n\nAttaching package: 'data.table'\n\n\nThe following object is masked from 'package:slam':\n\n    rollup\n\n\n\nexm_dt &lt;- data.table(\n  rfn = c(\"0000001\", \"0000002\", \"0000003\"), # fake rfn\n  fr_alive = c(1,1,1), # should be all identical\n  mo_alive = c(0,0,0),  # should be all identical\n  fr_effect = c(145500, 145500, 145500),\n  mo_effect = c(0,0,0)\n)\n\nexm_dt\n\n       rfn fr_alive mo_alive fr_effect mo_effect\n1: 0000001        1        0    145500         0\n2: 0000002        1        0    145500         0\n3: 0000003        1        0    145500         0\n\n\nIn our setting the objective function is not linear but piece-wise linear. So we use pwlobj instead of obj. Two vectors, u and uy should be supported beforehand. I did not make them arguments of the function because I use function factories.\n\nbest_strategy_fm &lt;- function(Data){\n    D &lt;- copy(Data)\n    \n    {\n      I &lt;- Data$true_income \n      \n      # Whether their father/ mother still alive \n      Has_father &lt;- Data$fr_alive[1]\n      Has_mother &lt;-  Data$mo_alive[1]\n      \n      # Deduction\n      fr_effect &lt;- Data$fr_effect[1]\n      mo_effect &lt;- Data$mo_effect[1]\n      K &lt;- length(I)\n      n_variable &lt;- K*3\n      \n      # Create Groubi Model\n      model &lt;- list()\n      model$modelsense &lt;- \"min\"\n      \n      # List of constraints\n      A_matrix &lt;- matrix(0,nrow = K, ncol = n_variable)\n      rhs_vector &lt;- numeric(K)\n      \n      for (i in 1:length(I)) {\n        \n        x_no_support &lt;- I[i]\n        x_support_father &lt;- x_no_support - fr_effect\n        x_support_mother &lt;- x_no_support - mo_effect\n        \n        # Equality Constraint i\n        # xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support\n        \n        A_matrix[i,(i-1)*3+1] &lt;- x_no_support-x_support_father\n        A_matrix[i,(i-1)*3+2] &lt;- x_no_support-x_support_mother\n        A_matrix[i,(i-1)*3+3] &lt;- 1\n        rhs_vector[i] &lt;- max(x_no_support,0)\n        \n        # Piece-wise linear Objective function of Tax( xi)\n        model$pwlobj[[(i-1)*3+3]] &lt;- list(var=(i-1)*3+3, x=u, y=uy)\n        model$pwlobj[[(i-1)*3+2]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n        model$pwlobj[[(i-1)*3+1]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n      }\n      \n      # Father Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(1,by=3,length.out=K)] &lt;- Has_father\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_father)\n      \n      # Mother Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(2,by=3,length.out=K)] &lt;-Has_mother\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_mother)\n      \n      \n      model$A &lt;- A_matrix\n      model$rhs &lt;- rhs_vector\n      \n      # 可以都不分配爸媽 \n      model$sense &lt;- c(rep(\"=\",K),rep(\"&lt;=\",2))\n      \n      # Upper Bound And Lower Bound\n      model$lb &lt;- rep(c(0,0,-Inf),K)\n      model$ub &lt;- rep(c(Has_father,Has_mother,Inf),K)\n      \n      # Variable Types: Variable Types, binary or continuous\n      model$vtype &lt;- rep(c(rep(\"B\",2),\"C\"),K)\n      \n      \n      result &lt;- gurobi(model,params = list( OutputFlag=0))\n      \n      solution &lt;- result$x\n      \n    }\n    Fr_distribution &lt;- solution[seq(1, by=3, length.out=K)]\n    Mo_distribution &lt;- solution[seq(2, by=3, length.out=K)]\n    \n    D[,best_daddy := Fr_distribution]\n    D[,best_mommy := Mo_distribution]\n    D[,best_income_net_dis := solution[seq(3,by=3,length.out=K)]]\n    \n    return(D)\n  }\n\n\nbest_strategy_fm_yearly &lt;- function(yr){\n  \n  ## 0 Set Up (By year) --------------------------------------------\n  \n  # functions for calculating tax\n  tax_cal &lt;- tax_calculator( tax_rate_table[[ yr - START_YR + 1]] )\n  cutoff &lt;- tax_rate_table[[yr - START_YR + 1]]\n  cutoff &lt;- cutoff[ ! is.na(cutoff) ]\n  \n  # Objective Function\n  u &lt;- c( -10000, 0, cutoff, 100000000)\n  uy &lt;- sapply(u,tax_cal)\n  \n  best_strategy_fm &lt;- function(Data){\n    ...\n    return(D)\n  }\n  \n  return(best_strategy_fm)\n}"
   }
 ]
