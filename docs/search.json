@@ -35,34 +35,6 @@
     "text": "Economics and other Social Science\nI’m currently studying economics and also interested a broad spectrum of social science topics. Stay tuned for more updates."
   },
   {
-    "objectID": "posts/welcome/index.html#section",
-    "href": "posts/welcome/index.html#section",
-    "title": "開張！",
-    "section": "",
-    "text": "架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統Quarto架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。"
-  },
-  {
-    "objectID": "posts/welcome/index.html#計畫",
-    "href": "posts/welcome/index.html#計畫",
-    "title": "開張！",
-    "section": "計畫",
-    "text": "計畫\n這個blog目前主要分成四個主題：\n\n研究生系列：關於讀研究所經歷的大小事\n台北生活系列：關於在台北賃居走跳的故事\n加州回憶系列：關於去年在UC Berkeley交換的紀錄\n經濟小白系列：一些關於經濟學的東西\n\n有任何建議歡迎告訴我！"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Here is my ressearch page.\nGurobi"
-  },
-  {
-    "objectID": "posts/0124/index.html",
-    "href": "posts/0124/index.html",
-    "title": "使用Zotero和Better BibTex生成引用書目",
-    "section": "",
-    "text": "這篇文章沒什麼大道理，就是記錄一下最近摸索出的新知識。\n\nBibTex\nLaTex文件中的書目引用是透過名為BibTex的編輯器生成。基本用法是要提供一個bib file。這個檔案就像是為了這篇文章所創建的一個書櫃，放著所有可能用到的書目的資訊。當你在latex文件中提及bib file裡的某篇文章，BibTex就會去把那篇文章的資訊抓出來放加入文件中。下面是一個簡單的bib file範例。\n@article{mccall_economics_1970,\n    title = {Economics of {Information} and {Job} {Search}},\n    volume = {84},\n    issn = {0033-5533},\n    abstract = {I. Introduction, 113.--II. A simple model of job search, 115.--III. A more general model of job search, 123.--IV. An adaptive search model, 125.},\n    number = {1},\n    urldate = {2024-10-26},\n    journal = {The Quarterly Journal of Economics},\n    author = {McCall, J. J.},\n    year = {1970},\n    note = {Publisher: Oxford University Press},\n    pages = {113--126},\n    file = {JSTOR Full Text PDF:/Users/hungchichao/Zotero/storage/FJSJBXUK/McCall - 1970 - Economics of Information and Job Search.pdf:application/pdf},\n}\n\n\n書目管理系統 Zotero\n要怎麼取得.bib檔呢？當然最暴力的做法可以自己創建一個文字檔手動輸入。大部分的期刊網站(e.g. JSTOR)都可以幫你生成bib file所需的格式。不過這麼做非常沒有效率。我自己（以及大部分認識的人）都是使用免費的書目管理系統Zotero。這個系統有幾個主要功能：\n\n在系統中創建不同資料夾搜集參考文獻\n提供瀏覽器的外掛，讓你直接把網路上看到的paper加入資料庫\n自動下載pdf，可以瀏覽文件與做筆記\n自動輸出bib file\n\n其中第四個功能大大降低了我們編輯latex中引用書目的門檻。（其實Zotero也可以搭配Microsoft Word使用，不過我不會用word寫論文就是）。\n要安裝Zotero非常簡單，只要到官網下載就行了。同時要打開瀏覽器的Zotero外掛(這是我很久以前設定的，網路上有非常多如何使用Zotero的教學)。\n\n\nBetter BibTex\nZotero雖然強大，但在輸出bib file上還是稍微缺乏彈性。我們可以下載Better Bibtex這個Zotero的plug-in。Better BibTex可以做到幾件原本做不到的事：\n\n自訂citation key：Zotero自動生成的citation key似乎有可能發生重複的問題，或是有時候你就是想自己訂citation key。Better BibTex可以當你做到這點。\n選擇bib file中需要的field： 原始的Zotero會自動把所有資訊都放入bib file，其中有些非常沒必要，例如abstract(誰會特別打開.bib看abstract?)。Better BibTex 可以自己設定需要排除的field，讓bib file保持一個極簡風。\n自動更新：當你把新文章加入資料庫時，自動幫你更新bib file，這樣就不用一直按輸出。\n\n使用Better Zotero可以參考這個YouTube影片。\n\n\n\n使用Better BibTex外掛設定輸出的field\n\n\n\n\n\n輸出.bib file\n\n\n\n\nBibliography Style\n雖然關聯不是很緊密，不過我還是順便紀錄一樣如何在Latex中進行引用。首先需要使用處理引用書目的套件，我使用的是natbib。接著設定ibliographystyle，我使用aer bibliography style。aer 顧名思義就是美國經濟學會發行的American Economics Review所使用的格式，據說跟Chicago style比較接近（我無法驗證就是）。事實上經濟學的主流期刊都有自己的style可以用，例如Econometrics的ecta與Journal of Political Economy 的jpe。關於各種style詳情可以參考這個網站。此例中我從zotero輸出的bib file叫做labor_ref.bib，只要把這個檔案放在與本文相同資料夾中並在結尾處加上\\bibliography{bib file name}即可。以下是一個非常簡單的例子。\n\\documentclass{article}\n\n\\usepackage{natbib}\n\\bibliographystyle{aer}\n\n\\title{Labor II: Model Proposal}\n\\author{R13323021 Hung, Chi-Chao}\n\\date{Octobor 2024}\n\n\\begin{document}\n\n\\maketitle\n\\section{Introduction}\n\nThis model follows the ``search\" framework established by \\citep{mccall_economics_1970}.\n\n\\bibliography{labor_ref}\n\n\\end{document}\n\n\n\n輸出結果\n\n\n\n\n在本地端執行BibTex\n我一開始在本地端complie的時候，無論如何citation都跑不出來。經過研究才發現原來我誤解了BibTex的運作原理。事實上，當你在一篇latex文章中加入引用時，發生的事情如下：\n當你按下complie的時候，你使用的編輯器（通常是pdflatex或xelatex）會先將所有的引用資訊記錄在一個auxiliary file(name.aux)。接著，BibTex會去讀取這個aux file, bib file跟所需的.bst file(記錄你選擇的style的設定)，生成出一個.bbl的檔案，這時候要再實行一次（或兩次）的pdflatex將.bbl的資訊讀進去，才會顯示出引用書目。\n我之前都是在Overleaf上編輯，Overleaf會自動幫你處理好這一切，所以我從來都沒有意識到背後這些運作。不過在本地端的編輯器(我使用的是Visual Studio Code)他並不一定知道你要執行BibTex。解決方法就是在VScode LaTex Workshop裡面build LaTex project底下選擇正確的recipe（例如 pdflatex -&gt; bibtex -&gt; pdflatex*2），VScode就會正確執行所有步驟了。\n\n\n參考資料\n\n\nBibTex Wikipedia\nUChicago Library Guide for LaTex\nBibliography management with bibtex\nBibliography management with natbib"
-  },
-  {
     "objectID": "posts/0119/index.html",
     "href": "posts/0119/index.html",
     "title": "關於當經原TA的一些心得",
@@ -98,11 +70,32 @@
     "text": "寫了這麼多，其實很多也是我當TA的這學期才慢慢體會。我想我跟其他三個助教們（學生似乎都還分不清楚誰是誰）有盡量在降低「通靈」的成分，但有沒有達到效果就不得而知了。至少看選課人數好像沒什麼影響XD"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/0124/index.html",
+    "href": "posts/0124/index.html",
+    "title": "使用Zotero和Better BibTex生成引用書目",
     "section": "",
-    "text": "About this blog"
+    "text": "這篇文章沒什麼大道理，就是記錄一下最近摸索出的新知識。\n\nBibTex\nLaTex文件中的書目引用是透過名為BibTex的編輯器生成。基本用法是要提供一個bib file。這個檔案就像是為了這篇文章所創建的一個書櫃，放著所有可能用到的書目的資訊。當你在latex文件中提及bib file裡的某篇文章，BibTex就會去把那篇文章的資訊抓出來放加入文件中。下面是一個簡單的bib file範例。\n@article{mccall_economics_1970,\n    title = {Economics of {Information} and {Job} {Search}},\n    volume = {84},\n    issn = {0033-5533},\n    abstract = {I. Introduction, 113.--II. A simple model of job search, 115.--III. A more general model of job search, 123.--IV. An adaptive search model, 125.},\n    number = {1},\n    urldate = {2024-10-26},\n    journal = {The Quarterly Journal of Economics},\n    author = {McCall, J. J.},\n    year = {1970},\n    note = {Publisher: Oxford University Press},\n    pages = {113--126},\n    file = {JSTOR Full Text PDF:/Users/hungchichao/Zotero/storage/FJSJBXUK/McCall - 1970 - Economics of Information and Job Search.pdf:application/pdf},\n}\n\n\n書目管理系統 Zotero\n要怎麼取得.bib檔呢？當然最暴力的做法可以自己創建一個文字檔手動輸入。大部分的期刊網站(e.g. JSTOR)都可以幫你生成bib file所需的格式。不過這麼做非常沒有效率。我自己（以及大部分認識的人）都是使用免費的書目管理系統Zotero。這個系統有幾個主要功能：\n\n在系統中創建不同資料夾搜集參考文獻\n提供瀏覽器的外掛，讓你直接把網路上看到的paper加入資料庫\n自動下載pdf，可以瀏覽文件與做筆記\n自動輸出bib file\n\n其中第四個功能大大降低了我們編輯latex中引用書目的門檻。（其實Zotero也可以搭配Microsoft Word使用，不過我不會用word寫論文就是）。\n要安裝Zotero非常簡單，只要到官網下載就行了。同時要打開瀏覽器的Zotero外掛(這是我很久以前設定的，網路上有非常多如何使用Zotero的教學)。\n\n\nBetter BibTex\nZotero雖然強大，但在輸出bib file上還是稍微缺乏彈性。我們可以下載Better Bibtex這個Zotero的plug-in。Better BibTex可以做到幾件原本做不到的事：\n\n自訂citation key：Zotero自動生成的citation key似乎有可能發生重複的問題，或是有時候你就是想自己訂citation key。Better BibTex可以當你做到這點。\n選擇bib file中需要的field： 原始的Zotero會自動把所有資訊都放入bib file，其中有些非常沒必要，例如abstract(誰會特別打開.bib看abstract?)。Better BibTex 可以自己設定需要排除的field，讓bib file保持一個極簡風。\n自動更新：當你把新文章加入資料庫時，自動幫你更新bib file，這樣就不用一直按輸出。\n\n使用Better Zotero可以參考這個YouTube影片。\n\n\n\n使用Better BibTex外掛設定輸出的field\n\n\n\n\n\n輸出.bib file\n\n\n\n\nBibliography Style\n雖然關聯不是很緊密，不過我還是順便紀錄一樣如何在Latex中進行引用。首先需要使用處理引用書目的套件，我使用的是natbib。接著設定ibliographystyle，我使用aer bibliography style。aer 顧名思義就是美國經濟學會發行的American Economics Review所使用的格式，據說跟Chicago style比較接近（我無法驗證就是）。事實上經濟學的主流期刊都有自己的style可以用，例如Econometrics的ecta與Journal of Political Economy 的jpe。關於各種style詳情可以參考這個網站。此例中我從zotero輸出的bib file叫做labor_ref.bib，只要把這個檔案放在與本文相同資料夾中並在結尾處加上\\bibliography{bib file name}即可。以下是一個非常簡單的例子。\n\\documentclass{article}\n\n\\usepackage{natbib}\n\\bibliographystyle{aer}\n\n\\title{Labor II: Model Proposal}\n\\author{R13323021 Hung, Chi-Chao}\n\\date{Octobor 2024}\n\n\\begin{document}\n\n\\maketitle\n\\section{Introduction}\n\nThis model follows the ``search\" framework established by \\citep{mccall_economics_1970}.\n\n\\bibliography{labor_ref}\n\n\\end{document}\n\n\n\n輸出結果\n\n\n\n\n在本地端執行BibTex\n我一開始在本地端complie的時候，無論如何citation都跑不出來。經過研究才發現原來我誤解了BibTex的運作原理。事實上，當你在一篇latex文章中加入引用時，發生的事情如下：\n當你按下complie的時候，你使用的編輯器（通常是pdflatex或xelatex）會先將所有的引用資訊記錄在一個auxiliary file(name.aux)。接著，BibTex會去讀取這個aux file, bib file跟所需的.bst file(記錄你選擇的style的設定)，生成出一個.bbl的檔案，這時候要再實行一次（或兩次）的pdflatex將.bbl的資訊讀進去，才會顯示出引用書目。\n我之前都是在Overleaf上編輯，Overleaf會自動幫你處理好這一切，所以我從來都沒有意識到背後這些運作。不過在本地端的編輯器(我使用的是Visual Studio Code)他並不一定知道你要執行BibTex。解決方法就是在VScode LaTex Workshop裡面build LaTex project底下選擇正確的recipe（例如 pdflatex -&gt; bibtex -&gt; pdflatex*2），VScode就會正確執行所有步驟了。\n\n\n參考資料\n\n\nBibTex Wikipedia\nUChicago Library Guide for LaTex\nBibliography management with bibtex\nBibliography management with natbib"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Here is my ressearch page."
+  },
+  {
+    "objectID": "posts/welcome/index.html#section",
+    "href": "posts/welcome/index.html#section",
+    "title": "開張！",
+    "section": "",
+    "text": "架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統Quarto架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。"
+  },
+  {
+    "objectID": "posts/welcome/index.html#計畫",
+    "href": "posts/welcome/index.html#計畫",
+    "title": "開張！",
+    "section": "計畫",
+    "text": "計畫\n這個blog目前主要分成四個主題：\n\n研究生系列：關於讀研究所經歷的大小事\n台北生活系列：關於在台北賃居走跳的故事\n加州回憶系列：關於去年在UC Berkeley交換的紀錄\n經濟小白系列：一些關於經濟學的東西\n\n有任何建議歡迎告訴我！"
   },
   {
     "objectID": "gurobi.html",
@@ -124,5 +117,12 @@
     "title": "README_script.qmd",
     "section": "Solving Optimal Tax Filing Strategy",
     "text": "Solving Optimal Tax Filing Strategy\nThe following function create a gurobi model and solve the model. The input data should be a data.table like:\n\nlibrary(data.table)\n\n\nAttaching package: 'data.table'\n\n\nThe following object is masked from 'package:slam':\n\n    rollup\n\n\n\nexm_dt &lt;- data.table(\n  rfn = c(\"0000001\", \"0000002\", \"0000003\"), # fake rfn\n  fr_alive = c(1,1,1), # should be all identical\n  mo_alive = c(0,0,0),  # should be all identical\n  fr_effect = c(145500, 145500, 145500),\n  mo_effect = c(0,0,0)\n)\n\nexm_dt\n\n       rfn fr_alive mo_alive fr_effect mo_effect\n1: 0000001        1        0    145500         0\n2: 0000002        1        0    145500         0\n3: 0000003        1        0    145500         0\n\n\nIn our setting the objective function is not linear but piece-wise linear. So we use pwlobj instead of obj. Two vectors, u and uy should be supported beforehand. I did not make them arguments of the function because I use function factories.\n\nbest_strategy_fm &lt;- function(Data){\n    D &lt;- copy(Data)\n    \n    {\n      I &lt;- Data$true_income \n      \n      # Whether their father/ mother still alive \n      Has_father &lt;- Data$fr_alive[1]\n      Has_mother &lt;-  Data$mo_alive[1]\n      \n      # Deduction\n      fr_effect &lt;- Data$fr_effect[1]\n      mo_effect &lt;- Data$mo_effect[1]\n      K &lt;- length(I)\n      n_variable &lt;- K*3\n      \n      # Create Groubi Model\n      model &lt;- list()\n      model$modelsense &lt;- \"min\"\n      \n      # List of constraints\n      A_matrix &lt;- matrix(0,nrow = K, ncol = n_variable)\n      rhs_vector &lt;- numeric(K)\n      \n      for (i in 1:length(I)) {\n        \n        x_no_support &lt;- I[i]\n        x_support_father &lt;- x_no_support - fr_effect\n        x_support_mother &lt;- x_no_support - mo_effect\n        \n        # Equality Constraint i\n        # xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support\n        \n        A_matrix[i,(i-1)*3+1] &lt;- x_no_support-x_support_father\n        A_matrix[i,(i-1)*3+2] &lt;- x_no_support-x_support_mother\n        A_matrix[i,(i-1)*3+3] &lt;- 1\n        rhs_vector[i] &lt;- max(x_no_support,0)\n        \n        # Piece-wise linear Objective function of Tax( xi)\n        model$pwlobj[[(i-1)*3+3]] &lt;- list(var=(i-1)*3+3, x=u, y=uy)\n        model$pwlobj[[(i-1)*3+2]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n        model$pwlobj[[(i-1)*3+1]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n      }\n      \n      # Father Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(1,by=3,length.out=K)] &lt;- Has_father\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_father)\n      \n      # Mother Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(2,by=3,length.out=K)] &lt;-Has_mother\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_mother)\n      \n      \n      model$A &lt;- A_matrix\n      model$rhs &lt;- rhs_vector\n      \n      # 可以都不分配爸媽 \n      model$sense &lt;- c(rep(\"=\",K),rep(\"&lt;=\",2))\n      \n      # Upper Bound And Lower Bound\n      model$lb &lt;- rep(c(0,0,-Inf),K)\n      model$ub &lt;- rep(c(Has_father,Has_mother,Inf),K)\n      \n      # Variable Types: Variable Types, binary or continuous\n      model$vtype &lt;- rep(c(rep(\"B\",2),\"C\"),K)\n      \n      \n      result &lt;- gurobi(model,params = list( OutputFlag=0))\n      \n      solution &lt;- result$x\n      \n    }\n    Fr_distribution &lt;- solution[seq(1, by=3, length.out=K)]\n    Mo_distribution &lt;- solution[seq(2, by=3, length.out=K)]\n    \n    D[,best_daddy := Fr_distribution]\n    D[,best_mommy := Mo_distribution]\n    D[,best_income_net_dis := solution[seq(3,by=3,length.out=K)]]\n    \n    return(D)\n  }\n\n\nbest_strategy_fm_yearly &lt;- function(yr){\n  \n  ## 0 Set Up (By year) --------------------------------------------\n  \n  # functions for calculating tax\n  tax_cal &lt;- tax_calculator( tax_rate_table[[ yr - START_YR + 1]] )\n  cutoff &lt;- tax_rate_table[[yr - START_YR + 1]]\n  cutoff &lt;- cutoff[ ! is.na(cutoff) ]\n  \n  # Objective Function\n  u &lt;- c( -10000, 0, cutoff, 100000000)\n  uy &lt;- sapply(u,tax_cal)\n  \n  best_strategy_fm &lt;- function(Data){\n    ...\n    return(D)\n  }\n  \n  return(best_strategy_fm)\n}"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
   }
 ]
