@@ -8,15 +8,18 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - about.qmd
-      - research.qmd
-      - blog.qmd
+      - Favorites.qmd
+      - text: "Blog"
+        href: blog.qmd
       - icon: github
         href: https://github.com/HungChiChao
+  
 format:
   html:
     theme: cosmo
     css: styles.css
 
 editor: visual
+
+
 

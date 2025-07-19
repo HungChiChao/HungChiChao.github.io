@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/0124/index.html",
-      "/posts/0119/index.html",
-      "/posts/welcome/index.html"
+      "/posts/0719-day1/index.html",
+      "/posts/0124-bibtex/index.html",
+      "/posts/0119-econ101/index.html",
+      "/posts/0112-welcome/index.html"
     ]
   }
 ]
