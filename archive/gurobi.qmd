@@ -1,6 +1,7 @@
 ---
 title: "README_script.qmd"
 format: html
+draft: true
 ---
 
 This is the documentation for R codes that works on tax filing efficiency.
@@ -13,9 +14,9 @@ Installation.
 
 See
 
-- [Installing the R package](https://docs.gurobi.com/projects/optimizer/en/current/reference/r/setup.html)
+-   [Installing the R package](https://docs.gurobi.com/projects/optimizer/en/current/reference/r/setup.html)
 
-- [CRAN- Gurobi Installation Guide](https://cran.r-project.org/web/packages/prioritizr/vignettes/gurobi_installation_guide.html)
+-   [CRAN- Gurobi Installation Guide](https://cran.r-project.org/web/packages/prioritizr/vignettes/gurobi_installation_guide.html)
 
 ```{r}
 library(gurobi)
