@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-07-22">
+<meta name="description" content="用GitHub做專案管理">
 
-<title>Blog – HungChiChao</title>
+<title>Day 4 – HungChiChao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HungChiChao</span>
     </a>
   </div>
@@ -150,11 +92,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item compact">
@@ -170,242 +112,59 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Day 4</h1>
+                  <div>
+        <div class="description">
+          用GitHub做專案管理
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Memo</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 22, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="TWVtbw==">Memo <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TlRV">NTU <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9vbHM=">Tools <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>最近KM開始推動我們研究室在健保資料庫跟財稅資料庫的各項基礎建設。其中一項是使用GitHub Issues 來管理專案。似乎是被研究室裡的一些學長啟發，他決定要大家把結果依照時序、主題依照固定形式放在GitHub Issue上，方便他統一的瀏覽。</p>
+<p>GitHub Issue 的設計確實像是一個主題式的留言板。他支持Markdown 語法，也可以加入連結到其他的Issue、文件或是特定的Commit。而企業版還有一個進階功能，是可以把Issues用一個儀表板呈現出來，依照進度分成To Do, In Progress, Done。</p>
+<p>最後使用GitHub的好處是在上面的Markdown文件會被自動渲染（具體來說是依照GitHub Flavored Markdown 這個Markdown 的變體）。因此如果研究結果使用.md來紀錄，在GitHub 上就可以生成美觀的文件。這點蠻吸引人的。</p>
+<hr>
+<p>如何管理研究進度是個難題。</p>
+<p>我們研究室過去的狀況是大家會各自用自己習慣的方式儲存分析結果。例如我早期喜歡用Rmarkdown輸出成html給老師看（當然因為之前的專案不是在資料中心）。有些人喜歡把攜出的圖檔同一放進一份簡報。有些人就直接存在overleaf。有人甚至用R shiny把結果放在網頁上。</p>
+<p>KM開會的時候，基本上就是我們打開什麼他就看什麼。除非要寫文章了，不然也不會管這些東西存在哪裡，怎麼整理等等。而最近他似乎是受不了了。他的說法是：「我開始上年紀了，記憶力不好，上次開會講了什麼，其實我都不記得，每次開會都要花半小時跟Coauthor一起回憶。」</p>
+<p>究竟用GitHub 來做研究（而不是軟體開發）的專案管理是不是好的做法呢？可能還需要一些時間才看得出來。不過目前GitHub 能做到的是簡潔的佈告欄跟建議的進度追蹤，似乎已經頗為足夠了。如果功能太多（像Notion 那樣），反而有點容易分心。當然，有些功能（例如每一個Issue可以設定人來Review Pull Request 可能在我們的情境不太實用）</p>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TWVtbw==" data-listing-date-sort="1753113600000" data-listing-file-modified-sort="1753199582654" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
-<div class="thumbnail"><a href="./posts/0722-Day4/index.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0722-Day4/index.html" class="no-external">Day 4</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0722-Day4/index.html" class="no-external">
-<p>用GitHub做專案管理</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0722-Day4/index.html" class="no-external">
-<div class="listing-date">
-Jul 22, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWVtbw==" data-listing-date-sort="1753027200000" data-listing-file-modified-sort="1753113100657" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="./posts/0721-Day3/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0721-Day3/index.html" class="no-external">Day 3</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0721-Day3/index.html" class="no-external">
-<p>跑步</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0721-Day3/index.html" class="no-external">
-<div class="listing-date">
-Jul 21, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TWVtbw==" data-listing-date-sort="1752940800000" data-listing-file-modified-sort="1752986221692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="thumbnail"><a href="./posts/0720-day2/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0720-day2/index.html" class="no-external">Day 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0720-day2/index.html" class="no-external">
-<p>烏克蘭</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0720-day2/index.html" class="no-external">
-<div class="listing-date">
-Jul 20, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TWVtbw==" data-listing-date-sort="1752854400000" data-listing-file-modified-sort="1752900780778" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="./posts/0719-day1/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0719-day1/index.html" class="no-external">Day 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0719-day1/index.html" class="no-external">
-<p>關於數學與經濟模型</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0719-day1/index.html" class="no-external">
-<div class="listing-date">
-Jul 19, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="VG9vbHM=" data-listing-date-sort="1737907200000" data-listing-file-modified-sort="1737973245368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
-<div class="thumbnail"><a href="./posts/0124-bibtex/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/0124-bibtex/betterbibtex1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0124-bibtex/index.html" class="no-external">使用Zotero和Better BibTex生成引用書目</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VG9vbHM='); return false;">Tools</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0124-bibtex/index.html" class="no-external">
-<p>研究生系列二</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0124-bibtex/index.html" class="no-external">
-<div class="listing-date">
-Jan 27, 2025
-</div>
-<div class="listing-author">
-H.C.C
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TlRV" data-listing-date-sort="1737216000000" data-listing-file-modified-sort="1737300572991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<div class="thumbnail"><a href="./posts/0119-econ101/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0119-econ101/index.html" class="no-external">關於當經原TA的一些心得</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TlRV'); return false;">NTU</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/0119-econ101/index.html" class="no-external">
-<p>研究生系列 1</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0119-econ101/index.html" class="no-external">
-<div class="listing-date">
-Jan 19, 2025
-</div>
-<div class="listing-author">
-H.C.C
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1736611200000" data-listing-file-modified-sort="1737277626702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-<div class="thumbnail"><a href="./posts/0112-welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/0112-welcome/JapanSky.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/0112-welcome/index.html" class="no-external">開張！</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/0112-welcome/index.html" class="no-external">
-<p>文字如氣泡般湧現</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/0112-welcome/index.html" class="no-external">
-<div class="listing-date">
-Jan 12, 2025
-</div>
-<div class="listing-author">
-H.C.C
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
