@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="H.C.C">
-<meta name="dcterms.date" content="2025-01-15">
+<meta name="dcterms.date" content="2025-07-26">
+<meta name="description" content="現在、未來">
 
-<title>Linear Regression – HungChiChao</title>
+<title>Day 8 – HungChiChao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,49 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta name="quarto:status" content="draft">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HungChiChao</span>
     </a>
   </div>
@@ -122,15 +92,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../Favorites.html"> 
+    <a class="nav-link" href="../../Favorites.html"> 
 <span class="menu-text">Favorites</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item compact">
@@ -149,9 +119,14 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Linear Regression</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">metrics</div>
+      <h1 class="title">Day 8</h1>
+                  <div>
+        <div class="description">
+          現在、未來
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Memo</div>
               </div>
                   </div>
   </div>
@@ -159,17 +134,11 @@ window.Quarto = {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>H.C.C </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 15, 2025</p>
+        <p class="date">July 26, 2025</p>
       </div>
     </div>
     
@@ -188,10 +157,18 @@ window.Quarto = {
 
 
 
-<p><span class="math display">\[
-\hat Y = X'\hat \beta = PY
-\]</span></p>
-<p><img src="bryan.jpeg" class="img-fluid"></p>
+<p>最近我的家人跟我說，他不認同現在的台灣。他認為獨裁政體可能比民主政體更能促進經濟成長。他認為民主亂象已經導致台灣經濟面臨崩潰，而被獨裁大國統治可以讓大家都更富足。</p>
+<p>我很驚訝我們的信念截竟然不同。但我不會因此說他被洗腦了、被滲透了。連偉大的經濟學家Paul Samuelson 都曾經認為蘇聯在經濟體制上比美國優越，這並不是一個毫無意義的論點。我感覺很多人好像都忘了，該怎麼跟異溫層的人溝通，而非互相叫罵。</p>
+<p>我應該怎麼回應？回應我的家人，也會應我愛的這個國家？（不管這個家大或小，多山還是多地震）</p>
+<p>大問題沒有簡單的答案。但我想先開始寫一系列，關於台灣的文章。</p>
+<hr>
+<p>這系列的文章會是關於台灣經濟的實證資料，涵蓋大多數公共政策討論（鄉民互嘴）會遇到的主題。包括薪資成長、所得與財富分配、經濟成長、失業率、房屋資產價格、財政收支、通貨膨脹、關稅與貿易條件、能源投資…</p>
+<p>坦白說，這些我都不懂。我不了解總體經濟學，我也做不出分析。但我想至少還有能力做到的，是去了解經濟事實，所有好的跟壞的。這個國家一定有很多缺點，但也有很多優點。我們需要健全的討論，而不是一昧壯膽或唱衰。</p>
+<p>良好的的公民社會需要有良好的公民對話，對話的前提在於雙方對事實有一些基本的共識。薪資有多不均？稅收跟債務有多少？能源缺口多大？然後才能討論好的政策是什麼。我知道自己並不具備這樣的知識，因為我關心的太少、了解的太少。但如果連我們讀經濟學的都不花時間關心，那我們還能期待誰？</p>
+<hr>
+<p>我一面回想著自己當初為什麼要讀經濟學系，一面想著自己為什麼要申請PhD。我其實並不真的想要那張有教授簽名的紙。但如果留在學術界代表獨立思考能獲得回報、能嚴謹的說話還能被聽見的話，那我要留下來。但就算留不下來，該做的事情也不會變。</p>
+<p>下個學期要當經濟學原理(林明仁班)的大助教了。我被學長建議不要花太多時間在這件事上，應該專心準備論文跟申請文件。但我想還是有責任，跟學生分享一些課本之外的事情。或是說，並不是我教他們什麼，而是我跟他們一起學習，關於發生在這座島上的所有事情。</p>
+<p>我們有很多工作要做，現在、未來。</p>
 
 
 

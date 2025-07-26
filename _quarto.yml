@@ -4,6 +4,7 @@ project:
 
 website:
   title: "HungChiChao"
+  draft-mode: visible
   navbar:
     left:
       - text: "Home"

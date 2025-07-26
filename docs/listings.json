@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/0726-Day8/index.html",
       "/posts/0725-Day7/index.html",
       "/posts/0724-Day6/index.html",
       "/posts/0723-Day5/index.html",
@@ -9,8 +10,11 @@
       "/posts/0721-Day3/index.html",
       "/posts/0720-day2/index.html",
       "/posts/0719-day1/index.html",
+      "/posts/Draft/0212/index.html",
       "/posts/0124-bibtex/index.html",
       "/posts/0119-econ101/index.html",
+      "/posts/Draft/test/index.html",
+      "/posts/Draft/Econometrics/index.html",
       "/posts/0112-welcome/index.html"
     ]
   }
