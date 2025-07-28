@@ -1,0 +1,16 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/HungChiChao
+    - icon: rss
+      text: RSS
+      href: index.xml
+---
+
+一個傾倒思緒的容器。
+

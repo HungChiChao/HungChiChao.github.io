@@ -4,20 +4,26 @@ project:
 
 website:
   title: "HungChiChao"
-  draft-mode: visible
+  draft-mode: unlinked
+  site-url: https://hungchichao.github.io
+  description: "ChiCHao's Pensieve"
   navbar:
     left:
       - text: "Home"
         href: index.qmd
       - Favorites.qmd
-      - text: "Blog"
-        href: blog.qmd
+      - text: "About"
+        href: about.qmd
       - icon: github
         href: https://github.com/HungChiChao
+      - icon: rss
+        href: index.xml
   
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: darkly
     css: styles.css
 
 editor: source

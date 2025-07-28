@@ -1,19 +1,13 @@
 ---
-title: "Hung Chi-Chao 洪啟超"
-page-layout: full
+title: "My Blog"
 title-block-banner: true
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, author, description, categories]
+  categories: true
+  filter-ui: true
+  sort-ui: false
+  feed: true
 ---
-
-![](./figures/cover.jpeg)
-
-*Taken on Sep. 7, 2021 at 昆陽停車場*
-
-Welcome to my website.
-
-## Economics and other Social Science
-
-I'm currently studying economics and also interested a broad spectrum of social science topics. Stay tuned for more updates.
-
-### Notes for Introductory Econometrics 2025 Spring
--   [Statistics: Conditional Expectation](./files/review01-1.pdf)
--   [Statistics: Point Estimation](./files/review02.pdf)

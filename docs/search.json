@@ -1,45 +1,17 @@
 [
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Day 8\n\n\n\nMemo\n\n\n\n現在、未來\n\n\n\n\n\nJul 26, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 7（關於這個Blog）\n\n\n\nMemo\n\n\n\n42 Days Challenge\n\n\n\n\n\nJul 25, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 6\n\n\n\nMemo\n\n\n\n過動\n\n\n\n\n\nJul 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 5\n\n\n\nMemo\n\n\n\n關於自信心、AI\n\n\n\n\n\nJul 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4\n\n\n\nMemo\n\n\n\n用GitHub做專案管理\n\n\n\n\n\nJul 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3\n\n\n\nMemo\n\n\n\n跑步\n\n\n\n\n\nJul 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\nMemo\n\n\n\n烏克蘭\n\n\n\n\n\nJul 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\nMemo\n\n\n\n關於數學與經濟模型\n\n\n\n\n\nJul 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n解釋\n\n\n\nNTU\n\n\n\n研究生系列 2\n\n\n\n\n\nFeb 11, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n\n\n\n\n\n使用Zotero和Better BibTex生成引用書目\n\n\n\nTools\n\n\n\n研究生系列二\n\n\n\n\n\nJan 27, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n\n\n\n\n\n關於當經原TA的一些心得\n\n\n\nNTU\n\n\n\n研究生系列 1\n\n\n\n\n\nJan 19, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n\n\n\n\n\n隨筆之一\n\n\n\nlife\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n\n\n\n\n\nLinear Regression\n\n\n\nmetrics\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n\n\n\n\n\n開張！\n\n\n文字如氣泡般湧現\n\n\n\n\n\nJan 12, 2025\n\n\nH.C.C\n\n\n\n\n\nNo matching items"
+    "text": "一個傾倒思緒的容器。"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Hung Chi-Chao 洪啟超",
+    "title": "My Blog",
     "section": "",
-    "text": "Taken on Sep. 7, 2021 at 昆陽停車場\nWelcome to my website."
-  },
-  {
-    "objectID": "index.html#economics-and-other-social-science",
-    "href": "index.html#economics-and-other-social-science",
-    "title": "Hung Chi-Chao 洪啟超",
-    "section": "Economics and other Social Science",
-    "text": "Economics and other Social Science\nI’m currently studying economics and also interested a broad spectrum of social science topics. Stay tuned for more updates.\n\nNotes for Introductory Econometrics 2025 Spring\n\nStatistics: Conditional Expectation\nStatistics: Point Estimation"
-  },
-  {
-    "objectID": "archive/gurobi.html",
-    "href": "archive/gurobi.html",
-    "title": "README_script.qmd",
-    "section": "",
-    "text": "This is the documentation for R codes that works on tax filing efficiency."
-  },
-  {
-    "objectID": "archive/gurobi.html#intro-to-gurobi",
-    "href": "archive/gurobi.html#intro-to-gurobi",
-    "title": "README_script.qmd",
-    "section": "1.1 Intro to Gurobi",
-    "text": "1.1 Intro to Gurobi\nInstallation.\nSee\n\nInstalling the R package\nCRAN- Gurobi Installation Guide\n\n\nlibrary(gurobi)\n\nWarning: package 'gurobi' was built under R version 4.5.0\n\n\nLoading required package: slam\n\n\nA Gurobi model are composed of the following components.\n\nconstraint matrix A\nsense of each constraint sense\nright hand side of the constraints rhs\ncoefficients of the objective function obj\nmodel sense\nvariable type\n\nHere is an simple example provide by Installing the R package.\n\\[\n\\begin{aligned}\n\\max_{x_1, x_2, x_3} \\quad & x_1 + x_2 + 2x_3 \\\\\n\\text{s.t.} \\quad\n& x_1 + 2x_2 + 3x_3 \\leq 4 \\\\\n& x_1 + x_2 \\geq 1 \\\\\n& x_1, x_2, x_3 \\in \\{0, 1\\}\n\\end{aligned}\n\\]\nThe following code solve the problem.\n\n# create optimization problem\nmodel &lt;- list()\nmodel$obj        &lt;- c(1, 1, 2)\nmodel$modelsense &lt;- \"max\"\nmodel$rhs        &lt;- c(4, 1)\nmodel$sense      &lt;- c(\"&lt;\", \"&gt;\")\nmodel$vtype      &lt;- \"B\"\nmodel$A          &lt;- matrix(c(1, 2, 3, 1, 1, 0), nrow = 2, ncol = 3,\n                           byrow = TRUE)\n\n# solve the optimization problem using Gurobi\nresult &lt;- gurobi(model, list())\n\nSet parameter Username\nSet parameter LicenseID to value 2689162\nAcademic license - for non-commercial use only - expires 2026-07-18\nGurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 23.1.0 23B81)\n\nCPU model: Apple M1\nThread count: 8 physical cores, 8 logical processors, using up to 8 threads\n\nNon-default parameters:\nLogToConsole  0\n\nOptimize a model with 2 rows, 3 columns and 5 nonzeros\nModel fingerprint: 0xba2d0add\nVariable types: 0 continuous, 3 integer (3 binary)\nCoefficient statistics:\n  Matrix range     [1e+00, 3e+00]\n  Objective range  [1e+00, 2e+00]\n  Bounds range     [0e+00, 0e+00]\n  RHS range        [1e+00, 4e+00]\nFound heuristic solution: objective 2.0000000\nPresolve removed 2 rows and 3 columns\nPresolve time: 0.00s\nPresolve: All rows and columns removed\n\nExplored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)\nThread count was 1 (of 8 available processors)\n\nSolution count 2: 3 2 \n\nOptimal solution found (tolerance 1.00e-04)\nBest objective 3.000000000000e+00, best bound 3.000000000000e+00, gap 0.0000%\n\nprint(result$objval) # objective\n\n[1] 3\n\nprint(result$x)\n\n[1] 1 0 1"
-  },
-  {
-    "objectID": "archive/gurobi.html#solving-optimal-tax-filing-strategy",
-    "href": "archive/gurobi.html#solving-optimal-tax-filing-strategy",
-    "title": "README_script.qmd",
-    "section": "Solving Optimal Tax Filing Strategy",
-    "text": "Solving Optimal Tax Filing Strategy\nThe following function create a gurobi model and solve the model. The input data should be a data.table like:\n\nlibrary(data.table)\n\nWarning: package 'data.table' was built under R version 4.2.3\n\n\n\nAttaching package: 'data.table'\n\n\nThe following object is masked from 'package:slam':\n\n    rollup\n\n\n\nexm_dt &lt;- data.table(\n  rfn = c(\"0000001\", \"0000002\", \"0000003\"), # fake rfn\n  fr_alive = c(1,1,1), # should be all identical\n  mo_alive = c(0,0,0),  # should be all identical\n  fr_effect = c(145500, 145500, 145500),\n  mo_effect = c(0,0,0)\n)\n\nexm_dt\n\n       rfn fr_alive mo_alive fr_effect mo_effect\n    &lt;char&gt;    &lt;num&gt;    &lt;num&gt;     &lt;num&gt;     &lt;num&gt;\n1: 0000001        1        0    145500         0\n2: 0000002        1        0    145500         0\n3: 0000003        1        0    145500         0\n\n\nIn our setting the objective function is not linear but piece-wise linear. So we use pwlobj instead of obj. Two vectors, u and uy should be supported beforehand. I did not make them arguments of the function because I use function factories.\n\nbest_strategy_fm &lt;- function(Data){\n    D &lt;- copy(Data)\n    \n    {\n      I &lt;- Data$true_income \n      \n      # Whether their father/ mother still alive \n      Has_father &lt;- Data$fr_alive[1]\n      Has_mother &lt;-  Data$mo_alive[1]\n      \n      # Deduction\n      fr_effect &lt;- Data$fr_effect[1]\n      mo_effect &lt;- Data$mo_effect[1]\n      K &lt;- length(I)\n      n_variable &lt;- K*3\n      \n      # Create Groubi Model\n      model &lt;- list()\n      model$modelsense &lt;- \"min\"\n      \n      # List of constraints\n      A_matrix &lt;- matrix(0,nrow = K, ncol = n_variable)\n      rhs_vector &lt;- numeric(K)\n      \n      for (i in 1:length(I)) {\n        \n        x_no_support &lt;- I[i]\n        x_support_father &lt;- x_no_support - fr_effect\n        x_support_mother &lt;- x_no_support - mo_effect\n        \n        # Equality Constraint i\n        # xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support\n        \n        A_matrix[i,(i-1)*3+1] &lt;- x_no_support-x_support_father\n        A_matrix[i,(i-1)*3+2] &lt;- x_no_support-x_support_mother\n        A_matrix[i,(i-1)*3+3] &lt;- 1\n        rhs_vector[i] &lt;- max(x_no_support,0)\n        \n        # Piece-wise linear Objective function of Tax( xi)\n        model$pwlobj[[(i-1)*3+3]] &lt;- list(var=(i-1)*3+3, x=u, y=uy)\n        model$pwlobj[[(i-1)*3+2]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n        model$pwlobj[[(i-1)*3+1]] &lt;- list(var=(i-1)*3+3, x=0, y=0)\n      }\n      \n      # Father Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(1,by=3,length.out=K)] &lt;- Has_father\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_father)\n      \n      # Mother Dependency Constraint (Binary, Inequality)\n      sum_constraint &lt;- numeric(n_variable)\n      sum_constraint[seq(2,by=3,length.out=K)] &lt;-Has_mother\n      A_matrix &lt;- rbind(A_matrix,sum_constraint)\n      rhs_vector &lt;- c(rhs_vector,Has_mother)\n      \n      \n      model$A &lt;- A_matrix\n      model$rhs &lt;- rhs_vector\n      \n      # 可以都不分配爸媽 \n      model$sense &lt;- c(rep(\"=\",K),rep(\"&lt;=\",2))\n      \n      # Upper Bound And Lower Bound\n      model$lb &lt;- rep(c(0,0,-Inf),K)\n      model$ub &lt;- rep(c(Has_father,Has_mother,Inf),K)\n      \n      # Variable Types: Variable Types, binary or continuous\n      model$vtype &lt;- rep(c(rep(\"B\",2),\"C\"),K)\n      \n      \n      result &lt;- gurobi(model,params = list( OutputFlag=0))\n      \n      solution &lt;- result$x\n      \n    }\n    Fr_distribution &lt;- solution[seq(1, by=3, length.out=K)]\n    Mo_distribution &lt;- solution[seq(2, by=3, length.out=K)]\n    \n    D[,best_daddy := Fr_distribution]\n    D[,best_mommy := Mo_distribution]\n    D[,best_income_net_dis := solution[seq(3,by=3,length.out=K)]]\n    \n    return(D)\n  }\n\n\nbest_strategy_fm_yearly &lt;- function(yr){\n  \n  ## 0 Set Up (By year) --------------------------------------------\n  \n  # functions for calculating tax\n  tax_cal &lt;- tax_calculator( tax_rate_table[[ yr - START_YR + 1]] )\n  cutoff &lt;- tax_rate_table[[yr - START_YR + 1]]\n  cutoff &lt;- cutoff[ ! is.na(cutoff) ]\n  \n  # Objective Function\n  u &lt;- c( -10000, 0, cutoff, 100000000)\n  uy &lt;- sapply(u,tax_cal)\n  \n  best_strategy_fm &lt;- function(Data){\n    ...\n    return(D)\n  }\n  \n  return(best_strategy_fm)\n}"
+    "text": "Day 10\n\n\n\nMemo\n\n\n\n一步一步，慢慢走\n\n\n\n\n\nJul 28, 2025\n\n\n\n\n\n\n\nDay 9\n\n\n\nMemo\n\n\n\n回憶2018\n\n\n\n\n\nJul 27, 2025\n\n\n\n\n\n\n\nDay 8\n\n\n\nMemo\n\n\n\n現在、未來\n\n\n\n\n\nJul 26, 2025\n\n\n\n\n\n\n\nDay 7（關於這個Blog）\n\n\n\nMemo\n\n\n\n42 Days Challenge\n\n\n\n\n\nJul 25, 2025\n\n\n\n\n\n\n\nDay 6\n\n\n\nMemo\n\n\n\n過動\n\n\n\n\n\nJul 24, 2025\n\n\n\n\n\n\n\nDay 5\n\n\n\nMemo\n\n\n\n關於自信心、AI\n\n\n\n\n\nJul 23, 2025\n\n\n\n\n\n\n\nDay 4\n\n\n\nMemo\n\n\n\n用GitHub做專案管理\n\n\n\n\n\nJul 22, 2025\n\n\n\n\n\n\n\nDay 3\n\n\n\nMemo\n\n\n\n跑步\n\n\n\n\n\nJul 21, 2025\n\n\n\n\n\n\n\nDay 2\n\n\n\nMemo\n\n\n\n烏克蘭\n\n\n\n\n\nJul 20, 2025\n\n\n\n\n\n\n\nDay 1\n\n\n\nMemo\n\n\n\n關於數學與經濟模型\n\n\n\n\n\nJul 19, 2025\n\n\n\n\n\n\n\n使用Zotero和Better BibTex生成引用書目\n\n\n\nTools\n\n\n\n研究生系列二\n\n\n\n\n\nJan 27, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n關於當經原TA的一些心得\n\n\n\nNTU\n\n\n\n研究生系列 1\n\n\n\n\n\nJan 19, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\n開張！\n\n\n文字如氣泡般湧現\n\n\n\n\n\nJan 12, 2025\n\n\nH.C.C\n\n\n\n\n\n\n\nIn Search of Lost Time\n\n\n\n拼貼簿\n\n\n\nInspried by Marcel Proust\n\n\n\n\n\nJan 1, 2024\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/0721-Day3/index.html",
@@ -61,62 +33,6 @@
     "title": "Day 1",
     "section": "",
     "text": "昨天，我偶然看到一段由 Lex Fridman 採訪陶哲軒（Terence Tao）的影片。整段訪談長達三個多小時，我只看了其中幾段片段。\n即使只是短短幾分鐘的片段，陶哲軒給人的印象就是一位真正的通才。他們談論了各式各樣的主題，而讓我印象最深的是他能以一種高層次的視角來說明複雜的數學問題，並為它們提供脈絡。他語速很快，但表達卻十分清晰。\n我不像某些經濟系同學那樣專注於數學，不過偶爾也會為著迷於數學的美感。那種美不只是來自解開難題的快感，而是來自於發現看似無關概念之間隱藏連結的過程，一種統整的美。我很喜歡從事這樣的活動。在教大二學生計量經濟學時，我總是試著以有條理的方式呈現證明，讓它們看起來更清楚，並與其他概念連結起來。對我而言，這就是所謂的「直觀」——不只是自圓其說，更重要的是，你能看見它從何而來。\n\n不過，作為一位經濟學學生，我對於過度沉迷於尋找「隱含結構」或「潛在連結」這件事，始終抱持著保留態度。我們很容易把這種結構上的優雅誤認為是研究的本質。在經濟學中，我們常常看到不同模型之間有相似之處，或者發現相同的數學技巧可以用來處理看似無關的問題。但這有時其實是種錯覺。或許有人會認為，就像數學在物理學中被用來描述物體的運動，在經濟學中則被用來描述人的選擇行為——但這樣的類比往往只是表面上的。這些相似性，多半來自我們如何建構模型，或者我們是從什麼視角開始分析問題。\n舉個例子，在可轉讓效用的家庭配對模型中，我們可以觀察到與福利經濟學第二定理非常相似的結果：模型中的穩定配對概念，對應到某種社會最適條件。這樣的對應確實很有啟發性。但它是否真的揭示了交易與婚配行為之間某種人類行為的共同本質？我並不這麼認為。這種「奇蹟般的結果」，其實是來自我們選擇的工具與設定的目標。我們選擇從一個完美、無摩擦的世界作為分析的起點，但那其實是一種過度簡化，甚至是一種對現實的錯誤描繪。\n人的行為是混亂且難以預測的。數學應該是幫助我們理解世界的工具，而不是直接對人類行為的描述。"
-  },
-  {
-    "objectID": "posts/0112-welcome/index.html#section",
-    "href": "posts/0112-welcome/index.html#section",
-    "title": "開張！",
-    "section": "",
-    "text": "架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統Quarto架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。"
-  },
-  {
-    "objectID": "posts/0112-welcome/index.html#計畫",
-    "href": "posts/0112-welcome/index.html#計畫",
-    "title": "開張！",
-    "section": "計畫",
-    "text": "計畫\n這個blog目前主要分成四個主題：\n\n研究生系列：關於讀研究所經歷的大小事\n台北生活系列：關於在台北賃居走跳的故事\n加州回憶系列：關於去年在UC Berkeley交換的紀錄\n經濟小白系列：一些關於經濟學的東西\n\n有任何建議歡迎告訴我！"
-  },
-  {
-    "objectID": "posts/Draft/Econometrics/index.html",
-    "href": "posts/Draft/Econometrics/index.html",
-    "title": "Linear Regression",
-    "section": "",
-    "text": "\\[\n\\hat Y = X'\\hat \\beta = PY\n\\]"
-  },
-  {
-    "objectID": "posts/Draft/test/index.html",
-    "href": "posts/Draft/test/index.html",
-    "title": "隨筆之一",
-    "section": "",
-    "text": "一些走路時的想法。\n西門町的街道上擠滿了人。你把腳踏車停好，往人群中走去。星期天的晚上，你的目標是西門的誠品，去找一本台大誠品缺貨的書。周遭的喧鬧讓你有些不習慣、又有些懷念。意外地其實你很喜歡，喜歡在這樣的路上看霓虹燈閃爍、人群湧動，在紅綠燈的明滅間如潮水般的來來回回。\n結果仍然缺貨，你只好在書店裡稍微閒晃。雖然不甘心，但你並不後悔沒有先在App上查詢庫存，只因為你其實享受這樣說走就走的小旅行（如果能夠接受濫用「旅行」這個字的話）。這也是為什麼你喜歡台北。在你人生中的其他階段都不曾有用過的放縱的自由。你喜歡騎車吹城市的晚風，喜歡你的衣襬隨風鼓動，喜歡看城市的燈光流瀉，喜歡老台北的屋簷在老舊的日光燈管的色澤。這讓你想看一部王家衛的電影（竟然一部都沒看過）。有時候你也想著是否有機會與人攜手同遊，或是與一群人在街道間橫衝直撞，拿著相機紀錄每個荒誕的瞬間。\n總有種感覺是這樣的日子不會持續太久，可是你也已經放棄了要去留住什麼。夜晚如是，城市如是，你逕自地走，在一切都還未老去的時候。"
-  },
-  {
-    "objectID": "posts/0722-Day4/index.html",
-    "href": "posts/0722-Day4/index.html",
-    "title": "Day 4",
-    "section": "",
-    "text": "最近KM開始推動我們研究室在健保資料庫跟財稅資料庫的各項基礎建設。其中一項是使用GitHub Issues 來管理專案。似乎是被研究室裡的一些學長啟發，他決定要大家把結果依照時序、主題依照固定形式放在GitHub Issue上，方便他統一的瀏覽。\nGitHub Issue 的設計確實像是一個主題式的留言板。他支持Markdown 語法，也可以加入連結到其他的Issue、文件或是特定的Commit。而企業版還有一個進階功能，是可以把Issues用一個儀表板呈現出來，依照進度分成To Do, In Progress, Done。\n另外一個使用GitHub的好處是在上面的Markdown文件會被自動渲染（具體來說是依照GitHub Flavored Markdown 這個Markdown 的變體）。因此如果研究結果使用.md來紀錄，在GitHub 上就可以生成美觀的文件。這點蠻吸引人的。\n\n如何管理研究進度是個難題。\n我們研究室過去的狀況是大家會各自用自己習慣的方式儲存分析結果。例如我早期喜歡用Rmarkdown輸出成html給老師看（當然因為之前的專案不是在資料中心）。有些人喜歡把攜出的圖檔同一放進一份簡報。有些人就直接存在overleaf。有人甚至用R shiny把結果放在網頁上。\nKM開會的時候，基本上就是我們打開什麼他就看什麼。除非要寫文章了，不然也不會管這些東西存在哪裡，怎麼整理等等。而最近他似乎是受不了了。他的說法是：「我開始上年紀了，記憶力不好，上次開會講了什麼，其實我都不記得，每次開會都要花半小時跟Coauthor一起回憶。」本質上來說，他希望所有過去跟現在的分析結果要能讓他一目了然。\n究竟用GitHub 來做研究（而不是軟體開發）的專案管理是不是好的做法呢？可能還需要一些時間才看得出來。不過目前GitHub 能做到的是簡潔的佈告欄跟建議的進度追蹤，似乎已經頗為足夠了。如果功能太多（像Notion 那樣），反而有點容易分心。當然，有些功能（例如每一個Issue可以設定人來Review Pull Request） 可能在我們的情境不太實用。"
-  },
-  {
-    "objectID": "posts/0726-Day8/index.html",
-    "href": "posts/0726-Day8/index.html",
-    "title": "Day 8",
-    "section": "",
-    "text": "最近我的家人跟我說，他不認同現在的台灣。他認為獨裁政體可能比民主政體更能促進經濟成長。他認為民主亂象已經導致台灣經濟面臨崩潰，而被獨裁大國統治可以讓大家都更富足。\n我很驚訝我們的信念竟截然不同。但我不會說他被洗腦了、被滲透了。連偉大的經濟學家Paul Samuelson 都曾經認為蘇聯在經濟體制上比美國優越，這並非毫無意義的論點。很多人好像都忘了，該怎麼跟異溫層的人溝通，而非互相叫罵。\n我應該怎麼回應？關於我愛的這個國家（不管這個家大或小，多山還是多地震）。\n大問題沒有簡單的答案。但我想先開始在這個Blog寫一系列，關於台灣的文章。\n\n這系列的文章會是關於台灣經濟的實證資料，涵蓋大多數公共政策討論（鄉民互嘴）會遇到的主題。包括薪資成長、所得與財富分配、經濟成長、失業率、房屋資產價格、財政收支、通貨膨脹、關稅與貿易條件、能源投資…\n坦白說，這些我都不懂。我不了解總體經濟學，我也做不出分析。但我想至少還有能力做到的，是去了解經濟事實，所有好的跟壞的。這個國家一定有很多缺點，但也有很多優點。我們需要健全的討論，而不是一昧壯膽或唱衰。\n良好的的公民社會需要有良好的公民對話，對話的前提在於雙方對事實有一些基本的共識。薪資有多不均？稅收跟債務有多少？能源缺口多大？然後才能討論好的政策是什麼。我知道自己並不具備這樣的知識，因為我關心的太少、了解的太少。\n\n我一面回想著自己當初為什麼要讀經濟學系，一面想著自己為什麼要申請PhD。\n我其實並不真的想要那張有教授簽名的紙。但如果留在學術界代表獨立思考能獲得回報、能嚴謹的說話還能被聽見的話，那我要留下來。\n但就算留不下來，想做的事情也不會變。\n下個學期要當經濟學原理(林明仁班)的大助教了。我被學長建議不要花太多時間在這件事上，應該專心準備論文跟申請文件。但我想還是有責任，跟學生分享一些課本之外的事情。或是說，並不是我教他們什麼，而是我跟他們一起學習，關於發生在這座島上的所有事情。\n我們有很多工作要做，現在、未來。"
-  },
-  {
-    "objectID": "posts/Draft/0212/index.html",
-    "href": "posts/Draft/0212/index.html",
-    "title": "解釋",
-    "section": "",
-    "text": "下山之後，又回到台北這種濕濕綿綿的雨。\n傍晚六點離開辦公室。雨不大，還能保持鞋子的乾燥在路上行走。工作尚未結束，只是不願再留在辦公室。我需要新鮮空氣，哪怕充滿潮濕的氣息。\n去連鎖咖啡廳寫計量經濟學的筆記。蠻好笑的，寫給學生的課程筆記也可以作為一種Escapism。\n還記得大二的時候，駱班計量經濟的助教表現慘不忍睹。在教室就看著她盯著自己的小抄在黑板上推導Gauss Markov定理推了一節課，自己好像也不確定自己在寫什麼，我自然什麼也沒看懂。\n我覺得有一天我要自己來做計量助教。誰知到總算當上計量助教，老闆把助教課取消了。不用站在台上推導Gauss Markov了。所以說其實寫這些note也是一種自作多情。\n\n\\[\n\\operatorname{Var}(Y) =  \\operatorname{Var}(\\operatorname{E}[Y\\mid X]) + \\operatorname{E}[\\operatorname{Var}(Y\\mid X)].\n\\]\n所有的變化，即能解釋的部分、不能解釋的部分的和。(Law of Total Variance.)\n\n跟我同研究室的L以前是社工系的。後來雙經濟考上經研所。他說他一直覺得經濟系都是一些不善表達情感的人，像是我。\n我想為自己辯駁，但發現他說的沒錯。對我來說，把自己攤開來在別人面前是如此的困難。我猜我在潛意識中有這種想法，是跟其他人談論自己的同時也是在自己的人生辯護。當你訴說自己，確保你的人生、你的抉擇、甚至你的情緒的合理性的舉證責任就在你身上。但對於我為什麼是現在的我，我不擅解釋、無從解釋。\n「你的人生不合邏輯」，確實，好似殺人放火一般，十惡不赦的罪。\n試著要釐清一切的結局就是無止盡的精神內耗。\n\n前陣子在家的時候，讀了一點點的「莊子」，有一句話特別引起我的注意。在「養生主」裡，庖丁游刃有餘地將牛之解體之後，「躊躇滿志，善刀而藏之」。如果說我們的精神是刀，在人世間批砍著前進，那莊子的人生建議是要收拾自己的心，不要隨時「與物相刃相靡」。不是所有事情都需要解釋，不是所有事都要想通，就放著吧。\n要開學了，還是期待自己的生活會再變得更好一點。希望我能固定去運動，固定找人吃飯，平時多去學校以外的地方走走。"
-  },
-  {
-    "objectID": "posts/0723-Day5/index.html",
-    "href": "posts/0723-Day5/index.html",
-    "title": "Day 5",
-    "section": "",
-    "text": "我自覺是一個自信心低落的人。除了我特別學過、被訓練過或是從小習慣的事情之外，我基本上不覺得我能夠做好其他任何事物。\n實際做得怎麼樣是一回事，但因為沒有自信的不安是普遍的。這包含了買衣服、清洗冷氣、報名英文檢定等等小事，或是做問卷、寫論文等等的大事（我依然覺得自己並沒有被訓練好會寫論文）。\n（這麼說，除了單純讀書、教書之外，到底有什麼事情我是有信心的？？？）\n當然很多人都會跟我說，「你想太多了」。不過缺乏自信這件事與其說是理性判斷的結果，本質上更像一種本能的情緒反應。就像是原始人看到野獸的害怕一樣。\n因為不安，所以就會逃避，事情就做不完，不安會不斷的疊加上去。這樣的性格究竟是怎麼來的，跟我的童年有什麼關係嗎？\n\n岔題了。\n最近在思考一個問題：AI能讓我們變得更有自信嗎？\n在AI出現後，最開始緩解的焦慮就是英文寫作。基本上我現在寄任何英文信件都少不了ChatGPT幫忙。當然還有Coding，省去的無盡的翻找Stack Overflow，從那些講話不太清楚的留言中尋找蛛絲馬跡。現在誰還會看Stack Overflow？\n最近一些應用包括我最近請AI幫我生成GRE單字的翻譯跟例句，直接轉成Quizlet的格式輸入成單字卡，就可以用手機反覆練習。 另外AI也幫我解決了一個最近研究上遇到的，一個比較棘手的線性規劃問題。自己在網路上找解答不知道要找多久。\nAI似乎給我一種前所未有的信心：我確實能做到很多事情。如果未來AI Agent更為成熟，那上面那些我想逃避的事（報名英檢、穿搭+網購衣服…）可能都能請AI直接解決。\n但這讓我更加自信了嗎？還是總有一天會因為沒有AI就什麼事情也做不了，感到極度自卑呢？"
   },
   {
     "objectID": "posts/0119-econ101/index.html",
@@ -154,6 +70,76 @@
     "text": "寫了這麼多，其實很多也是我當TA的這學期才慢慢體會。我想我跟其他三個助教們（學生似乎都還分不清楚誰是誰）有盡量在降低「通靈」的成分，但有沒有達到效果就不得而知了。至少看選課人數好像沒什麼影響XD"
   },
   {
+    "objectID": "posts/0727-Day9/index.html",
+    "href": "posts/0727-Day9/index.html",
+    "title": "Day 9",
+    "section": "",
+    "text": "（我思考了一下，原本42篇隨筆的計畫會持續。昨天想要多寫的東西是另外一條線，不限時間。）\n回想起2018年——2018年是我的哲學狂熱年。\nDay 6的時候寫過，從小腦袋就轉個不停。因此似乎成長過程中的每一個時期都會出現某個讓我著迷的興趣來佔據我的腦袋。國二國三的時候是天文、高一上的時候是法文（可惜現在忘光了）、高一下開始到高二上是哲學。\n我的哲學啟蒙書是暢銷著作Micheal Sandel的「正義，一場思辨之旅」。我第一次認識了Mill, Kant, Rawls, Aristoteles。(其實應該還有Milton Friedman 跟 Friedrich von Hayek，但當時我覺得Sandel把他們塑造得像反派角色，抱歉了經濟學家。)那年（高一）寒假，我交給依貞的人社學期報告是寫Thomas Negal的《哲學入門九堂課》，探討懷疑論跟自由意志。\n現在回去看當然覺得有些幼稚和好笑，但當初挺認真的。\n台中一中語文資優班的特殊課程其實主要是配合教育部的人文社會計畫，高中一年級下學期的時候有一系列經典導讀課程。課程設計是一個學期有四個session，每個session有一個附近的大學教師來開設微課程，讀一本人文社會的書。我選的四個是政治、哲學、文學跟歷史。（那時候我覺得經濟學就是跟錢有關的東西，沒興趣。）\n政治學的老師帶我們讀了柏拉圖的理想國。理想國真的偏無聊，也有可能是老師沒有講到有趣的地方。或許是為了解開「為什麼柏拉圖是西方哲學之父」的疑問，我那時候開始讀各種哲學史的書籍，包括杜蘭威爾的《哲學的故事》。哲學教授帶我們讀笛卡爾的沉思錄，講了四個禮拜只講到「我思考，我存在」。然後剩下的時間都在瞎聊。\n我最喜歡的哲學家在一個學期之內從康德換成讓保羅沙特，換成叔本華，換成尼采。當然，看得都是二手資料。（我記得我讀過大概30頁的《作為意志與表象的世界》，因為我爸的書櫃上有，還有大概兩章的《查拉圖斯特拉如是說》，雖然我都記不得他的書名。）\n那確實是一段有點瘋狂的時間，我其實一直不確定同學們到底覺得我在幹嘛。當時一個跟我很要好的朋友，時不時要聽我跟他講這些半吊子的讀書心得。終於有一天他不開心了，請我不要在不適當的場合一直跟他講這些。我猜那之後我應該是收斂不少。\n\n寫這些好像是有些岔題了。\n或許只是想追尋，我自己今天的價值觀是在什麼情形下形成的。我曾經相信過什麼又怎麼改變的。\n2018年底公投結果出來的時候，高二上的我挺失望的。我當時寫了一篇臉書貼文（已經封存），把支持「進步價值」的人比做理想國「洞穴之寓」中率先走出洞穴看見陽光的賢者，而在洞穴裡的人覺得他瘋了。\n現在的我已經不認同我當時的想法。我不認為在民主社會裡有誰可以宣稱自己是「看見陽光」的人，又有誰全然是活在洞穴裡。柏拉圖對民主的懷疑或許有理，但他的理型世界並不更有說服力。\n如果我們相信什麼事情是對的，「為你在乎的事而戰，但以他人能加入行列的方式實踐。」(美國已故自由派大法官金斯伯格語)。現在的我是這麼相信的。\n(寫這篇一不小心就超時了，之後會寫短一點。)"
+  },
+  {
+    "objectID": "posts/0728-Day10/index.html",
+    "href": "posts/0728-Day10/index.html",
+    "title": "Day 10",
+    "section": "",
+    "text": "There are always some days when things don’t go well.\n例如說這兩天，因為下雨停止了跑步，而且之前左腳似乎有肌腱發炎，還沒處理。在工作上可說是一籌莫展。作息中的某個環節如果被移除，其他部分似乎也會逐步崩塌。有時後事情就是如此。\n每天都寫文章強度似乎太高，畢竟不是每天都有什麼觀點，計時寫下的文字品質不佳似乎是無可避免的事。但基於先前提到的理由，還是要繼續寫下去。盡量去做到每天規律，去把生活的骨幹給撐住，至少不會全面崩潰。\n我想Day 7寫目標的只是一個方向。寫作固然是想要鍛鍊文字技巧，但這個部落格不用侷限於此。這是我處理思緒的地方。寫作也是一種跟外界進行持續連結的嘗試。（這也是為什麼我弄了留言的功能。1）又或者說是一種治療。\n持續踏出步伐，儘管只是一小步，也是一種令人穩定的力量。\n關於狀態混亂的時候該如何前進，最近我想起了王泓仁在數值方法講過的Gibbs Sampling。這是一種用在高維度隨機變數抽樣的方法。\n設計一個演算法直接對高維度的隨機變數做抽樣相對困難，而Gibbs Sampling的做法是使用條件分配進行抽樣。2給定初始值，先conditional on其他變數，對\\(x_1\\)進行抽樣，然後再conditional on 抽出來的\\(x_1\\)跟尚未改變的\\(x_3,...x_k\\)，對\\(x_2\\)進行抽樣。如此持續進行下去。這是一種Markov Chain Monte Carlo，因為蒙地卡羅的性質，整個過程最終會收斂到我們要抽樣的分配上去。\n就當作是過度聯想吧。但生活又何嘗不是如此？我覺得我的思路經常卡住的原因其中之一就是一次考慮太多事情。例如說在分析資料又想到自己應該先去讀什麼文章、想報名英檢又在想應該先去買參考書……。駕馭自己的思緒，某種程度上似乎也是在跟自己說：一步一步來。先假設其他情況不會變了，我們先處理一件事。然後給定新的結果在處理另一件事。或許終究能收斂到一個好的分配。\n我現在正在嘗試一種筆記方式：在紙上從中間畫一條線，左邊寫下要決定的事跟選項，右邊放下所有其他給定不變的狀況。如果有什麼成效，可能可以弄成模板跟大家分享。"
+  },
+  {
+    "objectID": "posts/0728-Day10/index.html#footnotes",
+    "href": "posts/0728-Day10/index.html#footnotes",
+    "title": "Day 10",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n目前需要有GitHub帳號才能留言。↩︎\n研究室以前的學長最近寫了一篇網誌介紹Metropolis-Hasting Algorithm 與 Gibbs Sampling.↩︎"
+  },
+  {
+    "objectID": "posts/0722-Day4/index.html",
+    "href": "posts/0722-Day4/index.html",
+    "title": "Day 4",
+    "section": "",
+    "text": "最近KM開始推動我們研究室在健保資料庫跟財稅資料庫的各項基礎建設。其中一項是使用GitHub Issues 來管理專案。似乎是被研究室裡的一些學長啟發，他決定要大家把結果依照時序、主題依照固定形式放在GitHub Issue上，方便他統一的瀏覽。\nGitHub Issue 的設計確實像是一個主題式的留言板。他支持Markdown 語法，也可以加入連結到其他的Issue、文件或是特定的Commit。而企業版還有一個進階功能，是可以把Issues用一個儀表板呈現出來，依照進度分成To Do, In Progress, Done。\n另外一個使用GitHub的好處是在上面的Markdown文件會被自動渲染（具體來說是依照GitHub Flavored Markdown 這個Markdown 的變體）。因此如果研究結果使用.md來紀錄，在GitHub 上就可以生成美觀的文件。這點蠻吸引人的。\n\n如何管理研究進度是個難題。\n我們研究室過去的狀況是大家會各自用自己習慣的方式儲存分析結果。例如我早期喜歡用Rmarkdown輸出成html給老師看（當然因為之前的專案不是在資料中心）。有些人喜歡把攜出的圖檔同一放進一份簡報。有些人就直接存在overleaf。有人甚至用R shiny把結果放在網頁上。\nKM開會的時候，基本上就是我們打開什麼他就看什麼。除非要寫文章了，不然也不會管這些東西存在哪裡，怎麼整理等等。而最近他似乎是受不了了。他的說法是：「我開始上年紀了，記憶力不好，上次開會講了什麼，其實我都不記得，每次開會都要花半小時跟Coauthor一起回憶。」本質上來說，他希望所有過去跟現在的分析結果要能讓他一目了然。\n究竟用GitHub 來做研究（而不是軟體開發）的專案管理是不是好的做法呢？可能還需要一些時間才看得出來。不過目前GitHub 能做到的是簡潔的佈告欄跟建議的進度追蹤，似乎已經頗為足夠了。如果功能太多（像Notion 那樣），反而有點容易分心。當然，有些功能（例如每一個Issue可以設定人來Review Pull Request） 可能在我們的情境不太實用。"
+  },
+  {
+    "objectID": "posts/0726-Day8/index.html",
+    "href": "posts/0726-Day8/index.html",
+    "title": "Day 8",
+    "section": "",
+    "text": "最近我的家人跟我說，他不認同現在的台灣。他認為獨裁政體可能比民主政體更能促進經濟成長。他認為民主亂象已經導致台灣經濟面臨崩潰，而被獨裁大國統治可以讓大家都更富足。\n我很驚訝我們的信念竟截然不同。但我不會說他被洗腦了、被滲透了。連偉大的經濟學家Paul Samuelson 都曾經認為蘇聯在經濟體制上比美國優越，這並非毫無意義的論點。很多人好像都忘了，該怎麼跟異溫層的人溝通，而非互相叫罵。\n我應該怎麼回應？關於我愛的這個國家（不管這個家大或小，多山還是多地震）。\n大問題沒有簡單的答案。但我想先開始在這個Blog寫一系列，關於台灣的文章。\n\n這系列的文章會是關於台灣經濟的實證資料，涵蓋大多數公共政策討論（鄉民互嘴）會遇到的主題。包括薪資成長、所得與財富分配、經濟成長、失業率、房屋資產價格、財政收支、通貨膨脹、關稅與貿易條件、能源投資…\n坦白說，這些我都不懂。我不了解總體經濟學，我也做不出分析。但我想至少還有能力做到的，是去了解經濟事實，所有好的跟壞的。這個國家一定有很多缺點，但也有很多優點。我們需要健全的討論，而不是一昧壯膽或唱衰。\n良好的的公民社會需要有良好的公民對話，對話的前提在於雙方對事實有一些基本的共識。薪資有多不均？稅收跟債務有多少？能源缺口多大？然後才能討論好的政策是什麼。我知道自己並不具備這樣的知識，因為我關心的太少、了解的太少。\n\n我一面回想著自己當初為什麼要讀經濟學系，一面想著自己為什麼要申請PhD。\n我其實並不真的想要那張有教授簽名的紙。但如果留在學術界代表獨立思考能獲得回報、能嚴謹的說話還能被聽見的話，那我要留下來。\n但就算留不下來，想做的事情也不會變。\n下個學期要當經濟學原理(林明仁班)的大助教了。我被學長建議不要花太多時間在這件事上，應該專心準備論文跟申請文件。但我想還是有責任，跟學生分享一些課本之外的事情。或是說，並不是我教他們什麼，而是我跟他們一起學習，關於發生在這座島上的所有事情。\n我們有很多工作要做，現在、未來。"
+  },
+  {
+    "objectID": "posts/0723-Day5/index.html",
+    "href": "posts/0723-Day5/index.html",
+    "title": "Day 5",
+    "section": "",
+    "text": "我自覺是一個自信心低落的人。除了我特別學過、被訓練過或是從小習慣的事情之外，我基本上不覺得我能夠做好其他任何事物。\n實際做得怎麼樣是一回事，但因為沒有自信的不安是普遍的。這包含了買衣服、清洗冷氣、報名英文檢定等等小事，或是做問卷、寫論文等等的大事（我依然覺得自己並沒有被訓練好會寫論文）。\n（這麼說，除了單純讀書、教書之外，到底有什麼事情我是有信心的？？？）\n當然很多人都會跟我說，「你想太多了」。不過缺乏自信這件事與其說是理性判斷的結果，本質上更像一種本能的情緒反應。就像是原始人看到野獸的害怕一樣。\n因為不安，所以就會逃避，事情就做不完，不安會不斷的疊加上去。這樣的性格究竟是怎麼來的，跟我的童年有什麼關係嗎？\n\n岔題了。\n最近在思考一個問題：AI能讓我們變得更有自信嗎？\n在AI出現後，最開始緩解的焦慮就是英文寫作。基本上我現在寄任何英文信件都少不了ChatGPT幫忙。當然還有Coding，省去的無盡的翻找Stack Overflow，從那些講話不太清楚的留言中尋找蛛絲馬跡。現在誰還會看Stack Overflow？\n最近一些應用包括我最近請AI幫我生成GRE單字的翻譯跟例句，直接轉成Quizlet的格式輸入成單字卡，就可以用手機反覆練習。 另外AI也幫我解決了一個最近研究上遇到的，一個比較棘手的線性規劃問題。自己在網路上找解答不知道要找多久。\nAI似乎給我一種前所未有的信心：我確實能做到很多事情。如果未來AI Agent更為成熟，那上面那些我想逃避的事（報名英檢、穿搭+網購衣服…）可能都能請AI直接解決。\n但這讓我更加自信了嗎？還是總有一天會因為沒有AI就什麼事情也做不了，感到極度自卑呢？"
+  },
+  {
+    "objectID": "posts/0112-welcome/index.html#section",
+    "href": "posts/0112-welcome/index.html#section",
+    "title": "開張！",
+    "section": "",
+    "text": "架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統Quarto架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。"
+  },
+  {
+    "objectID": "posts/0112-welcome/index.html#計畫",
+    "href": "posts/0112-welcome/index.html#計畫",
+    "title": "開張！",
+    "section": "計畫",
+    "text": "計畫\n這個blog目前主要分成四個主題：\n\n研究生系列：關於讀研究所經歷的大小事\n台北生活系列：關於在台北賃居走跳的故事\n加州回憶系列：關於去年在UC Berkeley交換的紀錄\n經濟小白系列：一些關於經濟學的東西\n\n有任何建議歡迎告訴我！"
+  },
+  {
+    "objectID": "posts/0000-pastwritings/index.html",
+    "href": "posts/0000-pastwritings/index.html",
+    "title": "In Search of Lost Time",
+    "section": "",
+    "text": "時間與內容無關。\n***\n腸胃炎後的第四天，午餐是吐司配小黃瓜跟玉米。早上把吐司裝進保鮮盒裡，搭上晨間的綠線列車。上次這麼做是在往Downtown Berkeley的列車上。今天的耳機選播李榮浩的「模特」專輯，出道即巔峰，忍不住這樣想著。\n胃痛的這幾天，被迫直接面對身體不適的時候，學會了大口呼吸，也許是藏在記憶深處的什麼被喚醒，也許是無計可施。深深的吸氣，吐氣，竟然真的就好過一些。\n沒有辦法寫出什麼，如朴作家1一樣令人會心一笑的情節，沒有辦法寫出像是李榮浩出道作那樣的歌詞，想要留下的感覺終究留不住。總還是想要被人關愛，也許對象不應該是朋友圈？也許回去Medium寫作？\n不能吃零食，今天的我竟然直接去水果攤買了一顆蘋果。從美國回來之後，似乎就再也沒削過蘋果了。技術一如往常的差，而且沒有專門將蘋果切瓣的刀具，切出來的蘋果歪七扭八。不知道怎麼竟被自己給逗笑了。\n在書桌前吃著剛泡玩鹽水的蘋果，想著要為明天去財稅做一點準備還是再閱讀一次朴作家的新書《信任的模樣》。吃完水果還是好餓啊，好想吃雞排（？）從來沒有減肥需求的我經然也被迫面臨「想吃但不能吃」的困擾。（今天至今為止吃了兩片吐司，一碗粥，跟一片蘋果，我是什麼苦行僧嗎）。但吃了那種東西我可能還要再多躺兩天。\n還是先閱讀朴作家的書吧。 我有多久沒有在房間看書了？\n我不常待在萬隆住處的原因，是因為沒有一張像樣的辦公椅嗎？ 今天從八點就待在家的我，這樣想著。\n在社科院的辦公室跟Lab都有裝上輪子，可以滑動的椅子。自己的房間裡是一張普通的木製餐桌椅。想想卻又覺得不對，以我這樣過動的個性，要是在房間裡也擺上一張辦公椅，肯定到處滾來滾去滾到底下鄰居受不了，也罷也罷。還是木頭椅就好。（這可是B還在萬隆的時候我們四個人一起去IKEA搬回來的，我自己組起來的椅子…）\n或是是今天確實有點早回家。其實前幾天待在家的時間更長，但主要是躺在床上。莫名奇妙得了腸胃炎直接讓兩個整天報銷，醫生說最近確實流行過一波，難不成是那天去桃機送機2回程的路上沒帶口罩？\n不知道為什麼才看了一點點朴作家的書，現在竟然變成在寫作。講到寫作，我最近一直在反省我的文字並不怎麼的「真誠」。我平時就會寫一些簡單紀錄想法的文字，有時候就會想寫長一點。但到底為什麼想寫？事實上對我來說寫作沒有很舒壓，也沒有什麼非寫不可的理由。想到頭來唯一合理的解釋是「討好自己」。確實，就是在討好自己。\n***\n今天我去活大點了碗酸辣湯，外面下以了暴雨，所以我躲進圖書館。躲進圖書館就跑去二樓看《天才的責任》3。一看又花了一個小時。覺得太久了。花太多時間去想哲學問題，從一開始就與維根斯坦背道而馳。不過這本傳記幾乎可以當作理解維根斯坦的入門書。他說，棕皮書（接近於之後出現在哲學研究前一百多節的內容）並不是給其他哲學家看的，而是給跟他具有同樣困惑的人看的。如果單純只是想知道維根斯坦說了什麼而去看哲學研究，那會發現它根本什麼都沒有說。\n還有另一段值得討論的話，在於維根斯坦似乎認為自己的哲學方法就是蘇格拉底的相反。我們很常在接觸哲學的一開始被引導去思考一些日常生活中常見的詞彙，例如「正義」、「善良」的意思，然後被引導而發現一般人並不了解者些詞語的意思，產生許多相互矛盾之處，進而評判一個未經反思的大腦對慨念的理解是混亂的、需要被哲學家加以釐清。但真是這樣嗎？會不會其實只有哲學家不懂什麼是正義？在接觸哲學之前，我們大部分的人在使用正義這個詞時也沒有遇到太多困難，當然每個人指的意思不太一樣，但在與身邊的人溝通上未必有什麼問題。當哲學家跳進來，一切才變得如此讓人困惑。會是這樣嗎？\n今天下午算是比較接近在工作的一個日子。但說實話仍舊什麼也沒有做成。我沒有真的理解Collective Labor Supply4，循著找了幾篇文章也沒有細讀。 我自己想像了一個我有興趣的經濟學：How to model? 但並沒有在很多的研究中看到這樣的影子。大部分的人都在測量某種elasticity 。可以說都是的reduced form。How to model is like how to design a board game. As long as you are internally consistent, no one can say you are wrong. However, just as some games are extremely boring, so are some models. 我可以說一直對這件事感到困惑又著迷。但這是一個很小眾的研究興趣嗎？畢竟這本質上不是一個非常科學的問題。但確實是重要的吧，代表說有某種重要無法化約到機制必須保留在模型裡。\n***\n星期六的晚上，研究室的窗戶上還是充滿霧氣。開著冷氣的室內跟潮濕的陽台好像兩個截然不同的世界。不知為何，我把手邊的工作放下了。我想要把事情想清楚。\n過去一週極度缺乏生活感。我完全沒有認真想過自己要怎麼樣生活。體現在衣櫃裡塞的完全沒有折的衣服，體現在每一餐吃的漫不經心，也體現在每個決定要提早入睡但還是在床上滑手機滑到眼睛乾澀的晚上。因為白天的事情很多，於是每天就這樣起床上班回家睡覺，也就沒有再思考要怎麼生活。這是個問題，當我在星期五晚上，試著靜下心來，想讓自己休息，卻始終感到很煩躁。很想要一個擁抱，一個就好，讓我能夠好好進入夢鄉。\n會覺得對生活不滿意，很大一部份來自於似乎我沒辦法掌控我的心情。我靜不下來，滿腦子想一些關於工作（計量、財稅）或是這個世界亂糟糟的事（川普、柯文哲案、匯率）。我並不真的想要想這些事情。不只是被事情追著跑，更是好像思緒被挾持著沒辦法想清楚。\n我覺得現在的我進入一個狀態。我對情緒的感知變得敏感，但我沒有動力去做任何事。開始變得非常需要情緒的照顧。或是說讓自己照顧自己。變得想要得到溫暖。還是害怕孤單。\n溫暖是什麼？在愛意的圍繞之下展開新的工作又是什麼樣子？我不想要在像無頭蒼蠅一樣到處亂飛然後用很粗淺的眼光攻擊自己活得不夠好。我不想要攻擊自己活得不夠好，所以我要活得很好。\n星期六的晚上給自己一些鼓勵的話。\n***\n一個夢想成為歌手的人，在多久都默默無名之後應該選擇放棄？不可能完全脫離利弊的考量。\n或許認清並不是所有事情都能有一個完美的標準。由時就任意的定宜個標準：如果XXX我就放棄。例如：如果申請不到有獎學金的program我就放棄。或是再高一點：如果我申請不到Top 20我就放棄，或是低一點：如果我申請不到任何學校我就放棄。決定這個標準很困難，但同時再怎麼想都還是非常任意，除非擬定一個超寬鬆或超嚴格的標準。\n總之，無論從什麼角度看，現在都跟放棄八竿子打不著。比較大的問題是心理問題。改善心理問題本身就是一件改做的事。如果現在不該放棄，那很多煩惱都可以比較單純的被處理。就是：想辦法舒緩、停止這些想法就好了。不需要去理會他們的真實性。但同時，也應該要防止會導致這些想法產生的原因，阻止原因更加重要。\n***\n搬出來住的一個好處，就是可以在晚上的時候，把燈關了，留下一盞昏黃的小桌燈，播一些簡單的音樂。今天播的是Ariana Grande 的Eternal Sunshine Deluxe Version。新加入的幾首歌都非常喜歡。這些歌都有一種很真誠的感覺，能夠輕輕地將你包圍。\n有時候換個視角可以看到不同事情，所以我會躺著。租屋處的床很矮，天花板很高，就這樣盯著天花板聽音樂想事情。有時候我在想自己是不是想太多了，好像只要不想太多，事情都能迎刃而解吧，但還沒有想到要怎麼不要想太多（哭笑）。\n我有時候也想多紀錄自己平常的生活，但太多的思緒。記錄下來其實也是在將思緒一縷縷梳理開來，否則記下來的都是一些難以追溯的片段。\n星期三那天在社科院遇到S學長，索性就走到醉月湖去。那幾天的陽光真的是eternal sunshine ，我們在醉月湖畔看到鴨媽媽跟一群剛孵出來的小鴨，我覺得我可以花一整天看著他們。\n那天我順道去校史館買了一組積木（跟樂高很像但不是樂高）總圖。回來花了三天陸陸續續的將他拼好。可惜的是積木竟然沒有把鐘塔做出來，好像少了些什麼東西。我想如果我哪一天又要出國讀書，大概會把他一起帶走吧。有研究室的同學指著總圖前的平台上的樂高人說：「再放個望遠鏡這就是你了」。確實，這幾年來在總圖晃蕩的日子是沒少過，也許拼起來的其實也是我自己的回憶。\nEternal Sunshine 的Deluxe Version 有一個副標題，Brighter Days Ahead. 我有時候會想，在永恆的陽光褪去之後，有什麼理由相信Brighter Days Ahead? 最近聽到今年在川普政府大幅減少預算的狀況下申請國外博士班便當更加艱困，我想我對未來的想像也變得越來越不確定。我該對自己要求些什麼？我能夠期待什麼？再想下去可能又太多了。\n這學期修洪俊教的實證賽局分析。洪俊教是去年剛來教書的韓國人，經過許多朋友都認證是系上最帥的男老師。他一直勸我們不要念PhD，說世界上的路還很寬廣。不過上次跟他還有KM去跟來訪的學者出發吃飯，又聊到不做學術要做什麼。我想了一下高中的自己，回答說想當獨立媒體的記者。他們聽完哈哈大笑，說那還是去走學術吧，一樣也能發journal。所以我想我是沒有退路了（苦笑）\n所謂的Brighter是什麼意思呢？我其實越來越不確定，說實話我並不期待再次回到美國讀書。有時候我覺得此時此刻或許已經是我人生最幸福的時刻了，我都是修自己有興趣的課，做喜歡的教書工作，跟一群合得來的人生活，應付老師的研究要求。但一切感覺都是在倒數著，我卻還沒找到真正的快樂（或許該說是平靜嗎）。未來似乎並不是一個追尋的目標。當下正在急速地向後退，未來以未曾預告過的速度撲面而來，只怕是要撞得頭破血流。\n於是我在想像一種生活，一種在意義結束了之後的生活。世界像是散落一地的樂高，我在廢墟裡面試著拼著自己想要守護的東西，然後等待金黃色的夕陽再次降臨。\n***\n近幾日的陽光很好，萬里無雲，在學校裡散步非常舒服，讓人想起在加州的日子。記憶模糊了，而我也越來越不確定應該要用什麼方式丈量過去和現在，自己的處境是怎麼樣的變化。我在Berkeley的時間並不能稱得上非常開心，但時間越久卻越讓人懷念。而在台灣的日子則是不知道該往哪裡去。\n我想像一種處在邊緣的處境。想像一種屬於弱者的敘事，在這裡我用一種承認自己已經認輸離開遊戲之後回過頭來的方式來思考我的人生。一切似乎開始清晰。 時間\n跟J在總圖後草坪曬太陽。\n那一天下午要去Brown Bag報告。不出所料的焦慮又發作，什麼事也做不了。試圖出去走走晃晃還是一樣。後來J傳了個訊息來說要不要曬太陽。\nJ是高中的同班同學，上大學之後我們還當過兩年的室友。不過最近因為他要準備考試正在讀書的關係，好像有空能見面的時間更多了一些。\n沒想到草坪上陽光把手機曬熱了，曬到不能動，只好挪到比較陰涼的地方。\n***\nStay with the flow.\n星期一來到學校要把論文的附錄給補上。還是經常忍不住要分心。儘管到了這個階段，還是覺得自己有很多是沒有盡到自己的責任。所以很不安。想要讓自己好好放鬆。其實非常的艱難。這一天基本上沒有發生任何有趣的事。我不敢說教書到底是不是讓我快樂。我覺得看到學生的眼神好像有懂會感覺很開心，但是想到他面臨著這麼大的考試而且在學這些沒有用的東西，就覺得一切其實挺沒有意義的（然後擔心自己沒有讓他考過之後也賺不到錢）。然後在感覺緊繃的時候就會很希望自己有戀愛可以談。有時候會想要玩弄一下自己的身體。其實只不過是因為不知道怎麼讓自己內心趨於平靜所做出的無謂舉動。感覺不到生活的flow。\n這樣說起來，你必須成承認，這一切就是這麼的無聊。我的人生就是做研究跟教書。這兩件事其實都還蠻無聊的。其實我是對這兩件事都有很高的熱情，但這才是問題所在：因為兩件事大多時候還是偏無聊。而似乎有些不滿就變成看手機了。好像是在那個世界也許、就那麼也許，可以突然找到一種感覺是自己正被關愛著。\n不要過度受制於想要被關愛的這種渴望，似乎是必要的。我其實需要高度社交。而且我其實不是不會社交，只是能聊的話題比較侷限，而且對陌生人防備心重。我需要感覺到自己被大家關愛來獲得一些正面的能量。\n不要強求。不要刻意去求別人的喜愛。但是可以望人多的地方去，可以更大方一點。或是也許我就是要更接受現在的工作型態。事情還有非常多沒做完。\n某種程度上需要記錄每日的思考狀態，畢竟今天狀態不是太好。沒有吃飯，感覺早上上課也提不起勁。覺得自己其實很廢（害怕被看破手腳）又來了，無端的生出一堆麻煩事。我解決事情的方式還是太慢，可能又充滿內耗吧。\n***\n最近的生活稱不上苦，其實就是悶。唯一的起伏大概就是每天在研究室裡會有一些荒誕的事發生。例如今天一夥人在個論上課之前討論到底指導老師消失一週是不是去秘密結婚。有時候又在討論是不是應該在教師節送老師鼻毛剪。研究室裡有一把日式的長刀（塑膠做的），不止一次想要拿刀把這些荒誕的人砍了，然後再自盡。\n有時候在思考自己到底想做什麼。首先我完全無法當一個工程師，對於開發工具等之類的事情毫無興趣。也不喜歡處理一些技術細節，所以其實當經濟理論家也不行。\n我覺得自己到比較像是某種空想家（原本想說哲學但怕侮辱哲學家），或者應該說是魔法師？奇幻故事裡面最厲害的魔法師通曉世界運作背後最基礎的道理，並能夠運用「道」來施展魔法解決問題。某種程度經濟學也在標榜一種瞭解世界背後運作的道理，並且宣稱這些道理非常有用，跟這些魔法師的目標其實差不多。\n但在小說世界裡魔法是真的，在現實中經濟學是假的。現實中並沒有什麼「底層邏輯」或是「洞悉人性的經濟學」這類的東西，看似魔法師只不過是江湖術士。只可惜醒悟的晚了，沒有一技之長只好繼續追求成為一位表面上厲害的魔法師去向更多人販賣魔法。\n回家的路上，決定走進誠品逛逛。偶然之間就看到了新銳作家「寺尾哲也」的散文集《努力是癮》。翻了幾頁內心就想起現在的室友B，於是就把這本書買了回去送他。讀著裡面故事人物的人生，想到自己中年之後的樣子。其實我們終究不是天縱英才，而是平凡不過的人。四十歲的時候，如果確實活著的話，應該也是在過極為平凡的人生、煩惱著各種一般人都會煩惱的事情。我自認為還算是相信有「夢想」的人，只是最近也越來越不確定了。人生不都一樣，真有什麼值得追求的「夢」嗎？\n回家的路上，經過全家，去買買一送一的翡翠檸檬茶。廣播裡播著曼哈頓練習曲的電影主題曲Lost stars。突然之間心頭一陣翻湧，差點在大庭廣眾之下痛哭失聲…\nJust a speck of dust in the galaxy\n***\n事情是這樣的，我喝了一點酒。為什麼呢？因為有人在我的辦公桌上留了一瓶酒。那又是為什麼呢？因為前幾天有一群人在研究室喝酒看煙火，竟然就留下了一瓶酒沒喝完，真掃興。不是，你說，你避開了重點。喔喔，重點，好吧。重點是為什麼我，此時（一個確定的時間點，00:00）此地（一個確定的地點，羅斯福路四段一號臺灣大學社會科學院645室）存在。那又是一段冗長的故事，我想你也未必有興趣，但我知道此事自是無可迴避：\n我欠債欠太多了，所以現在正在還債。債主當然就是KM，還有博班的楊學長，我都不敢抬起頭來見他，他想必覺得我是個沒有的草莓族（不是小草）。不錯，一篇文章就然就這麼拖了一個學期沒有進度，我跟老師說我修課忙不過來，唉，老師也真好心，知道人有時必須得做consumption smoothing 。所以現在我就在這啦，時間少的時候欠債，時間多的時候還債，跨期替代，你懂的。\n或許你不曾想過，我總覺得夜裡的社科院彷彿一隻碩大的灰白色鯨魚，在名為臺北盆地的內陸海裡漂流。漆黑的海流中明滅著的絢爛的螢光（如果你有看過少年Pi可能有機會知道我在說什麼）同時又覺得這隻鯨魚是個大飯店（夫天地者 萬物之逆旅），我們如魚蝦蜉蝣，寄居於此。（這麼一說，那些拿到tenure 的教授不就成了藤壺？）所以我們不妨就用鯨魚飯店來稱呼吧。\n我的研究室在鯨魚飯店的六樓、北側。看得到101，半截。如果說就鯨魚飯店是飯店，那我們的研究室可說就是飯店中的飯店了。上至讀博班的學長，下至大三的學弟，都無不講這裡當作避風港，又或是茫茫大海中唯一的歸宿。所以你看，從上禮拜至今簽到本上已經有九個人簽名（啊忘記給魏珈銘簽了）不過最近會待到這麼晚的人也就只有我一個。上禮拜四，天冷，時間已經過了三更，於是就決定乾脆不回家，在鯨魚飯店住一晚。沒有客房服務但走幾步就有7-11。結論是還是別住好，半夜真快冷死了，要不是有蕭學長（不知道為什麼一位已經讀博班的學長竟然特別來給我們一台電暖爐）的暖爐，大概是活不下去。\n這幾天我也反覆思考，為什麼自己做事情這麼慢，一直欠債。有時候坐著想、有時候站著想、有時候一邊踱步一邊忖度，這樣一件重要的問題。這時候你就知道一個人的研究室有什麼迷人之處了。你可以自由的活動、在辦公桌之間踱步、偷偷坐到別人的椅子上滑來滑去、直接把音樂放出來。我總是非常困擾，到底工作的時候要不要聽音樂呢？有時候真需要一些流行樂當作興奮劑或抗憂鬱劑來讓自己繼續做下去，但有時候又會因為聽音樂而分心。跟著哼，或是聽到好喜歡的歌就站起來唱，360度的唱。例如今天就是完全屬於魏如萱的一夜。魏如萱的這張新專輯「珍珠刑」我超愛尤其是下半張抒情歌的部分真的是更上一層樓耶還有之前那張「藏著並不等於遺忘」今天唱了三遍的「星期三或禮拜三」。我媽媽在我小時候一直覺得我是不是有過動症（因為我作業寫到九點半都還寫不完）其實不無道理。不過必須先聲明這些是不可觀察的。雖然你現在知道研究室裡的這位仁兄可能處在某種又唱又跳的混沌疊加狀態，但若你打開研究室的門想要觀測的話，很不幸的，一切就會坍縮到一個人呆呆的坐在電腦桌前面。就是不想讓你看到呵。\n所以最近確實是過得比較辛苦一點，在學校待得晚就會想要吃宵夜。我也希望自己是那種朋友隨call隨來就去吃個鐵板燒之類的但可惜就不是。今天去吃了一碗麻油虱目魚湯哎呀天氣冷吃什麼熱的東西都是人間美味。如果是晴天的話我就會晃到總圖前面去數星星（都老朋友了）但天氣不好就只能先回飯店休息。\n你說酒是不是喝的有點多，這當然沒有。被放在我桌上的只不過是7-11賣的韓多露荔枝風味燒酒，12度。這點程度是不會醉的，何況有人醉了還會打字嗎？再說，不管怎麼樣你也不用擔這個心，有人說過這些從備忘錄的截圖寫的「我」真的是我嗎？唯一的請求，我會說，也許可以請你不要傳「你還好嗎」的之類的訊息給我。我想你能體諒，一個人如果真醉了亂講話可以推拖說我都不記得，但一個沒有醉的人做出像是喝醉酒的事那可真是沒臉見人了。"
+  },
+  {
+    "objectID": "posts/0000-pastwritings/index.html#footnotes",
+    "href": "posts/0000-pastwritings/index.html#footnotes",
+    "title": "In Search of Lost Time",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n朴相映，韓國小說家。著有《大都市的愛情法》、《無人知曉的藝術家之淚和宰桐義大利麵》、《信任的模樣》等書。↩︎\n一群人去日本玩六天五夜，但出於某些特殊原因竟然有人送機。↩︎\n哲學家維根斯坦的傳記。作者是雷伊．孟克。↩︎\n家庭經濟學的一種模型。假設家庭成員會互相分工，在家庭內達成帕雷托最優。↩︎"
+  },
+  {
     "objectID": "posts/0724-Day6/index.html",
     "href": "posts/0724-Day6/index.html",
     "title": "Day 6",
@@ -173,47 +159,5 @@
     "title": "使用Zotero和Better BibTex生成引用書目",
     "section": "",
     "text": "這篇文章沒什麼大道理，就是記錄一下最近摸索出的新知識。\n\nBibTex\nLaTex文件中的書目引用是透過名為BibTex的編輯器生成。基本用法是要提供一個bib file。這個檔案就像是為了這篇文章所創建的一個書櫃，放著所有可能用到的書目的資訊。當你在latex文件中提及bib file裡的某篇文章，BibTex就會去把那篇文章的資訊抓出來放加入文件中。下面是一個簡單的bib file範例。\n@article{mccall_economics_1970,\n    title = {Economics of {Information} and {Job} {Search}},\n    volume = {84},\n    issn = {0033-5533},\n    abstract = {I. Introduction, 113.--II. A simple model of job search, 115.--III. A more general model of job search, 123.--IV. An adaptive search model, 125.},\n    number = {1},\n    urldate = {2024-10-26},\n    journal = {The Quarterly Journal of Economics},\n    author = {McCall, J. J.},\n    year = {1970},\n    note = {Publisher: Oxford University Press},\n    pages = {113--126},\n    file = {JSTOR Full Text PDF:/Users/hungchichao/Zotero/storage/FJSJBXUK/McCall - 1970 - Economics of Information and Job Search.pdf:application/pdf},\n}\n\n\n書目管理系統 Zotero\n要怎麼取得.bib檔呢？當然最暴力的做法可以自己創建一個文字檔手動輸入。大部分的期刊網站(e.g. JSTOR)都可以幫你生成bib file所需的格式。不過這麼做非常沒有效率。我自己（以及大部分認識的人）都是使用免費的書目管理系統Zotero。這個系統有幾個主要功能：\n\n在系統中創建不同資料夾搜集參考文獻\n提供瀏覽器的外掛，讓你直接把網路上看到的paper加入資料庫\n自動下載pdf，可以瀏覽文件與做筆記\n自動輸出bib file\n\n其中第四個功能大大降低了我們編輯latex中引用書目的門檻。（其實Zotero也可以搭配Microsoft Word使用，不過我不會用word寫論文就是）。\n要安裝Zotero非常簡單，只要到官網下載就行了。同時要打開瀏覽器的Zotero外掛(這是我很久以前設定的，網路上有非常多如何使用Zotero的教學)。\n\n\nBetter BibTex\nZotero雖然強大，但在輸出bib file上還是稍微缺乏彈性。我們可以下載Better Bibtex這個Zotero的plug-in。Better BibTex可以做到幾件原本做不到的事：\n\n自訂citation key：Zotero自動生成的citation key似乎有可能發生重複的問題，或是有時候你就是想自己訂citation key。Better BibTex可以當你做到這點。\n選擇bib file中需要的field： 原始的Zotero會自動把所有資訊都放入bib file，其中有些非常沒必要，例如abstract(誰會特別打開.bib看abstract?)。Better BibTex 可以自己設定需要排除的field，讓bib file保持一個極簡風。\n自動更新：當你把新文章加入資料庫時，自動幫你更新bib file，這樣就不用一直按輸出。\n\n使用Better Zotero可以參考這個YouTube影片。\n\n\n\n使用Better BibTex外掛設定輸出的field\n\n\n\n\n\n輸出.bib file\n\n\n\n\nBibliography Style\n雖然關聯不是很緊密，不過我還是順便紀錄一樣如何在Latex中進行引用。首先需要使用處理引用書目的套件，我使用的是natbib。接著設定ibliographystyle，我使用aer bibliography style。aer 顧名思義就是美國經濟學會發行的American Economics Review所使用的格式，據說跟Chicago style比較接近（我無法驗證就是）。事實上經濟學的主流期刊都有自己的style可以用，例如Econometrics的ecta與Journal of Political Economy 的jpe。關於各種style詳情可以參考這個網站。此例中我從zotero輸出的bib file叫做labor_ref.bib，只要把這個檔案放在與本文相同資料夾中並在結尾處加上\\bibliography{bib file name}即可。以下是一個非常簡單的例子。\n\\documentclass{article}\n\n\\usepackage{natbib}\n\\bibliographystyle{aer}\n\n\\title{Labor II: Model Proposal}\n\\author{R13323021 Hung, Chi-Chao}\n\\date{Octobor 2024}\n\n\\begin{document}\n\n\\maketitle\n\\section{Introduction}\n\nThis model follows the ``search\" framework established by \\citep{mccall_economics_1970}.\n\n\\bibliography{labor_ref}\n\n\\end{document}\n\n\n\n輸出結果\n\n\n\n\n在本地端執行BibTex\n我一開始在本地端complie的時候，無論如何citation都跑不出來。經過研究才發現原來我誤解了BibTex的運作原理。事實上，當你在一篇latex文章中加入引用時，發生的事情如下：\n當你按下complie的時候，你使用的編輯器（通常是pdflatex或xelatex）會先將所有的引用資訊記錄在一個auxiliary file(name.aux)。接著，BibTex會去讀取這個aux file, bib file跟所需的.bst file(記錄你選擇的style的設定)，生成出一個.bbl的檔案，這時候要再實行一次（或兩次）的pdflatex將.bbl的資訊讀進去，才會顯示出引用書目。\n我之前都是在Overleaf上編輯，Overleaf會自動幫你處理好這一切，所以我從來都沒有意識到背後這些運作。不過在本地端的編輯器(我使用的是Visual Studio Code)他並不一定知道你要執行BibTex。解決方法就是在VScode LaTex Workshop裡面build LaTex project底下選擇正確的recipe（例如 pdflatex -&gt; bibtex -&gt; pdflatex*2），VScode就會正確執行所有步驟了。\n\n\n參考資料\n\n\nBibTex Wikipedia\nUChicago Library Guide for LaTex\nBibliography management with bibtex\nBibliography management with natbib"
-  },
-  {
-    "objectID": "archive/about.html",
-    "href": "archive/about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "Favorites.html",
-    "href": "Favorites.html",
-    "title": "Favorites",
-    "section": "",
-    "text": "I’m an amateur astronomer passionate about exploring the night sky. My interests include stargazing, visual astronomy, and also the origins of constellations and star charts. I enjoy finding Deep Sky Objects using binoculars or a Dobsonian telescope.\nHere are some of my works:\n\n尋找屬於自己的星: 新手觀星指南\n如何準備星導(2023天文領袖營)"
-  },
-  {
-    "objectID": "Favorites.html#stars",
-    "href": "Favorites.html#stars",
-    "title": "Favorites",
-    "section": "",
-    "text": "I’m an amateur astronomer passionate about exploring the night sky. My interests include stargazing, visual astronomy, and also the origins of constellations and star charts. I enjoy finding Deep Sky Objects using binoculars or a Dobsonian telescope.\nHere are some of my works:\n\n尋找屬於自己的星: 新手觀星指南\n如何準備星導(2023天文領袖營)"
-  },
-  {
-    "objectID": "Favorites.html#photography",
-    "href": "Favorites.html#photography",
-    "title": "Favorites",
-    "section": "Photography",
-    "text": "Photography\nI’m a beginner in photography. I primarily use a CANON 5D Mark II to capture moments and landscapes. Here’s a glimpse of my work:\nYosemite Album"
-  },
-  {
-    "objectID": "Favorites.html#gardening",
-    "href": "Favorites.html#gardening",
-    "title": "Favorites",
-    "section": "Gardening",
-    "text": "Gardening"
-  },
-  {
-    "objectID": "Favorites.html#books",
-    "href": "Favorites.html#books",
-    "title": "Favorites",
-    "section": "Books",
-    "text": "Books"
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hung Chi-Chao 洪啟超 – HungChiChao</title>
+<title>My Blog – HungChiChao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,16 +30,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,12 +73,232 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="HungChiChao" href="index.xml" data-external="1"></head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -94,21 +320,23 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Favorites.html"> 
-<span class="menu-text">Favorites</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/HungChiChao"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -116,13 +344,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Hung Chi-Chao 洪啟超</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">My Blog</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
       
     
@@ -130,37 +358,362 @@ ul.task-list li input[type="checkbox"] {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="TWVtbw==">Memo <span class="quarto-category-count">(10)</span></div><div class="category" data-category="TlRV">NTU <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VG9vbHM=">Tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JThCJUJDJUU4JUIyJUJDJUU3JUIwJUJG">拼貼簿 <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<p><img src="./figures/cover.jpeg" class="img-fluid"></p>
-<p><em>Taken on Sep.&nbsp;7, 2021 at 昆陽停車場</em></p>
-<p>Welcome to my website.</p>
-<section id="economics-and-other-social-science" class="level2">
-<h2 class="anchored" data-anchor-id="economics-and-other-social-science">Economics and other Social Science</h2>
-<p>I’m currently studying economics and also interested a broad spectrum of social science topics. Stay tuned for more updates.</p>
-<section id="notes-for-introductory-econometrics-2025-spring" class="level3">
-<h3 class="anchored" data-anchor-id="notes-for-introductory-econometrics-2025-spring">Notes for Introductory Econometrics 2025 Spring</h3>
-<ul>
-<li><a href="./files/review01-1.pdf">Statistics: Conditional Expectation</a></li>
-<li><a href="./files/review02.pdf">Statistics: Point Estimation</a></li>
-</ul>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TWVtbw==" data-listing-date-sort="1753632000000" data-listing-file-modified-sort="1753725264688" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0728-Day10/index.html" class="no-external">Day 10</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0728-Day10/index.html" class="no-external">
+<p>一步一步，慢慢走</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0728-Day10/index.html" class="no-external">
+<div class="listing-date">
+Jul 28, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TWVtbw==" data-listing-date-sort="1753545600000" data-listing-file-modified-sort="1753607194556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0727-Day9/index.html" class="no-external">Day 9</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0727-Day9/index.html" class="no-external">
+<p>回憶2018</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0727-Day9/index.html" class="no-external">
+<div class="listing-date">
+Jul 27, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="TWVtbw==" data-listing-date-sort="1753459200000" data-listing-file-modified-sort="1753536868537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0726-Day8/index.html" class="no-external">Day 8</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0726-Day8/index.html" class="no-external">
+<p>現在、未來</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0726-Day8/index.html" class="no-external">
+<div class="listing-date">
+Jul 26, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="TWVtbw==" data-listing-date-sort="1753372800000" data-listing-file-modified-sort="1753513897965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0725-Day7/index.html" class="no-external">Day 7（關於這個Blog）</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0725-Day7/index.html" class="no-external">
+<p>42 Days Challenge</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0725-Day7/index.html" class="no-external">
+<div class="listing-date">
+Jul 25, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="TWVtbw==" data-listing-date-sort="1753286400000" data-listing-file-modified-sort="1753370006340" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0724-Day6/index.html" class="no-external">Day 6</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0724-Day6/index.html" class="no-external">
+<p>過動</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0724-Day6/index.html" class="no-external">
+<div class="listing-date">
+Jul 24, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="TWVtbw==" data-listing-date-sort="1753200000000" data-listing-file-modified-sort="1753257211823" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0723-Day5/index.html" class="no-external">Day 5</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0723-Day5/index.html" class="no-external">
+<p>關於自信心、AI</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0723-Day5/index.html" class="no-external">
+<div class="listing-date">
+Jul 23, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="TWVtbw==" data-listing-date-sort="1753113600000" data-listing-file-modified-sort="1753199753619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0722-Day4/index.html" class="no-external">Day 4</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0722-Day4/index.html" class="no-external">
+<p>用GitHub做專案管理</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0722-Day4/index.html" class="no-external">
+<div class="listing-date">
+Jul 22, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="TWVtbw==" data-listing-date-sort="1753027200000" data-listing-file-modified-sort="1753113100657" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0721-Day3/index.html" class="no-external">Day 3</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0721-Day3/index.html" class="no-external">
+<p>跑步</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0721-Day3/index.html" class="no-external">
+<div class="listing-date">
+Jul 21, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="TWVtbw==" data-listing-date-sort="1752940800000" data-listing-file-modified-sort="1752986221692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0720-day2/index.html" class="no-external">Day 2</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0720-day2/index.html" class="no-external">
+<p>烏克蘭</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0720-day2/index.html" class="no-external">
+<div class="listing-date">
+Jul 20, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="TWVtbw==" data-listing-date-sort="1752854400000" data-listing-file-modified-sort="1752900780778" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0719-day1/index.html" class="no-external">Day 1</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVtbw=='); return false;">Memo</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0719-day1/index.html" class="no-external">
+<p>關於數學與經濟模型</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0719-day1/index.html" class="no-external">
+<div class="listing-date">
+Jul 19, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="VG9vbHM=" data-listing-date-sort="1737907200000" data-listing-file-modified-sort="1737973245368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0124-bibtex/index.html" class="no-external">使用Zotero和Better BibTex生成引用書目</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('VG9vbHM='); return false;">Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0124-bibtex/index.html" class="no-external">
+<p>研究生系列二</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0124-bibtex/index.html" class="no-external">
+<div class="listing-date">
+Jan 27, 2025
+</div>
+<div class="listing-author">
+H.C.C
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="TlRV" data-listing-date-sort="1737216000000" data-listing-file-modified-sort="1737300572991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0119-econ101/index.html" class="no-external">關於當經原TA的一些心得</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TlRV'); return false;">NTU</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0119-econ101/index.html" class="no-external">
+<p>研究生系列 1</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0119-econ101/index.html" class="no-external">
+<div class="listing-date">
+Jan 19, 2025
+</div>
+<div class="listing-author">
+H.C.C
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1736611200000" data-listing-file-modified-sort="1737277626702" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0112-welcome/index.html" class="no-external">開張！</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/0112-welcome/index.html" class="no-external">
+<p>文字如氣泡般湧現</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0112-welcome/index.html" class="no-external">
+<div class="listing-date">
+Jan 12, 2025
+</div>
+<div class="listing-author">
+H.C.C
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="JUU2JThCJUJDJUU4JUIyJUJDJUU3JUIwJUJG" data-listing-date-sort="1704038400000" data-listing-file-modified-sort="1753721920187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="88">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/0000-pastwritings/index.html" class="no-external">In Search of Lost Time</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU2JThCJUJDJUU4JUIyJUJDJUU3JUIwJUJG'); return false;">拼貼簿</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/0000-pastwritings/index.html" class="no-external">
+<p>Inspried by Marcel Proust</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/0000-pastwritings/index.html" class="no-external">
+<div class="listing-date">
+Jan 1, 2024
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -231,7 +784,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/hungchichao\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

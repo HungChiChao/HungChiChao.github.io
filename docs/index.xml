@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>HungChiChao</title>
+<link>https://hungchichao.github.io/</link>
+<atom:link href="https://hungchichao.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>ChiCHao&#39;s Pensieve</description>
+<generator>quarto-1.7.32</generator>
+<lastBuildDate>Sun, 27 Jul 2025 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>Day 10</title>
+  <link>https://hungchichao.github.io/posts/0728-Day10/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>There are always some days when things don’t go well.</p>
+<p>例如說這兩天，因為下雨停止了跑步，而且之前左腳似乎有肌腱發炎，還沒處理。在工作上可說是一籌莫展。作息中的某個環節如果被移除，其他部分似乎也會逐步崩塌。有時後事情就是如此。</p>
+<p>每天都寫文章強度似乎太高，畢竟不是每天都有什麼觀點，計時寫下的文字品質不佳似乎是無可避免的事。但基於先前提到的理由，還是要繼續寫下去。盡量去做到每天規律，去把生活的骨幹給撐住，至少不會全面崩潰。</p>
+<p>我想Day 7寫目標的只是一個方向。寫作固然是想要鍛鍊文字技巧，但這個部落格不用侷限於此。這是我處理思緒的地方。寫作也是一種跟外界進行持續連結的嘗試。（這也是為什麼我弄了留言的功能。<sup>1</sup>）又或者說是一種治療。</p>
+<p>持續踏出步伐，儘管只是一小步，也是一種令人穩定的力量。</p>
+<hr>
+<p>關於狀態混亂的時候該如何前進，最近我想起了王泓仁在數值方法講過的Gibbs Sampling。這是一種用在高維度隨機變數抽樣的方法。</p>
+<p>設計一個演算法直接對高維度的隨機變數做抽樣相對困難，而Gibbs Sampling的做法是使用條件分配進行抽樣。<sup>2</sup>給定初始值，先conditional on其他變數，對<img src="https://latex.codecogs.com/png.latex?x_1">進行抽樣，然後再conditional on 抽出來的<img src="https://latex.codecogs.com/png.latex?x_1">跟尚未改變的<img src="https://latex.codecogs.com/png.latex?x_3,...x_k">，對<img src="https://latex.codecogs.com/png.latex?x_2">進行抽樣。如此持續進行下去。這是一種Markov Chain Monte Carlo，因為蒙地卡羅的性質，整個過程最終會收斂到我們要抽樣的分配上去。</p>
+<p>就當作是過度聯想吧。但生活又何嘗不是如此？我覺得我的思路經常卡住的原因其中之一就是一次考慮太多事情。例如說在分析資料又想到自己應該先去讀什麼文章、想報名英檢又在想應該先去買參考書……。駕馭自己的思緒，某種程度上似乎也是在跟自己說：一步一步來。先假設其他情況不會變了，我們先處理一件事。然後給定新的結果在處理另一件事。或許終究能收斂到一個好的分配。</p>
+<p>我現在正在嘗試一種筆記方式：在紙上從中間畫一條線，左邊寫下要決定的事跟選項，右邊放下所有其他給定不變的狀況。如果有什麼成效，可能可以弄成模板跟大家分享。</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>目前需要有GitHub帳號才能留言。↩︎</p></li>
+<li id="fn2"><p>研究室以前的學長最近寫了一篇<a href="https://jessekelighine.com/metropolis-hastings-algorithm/">網誌</a>介紹Metropolis-Hasting Algorithm 與 Gibbs Sampling.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0728-Day10/</guid>
+  <pubDate>Sun, 27 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 9</title>
+  <link>https://hungchichao.github.io/posts/0727-Day9/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>（我思考了一下，原本42篇隨筆的計畫會持續。昨天想要多寫的東西是另外一條線，不限時間。）</p>
+<p>回想起2018年——2018年是我的哲學狂熱年。</p>
+<p>Day 6的時候寫過，從小腦袋就轉個不停。因此似乎成長過程中的每一個時期都會出現某個讓我著迷的興趣來佔據我的腦袋。國二國三的時候是天文、高一上的時候是法文（可惜現在忘光了）、高一下開始到高二上是哲學。</p>
+<p>我的哲學啟蒙書是暢銷著作Micheal Sandel的「正義，一場思辨之旅」。我第一次認識了Mill, Kant, Rawls, Aristoteles。(其實應該還有Milton Friedman 跟 Friedrich von Hayek，但當時我覺得Sandel把他們塑造得像反派角色，抱歉了經濟學家。)那年（高一）寒假，我交給依貞的人社學期報告是寫Thomas Negal的《哲學入門九堂課》，探討懷疑論跟自由意志。</p>
+<p>現在回去看當然覺得有些幼稚和好笑，但當初挺認真的。</p>
+<p>台中一中語文資優班的特殊課程其實主要是配合教育部的人文社會計畫，高中一年級下學期的時候有一系列經典導讀課程。課程設計是一個學期有四個session，每個session有一個附近的大學教師來開設微課程，讀一本人文社會的書。我選的四個是政治、哲學、文學跟歷史。（那時候我覺得經濟學就是跟錢有關的東西，沒興趣。）</p>
+<p>政治學的老師帶我們讀了柏拉圖的理想國。理想國真的偏無聊，也有可能是老師沒有講到有趣的地方。或許是為了解開「為什麼柏拉圖是西方哲學之父」的疑問，我那時候開始讀各種哲學史的書籍，包括杜蘭威爾的《哲學的故事》。哲學教授帶我們讀笛卡爾的沉思錄，講了四個禮拜只講到「我思考，我存在」。然後剩下的時間都在瞎聊。</p>
+<p>我最喜歡的哲學家在一個學期之內從康德換成讓保羅沙特，換成叔本華，換成尼采。當然，看得都是二手資料。（我記得我讀過大概30頁的《作為意志與表象的世界》，因為我爸的書櫃上有，還有大概兩章的《查拉圖斯特拉如是說》，雖然我都記不得他的書名。）</p>
+<p>那確實是一段有點瘋狂的時間，我其實一直不確定同學們到底覺得我在幹嘛。當時一個跟我很要好的朋友，時不時要聽我跟他講這些半吊子的讀書心得。終於有一天他不開心了，請我不要在<strong>不適當</strong>的場合一直跟他講這些。我猜那之後我應該是收斂不少。</p>
+<hr>
+<p>寫這些好像是有些岔題了。</p>
+<p>或許只是想追尋，我自己今天的價值觀是在什麼情形下形成的。我曾經相信過什麼又怎麼改變的。</p>
+<p>2018年底公投結果出來的時候，高二上的我挺失望的。我當時寫了一篇臉書貼文（已經封存），把支持「進步價值」的人比做理想國「洞穴之寓」中率先走出洞穴看見陽光的賢者，而在洞穴裡的人覺得他瘋了。</p>
+<p>現在的我已經不認同我當時的想法。我不認為在民主社會裡有誰可以宣稱自己是「看見陽光」的人，又有誰全然是活在洞穴裡。柏拉圖對民主的懷疑或許有理，但他的理型世界並不更有說服力。</p>
+<p>如果我們相信什麼事情是對的，「為你在乎的事而戰，但以<strong>他人能加入行列</strong>的方式實踐。」(美國已故自由派大法官金斯伯格語)。現在的我是這麼相信的。</p>
+<p>(寫這篇一不小心就超時了，之後會寫短一點。)</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0727-Day9/</guid>
+  <pubDate>Sat, 26 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 8</title>
+  <link>https://hungchichao.github.io/posts/0726-Day8/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>最近我的家人跟我說，他不認同現在的台灣。他認為獨裁政體可能比民主政體更能促進經濟成長。他認為民主亂象已經導致台灣經濟面臨崩潰，而被獨裁大國統治可以讓大家都更富足。</p>
+<p>我很驚訝我們的信念竟截然不同。但我不會說他被洗腦了、被滲透了。連偉大的經濟學家Paul Samuelson 都曾經認為蘇聯在經濟體制上比美國優越，這並非毫無意義的論點。很多人好像都忘了，該怎麼跟異溫層的人溝通，而非互相叫罵。</p>
+<p>我應該怎麼回應？關於我愛的這個國家（不管這個家大或小，多山還是多地震）。</p>
+<p>大問題沒有簡單的答案。但我想先開始在這個Blog寫一系列，關於台灣的文章。</p>
+<hr>
+<p>這系列的文章會是關於台灣經濟的實證資料，涵蓋大多數公共政策討論（鄉民互嘴）會遇到的主題。包括薪資成長、所得與財富分配、經濟成長、失業率、房屋資產價格、財政收支、通貨膨脹、關稅與貿易條件、能源投資…</p>
+<p>坦白說，這些我都不懂。我不了解總體經濟學，我也做不出分析。但我想至少還有能力做到的，是去了解經濟事實，所有好的跟壞的。這個國家一定有很多缺點，但也有很多優點。我們需要健全的討論，而不是一昧壯膽或唱衰。</p>
+<p>良好的的公民社會需要有良好的公民對話，對話的前提在於雙方對事實有一些基本的共識。薪資有多不均？稅收跟債務有多少？能源缺口多大？然後才能討論好的政策是什麼。我知道自己並不具備這樣的知識，因為我關心的太少、了解的太少。</p>
+<hr>
+<p>我一面回想著自己當初為什麼要讀經濟學系，一面想著自己為什麼要申請PhD。</p>
+<p>我其實並不真的想要那張有教授簽名的紙。但如果留在學術界代表獨立思考能獲得回報、能嚴謹的說話還能被聽見的話，那我要留下來。</p>
+<p>但就算留不下來，想做的事情也不會變。</p>
+<p>下個學期要當經濟學原理(林明仁班)的大助教了。我被學長建議不要花太多時間在這件事上，應該專心準備論文跟申請文件。但我想還是有責任，跟學生分享一些課本之外的事情。或是說，並不是我教他們什麼，而是我跟他們一起學習，關於發生在這座島上的所有事情。</p>
+<p>我們有很多工作要做，現在、未來。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0726-Day8/</guid>
+  <pubDate>Fri, 25 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 7（關於這個Blog）</title>
+  <link>https://hungchichao.github.io/posts/0725-Day7/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>親愛的讀者：</p>
+<p>我想是時候來談談這個blog的方向是什麼。我平常斷斷續續的會紀錄一些生活上的事，大多數並沒有要給別人看，少數的有。我確實希望自己能夠寫的更認真更勤勞一點，把寫作當作第二專長在經營。不過過去並沒有付諸實現。其中一個問題，是我總是在於應該要寫什麼、怎麼寫上游移不定。</p>
+<p>我喜歡閱讀，雖然上大學之後讀書的速度明顯慢下來，但我想應該還是比身邊大部分的人讀得再多一點。詩、散文、小說、傳記、科普書都有。我花了很長的時間才慢慢意識到，我並沒有寫散文的能力。這裡的散文指得是抒情文，文學獎會出現那種。抒情散文貴在真誠。大喇喇的真誠簡單，但無趣；在高超的技巧中保持情感上絕對的真摯，需要天份。我的文字技巧並不適合走這個路線。其中一個原因是，我總好像是要用論理的方式來向別人證明我的情感。我已經發現這在文學上是行不通的，情感早已支離破碎了。</p>
+<p>而這次我再度試著開始持續地寫作，目的算是給自己建立一個新的習慣，所以本質上跟跑步的目的是類似的。第一階段的目標，是從上週開始，連續寫42篇部落格。寫作的時間預設是在吃早餐的時候，計時半小時，半小時內寫出什麼就是什麼。（不過有幾天很明顯我在晚上又做了一些調整）</p>
+<p><strong>關於文體</strong></p>
+<p>這個blog的文體是「隨筆」，也就是英文說的Essay，大部分的人都會把法國思想家蒙田當作Essay的始祖。這種文體不太能翻成「散文」（除非我們把散文定義成詩跟小說以外的所有東西）。Essay是談論一件事、一個觀點的短文。因此這42天的訓練，也是在訓練自己在半小時內，盡量把一個「觀點」給講清楚。</p>
+<p><strong>關於內容</strong></p>
+<p>因此雖然是每天更新，但這些隨筆不是日記。我盡量降低記敘文的成分，也避免看起來很像流水帳。我也有考慮過是不是應該更圍繞一個主題來寫（利如介紹某個有趣的經濟學觀念），連寫多天。但我還是決定在前期先把平常堆積在腦中的思緒給倒出來，所以目前這些隨筆多半還是我的生活感觸。</p>
+<p><strong>關於未來</strong></p>
+<p>當然目前出現的文章裡，很多可能都不太能符合我自己設下的標準。有幾篇錯字也沒改（苦笑）。42天後我會再思考該如何處理這42篇隨筆。或許會下架，或許改寫之後再上架，或許就不寫了。誰知道呢？</p>
+<p>(不過，因為這是用GitHub Page架設的，所有東西都已經紀錄在GitHub上面，而且因為免費使用所以被迫設定成Public Repository，文章已經永遠留在眾多commit裡面了，除非我刪掉整個repo。)</p>
+<p>感謝所有讀到這裡的人。</p>
+<p>Chi Chao</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0725-Day7/</guid>
+  <pubDate>Thu, 24 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 6</title>
+  <link>https://hungchichao.github.io/posts/0724-Day6/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>突然回憶起小時候的一件事。</p>
+<p>大概是小學二年級的時候，我爸媽曾經帶我去檢查過動症。我媽的理由是：我寫作業很不專心，常常東摸西摸拖拖拉拉。確實我從小寫作業就比別人慢。在安親班裡面，同學們都已經在玩桌遊了（那時候的小學生普遍還沒有手機），就剩我作業寫不完還要帶回家寫。可能是因為這樣，小時候沒什麼朋友。</p>
+<p>我還記得那天我被帶到一個房間裡面，對著一個按鈕，醫生要求我看著碼錶數秒數按按鈕。後來結果並沒有發現什麼異常，我爸媽也只好接受我就是「莫名其妙的喜歡拖拖拉拉」。</p>
+<p>時隔多年回想起來，我倒是有另一個版本的解釋，而且這個解釋到現在都還適用：停不下來的不是身體，而是大腦（思緒）。</p>
+<p>簡單來說，在我清醒的時間裡，大腦基本上都在說話。有時候是很認真在想事情，有時只是有一些情緒在運作。無論如何，大多數的狀況都沒有停過。寫下來的只是出現在思緒中的話語的極小一部分。（或許這是我寫作的契機？）</p>
+<p>我知道有些人腦中會有獨白，有些人則沒有，這倒未必是個壞事。但至少我很難以在該做事的時間進入狀況。很多時候進了辦公室，明明應該靜下心來做事，但思緒卻這在想其他的事情停不下來。</p>
+<p>例如說昨天上午在辦公室花了一個小時思考這個blog的文體跟風格的問題（這應該是明天的內容）。在更早以前是在想自信心的問題，在更早之前可能在想烏俄戰爭的問題，在想數學模型在經濟學的必要性的問題⋯⋯</p>
+<p>很多時候在時間真的很緊迫的時候，我必須對自己大叫「停！」。運氣好的話就真的會停下來。運氣不好的話，我就算回到租屋處，還是會在在房間裡踱步想著正在想的事情。時間就過去了，作息就這麼亂掉了，也不會想出什麼東西來。</p>
+<p>這個暑假其中一個重要的目標就是希望能夠訓練自己控制自己的思緒。方法的話還在嘗試，寫作是其中一種。</p>
+<hr>
+<p>（記夢）</p>
+<p>今天夢到我這學期又去修了謝銘倫的線性代數二，結果期中考之後忘記寫兩次作業。</p>
+<p>還夢到跟一群高中同學要一起去吃飯，但它們後來決定不等我了。</p>
+<p>還有一個奇怪，像是教室又像宿舍的空間。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0724-Day6/</guid>
+  <pubDate>Wed, 23 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 5</title>
+  <link>https://hungchichao.github.io/posts/0723-Day5/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>我自覺是一個自信心低落的人。除了我特別學過、被訓練過或是從小習慣的事情之外，我基本上不覺得我能夠做好其他任何事物。</p>
+<p>實際做得怎麼樣是一回事，但因為沒有自信的不安是普遍的。這包含了買衣服、清洗冷氣、報名英文檢定等等小事，或是做問卷、寫論文等等的大事（我依然覺得自己並沒有被訓練好會寫論文）。</p>
+<p>（這麼說，除了單純讀書、教書之外，到底有什麼事情我是有信心的？？？）</p>
+<p>當然很多人都會跟我說，「你想太多了」。不過缺乏自信這件事與其說是理性判斷的結果，本質上更像一種本能的情緒反應。就像是原始人看到野獸的害怕一樣。</p>
+<p>因為不安，所以就會逃避，事情就做不完，不安會不斷的疊加上去。這樣的性格究竟是怎麼來的，跟我的童年有什麼關係嗎？</p>
+<hr>
+<p>岔題了。</p>
+<p>最近在思考一個問題：AI能讓我們變得更有自信嗎？</p>
+<p>在AI出現後，最開始緩解的焦慮就是英文寫作。基本上我現在寄任何英文信件都少不了ChatGPT幫忙。當然還有Coding，省去的無盡的翻找Stack Overflow，從那些講話不太清楚的留言中尋找蛛絲馬跡。現在誰還會看Stack Overflow？</p>
+<p>最近一些應用包括我最近請AI幫我生成GRE單字的翻譯跟例句，直接轉成Quizlet的格式輸入成單字卡，就可以用手機反覆練習。 另外AI也幫我解決了一個最近研究上遇到的，一個比較棘手的線性規劃問題。自己在網路上找解答不知道要找多久。</p>
+<p>AI似乎給我一種前所未有的信心：我確實能做到很多事情。如果未來AI Agent更為成熟，那上面那些我想逃避的事（報名英檢、穿搭+網購衣服…）可能都能請AI直接解決。</p>
+<p>但這讓我更加自信了嗎？還是總有一天會因為沒有AI就什麼事情也做不了，感到極度自卑呢？</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0723-Day5/</guid>
+  <pubDate>Tue, 22 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 4</title>
+  <link>https://hungchichao.github.io/posts/0722-Day4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>最近KM開始推動我們研究室在健保資料庫跟財稅資料庫的各項基礎建設。其中一項是使用GitHub Issues 來管理專案。似乎是被研究室裡的一些學長啟發，他決定要大家把結果依照時序、主題依照固定形式放在GitHub Issue上，方便他統一的瀏覽。</p>
+<p>GitHub Issue 的設計確實像是一個主題式的留言板。他支持Markdown 語法，也可以加入連結到其他的Issue、文件或是特定的Commit。而企業版還有一個進階功能，是可以把Issues用一個儀表板呈現出來，依照進度分成To Do, In Progress, Done。</p>
+<p>另外一個使用GitHub的好處是在上面的Markdown文件會被自動渲染（具體來說是依照GitHub Flavored Markdown 這個Markdown 的變體）。因此如果研究結果使用.md來紀錄，在GitHub 上就可以生成美觀的文件。這點蠻吸引人的。</p>
+<hr>
+<p>如何管理研究進度是個難題。</p>
+<p>我們研究室過去的狀況是大家會各自用自己習慣的方式儲存分析結果。例如我早期喜歡用Rmarkdown輸出成html給老師看（當然因為之前的專案不是在資料中心）。有些人喜歡把攜出的圖檔同一放進一份簡報。有些人就直接存在overleaf。有人甚至用R shiny把結果放在網頁上。</p>
+<p>KM開會的時候，基本上就是我們打開什麼他就看什麼。除非要寫文章了，不然也不會管這些東西存在哪裡，怎麼整理等等。而最近他似乎是受不了了。他的說法是：「我開始上年紀了，記憶力不好，上次開會講了什麼，其實我都不記得，每次開會都要花半小時跟Coauthor一起回憶。」本質上來說，他希望所有過去跟現在的分析結果要能讓他一目了然。</p>
+<p>究竟用GitHub 來做研究（而不是軟體開發）的專案管理是不是好的做法呢？可能還需要一些時間才看得出來。不過目前GitHub 能做到的是簡潔的佈告欄跟建議的進度追蹤，似乎已經頗為足夠了。如果功能太多（像Notion 那樣），反而有點容易分心。當然，有些功能（例如每一個Issue可以設定人來Review Pull Request） 可能在我們的情境不太實用。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0722-Day4/</guid>
+  <pubDate>Mon, 21 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 3</title>
+  <link>https://hungchichao.github.io/posts/0721-Day3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>我竟然開始跑步了。</p>
+<p>這次開始的原因是村上春樹。我一直都知道村上是個跑者。直到讀了他的散文集《關於跑步，我說的其實是……》，才清楚他開始跑步的原因是什麼。在此書第二篇〈一個人如何變成一個跑步的小說家〉，他說，與一般人想像不同，他認為小說家是高度消耗心力跟體力的工作。在寫《尋羊冒險記》的時候，他發現體力急速下降，身體也變得肥胖，他知道他不可能以這個狀態持續寫作一輩子，於是便選擇了他當時能做最方便的運動：跑步。</p>
+<p>這本書中間夾了幾頁彩色的照片，其中有幾張是他旅居波士頓時，在查爾斯河沿岸跑步的照片。我看著他在河岸跑步的身影，問自己：「萬隆旁邊不也有一條河嗎？也許像這樣在河邊跑步還不錯。」就這樣開始了。</p>
+<p>當然，進一步詮釋的話沒有那麼簡單。我某種程度在「模仿」村上春樹。我曾經和朋友說過一個理論，是說對於一個狀態不佳的人來說（這裡主要是指心態上陷入混亂、挫折或感到失去方向等心理上的狀態），找一個你覺得值得尊敬的人，去試著在自己的生活中扮演他，可能是一種解方。</p>
+<p>我尊敬村上春樹，倒不是我有多喜歡他的小說，只是我渴望擁有他那樣的毅力。想像如果村上今天變成了一個在住在河堤邊的碩士生，那他大概會開始跑步吧。</p>
+<hr>
+<p>從上禮拜至今，除了一天下雨、一天跟朋友吃飯、一天被帶到陽明山上滿足學長看星星的願望之外，每天晚上大概九點到十點之間，我開始到河濱慢跑。也是因為這樣我才發現，自己租屋處出去往西走，跨過一個街區，進入河堤的樓梯就在眼前。</p>
+<p>爬上河堤的時候感受到其實河畔有風，有一點河的氣息。沿著自行車道，慢慢開始跑起來，雖然身體一開始抗議著，但很快也屈服了。</p>
+<p>村上有一個理論，是說他從跑步裡學到很多寫作的方法。而我也有一個理論，是其實做研究（社科類的）其實本質上並不跟小說家差太多。都是在講故事，都需要長時間，都需要反覆嘗試，都不知道能不能順利出版，也不知道出版之後會不會暢銷（被引用）。所以從跑步中也可以學到很多做研究的方法吧？其中的道理，或許就像村上說的：「無論如何也不停下來用走的」。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0721-Day3/</guid>
+  <pubDate>Sun, 20 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 2</title>
+  <link>https://hungchichao.github.io/posts/0720-day2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>我接著看了其他Lex Fridman的訪問節目。我看了今年一月初，他到基輔訪問澤倫斯基，兩個多小時的<a href="https://youtu.be/u321m25rKXc?si=k3giRr2pY3ZiKLnZ">訪談</a>。</p>
+<p>主持人自認為立場是一個中間派，他宣稱此行的目的是要推進雙方停火、談判、協商。他對川普有很強的信心（原因不明），認為川普可以結束這場戰爭。而整場訪問基本上在兩種思維之間激烈來回：「為了停火做出妥協」與「戰鬥直到獲得安全保障」。</p>
+<p>主持人不斷詢問「讓步」的可能，但澤倫斯基對於「安全保障」，例如加入北約，始終踩得很死。澤倫斯基清楚的傳達了，身為一個烏克蘭人，暫時向俄羅斯妥協是不能接受的。因為所有俄羅斯的要求都是在讓下一次入侵時烏克蘭毫無抵禦的能力。而烏克蘭人無法、絕對無法，信任普丁的任何承諾。</p>
+<p>主持人持始終認為有協商的可能。他提出了一個論點：普丁行動的出發點，終究是為了他心目中俄羅斯人民的福祉。「所有領導人都愛著他的人民」。基於這個假設，他認為協商是可能的，因為長期的戰鬥終究不是俄羅斯人民之福。所以他相信，只要「滿足條件」，普丁會停止這場戰爭。換句話說，我們「必須」相信普丁是理性的，並不全然是因為個人情緒或自己的權力慾望行事。如果普丁目標確實是某種版本的俄羅斯福祉，那談判確實有可能，如果動機全然是個人的，談判如何可能？</p>
+<p>澤倫斯基反問，一個讓18歲男孩到前線送死的領導人，一個鎮壓境內其他族群的領導人，如何可能愛著他的人民？沒有烏克蘭人，到現在，能夠相信普丁確實為他的人民著想。普丁向國內隱瞞事實的真相、普丁自己從未到訪前線。澤倫斯基確實認為普丁是瘋狂的，他沒有下限。</p>
+<p>唯一能保障烏克蘭的，只有來自歐洲甚至是美國的安全保障。加入北約只是一種保障的形式，以色列沒有加入北約，但比很多北約國家都具有更充足的安全保障。</p>
+<p>而他們也談到原諒。有沒有可能，烏克蘭人能原諒普丁？澤倫斯基說出了他心中的未來，就像是納粹德國一樣，普丁需要被咎責，俄羅斯人必須要承認自己的錯誤，並且傳承給下一代，在教育中、文化中，深且反醒。如此，在幾個世代之後，烏克蘭人與俄羅斯人，才有可能再度成為朋友。此時此刻，要求烏克蘭人原諒、放下是不可能的。</p>
+<hr>
+<p>思考與極權國家的領導人互動，很多時候淪為爭論到底對方心中想要什麼。對於獨裁者的想像，會劇烈影響對於我們該執行什麼樣的行動。我們都希望對方的獨裁者是愛好和平、愛護人民的領導人，那樣我們就不會需要開戰。但我們可以這麼天真嗎？在俄羅斯的例子，不行。</p>
+<p>我自己觀察國內政治，我不認為給國民黨人貼上「中共同路人」的標籤是恰當的。不過國民黨人——因為不明原因——普遍相信對岸的領導人是一位理性、愛護人民、愛好和平的領導人。而唯一會受到對方攻擊的可能，就是台灣自己做一個搗蛋鬼去激怒對方。所以自保之道就是討好。</p>
+<p>這樣的信任是哪裡來的？我不清楚，但很多台灣人確實抱持這樣的想法。這樣的信任是不是合理的？我不知道，但我無法。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0720-day2/</guid>
+  <pubDate>Sat, 19 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 1</title>
+  <link>https://hungchichao.github.io/posts/0719-day1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>昨天，我偶然看到一段由 Lex Fridman 採訪陶哲軒（Terence Tao）的影片。整段訪談長達三個多小時，我只看了其中幾段片段。</p>
+<p>即使只是短短幾分鐘的片段，陶哲軒給人的印象就是一位真正的通才。他們談論了各式各樣的主題，而讓我印象最深的是他能以一種高層次的視角來說明複雜的數學問題，並為它們提供脈絡。他語速很快，但表達卻十分清晰。</p>
+<p>我不像某些經濟系同學那樣專注於數學，不過偶爾也會為著迷於數學的美感。那種美不只是來自解開難題的快感，而是來自於發現看似無關概念之間隱藏連結的過程，一種統整的美。我很喜歡從事這樣的活動。在教大二學生計量經濟學時，我總是試著以有條理的方式呈現證明，讓它們看起來更清楚，並與其他概念連結起來。對我而言，這就是所謂的「直觀」——不只是自圓其說，更重要的是，你能看見它從何而來。</p>
+<hr>
+<p>不過，作為一位經濟學學生，我對於過度沉迷於尋找「隱含結構」或「潛在連結」這件事，始終抱持著保留態度。我們很容易把這種結構上的優雅誤認為是研究的本質。在經濟學中，我們常常看到不同模型之間有相似之處，或者發現相同的數學技巧可以用來處理看似無關的問題。但這有時其實是種錯覺。或許有人會認為，就像數學在物理學中被用來描述物體的運動，在經濟學中則被用來描述人的選擇行為——但這樣的類比往往只是表面上的。這些相似性，多半來自我們如何建構模型，或者我們是從什麼視角開始分析問題。</p>
+<p>舉個例子，在可轉讓效用的家庭配對模型中，我們可以觀察到與福利經濟學第二定理非常相似的結果：模型中的穩定配對概念，對應到某種社會最適條件。這樣的對應確實很有啟發性。但它是否真的揭示了交易與婚配行為之間某種人類行為的共同本質？我並不這麼認為。這種「奇蹟般的結果」，其實是來自我們選擇的工具與設定的目標。我們選擇從一個完美、無摩擦的世界作為分析的起點，但那其實是一種過度簡化，甚至是一種對現實的錯誤描繪。</p>
+<p>人的行為是混亂且難以預測的。數學應該是幫助我們理解世界的工具，而不是直接對人類行為的描述。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0719-day1/</guid>
+  <pubDate>Fri, 18 Jul 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>使用Zotero和Better BibTex生成引用書目</title>
+  <dc:creator>H.C.C </dc:creator>
+  <link>https://hungchichao.github.io/posts/0124-bibtex/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>這篇文章沒什麼大道理，就是記錄一下最近摸索出的新知識。</p>
+<section id="bibtex" class="level3">
+<h3 class="anchored" data-anchor-id="bibtex">BibTex</h3>
+<p>LaTex文件中的書目引用是透過名為BibTex的編輯器生成。基本用法是要提供一個bib file。這個檔案就像是為了這篇文章所創建的一個書櫃，放著所有可能用到的書目的資訊。當你在latex文件中提及bib file裡的某篇文章，BibTex就會去把那篇文章的資訊抓出來放加入文件中。下面是一個簡單的bib file範例。</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">@article</span>{<span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">mccall_economics_1970</span>,</span>
+<span id="cb1-2">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">title</span> = {Economics of {Information} and {Job} {Search}},</span>
+<span id="cb1-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">volume</span> = {84},</span>
+<span id="cb1-4">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">issn</span> = {0033-5533},</span>
+<span id="cb1-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">abstract</span> = {I. Introduction, 113.--II. A simple model of job search, 115.--III. A more general model of job search, 123.--IV. An adaptive search model, 125.},</span>
+<span id="cb1-6">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">number</span> = {1},</span>
+<span id="cb1-7">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">urldate</span> = {2024-10-26},</span>
+<span id="cb1-8">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">journal</span> = {The Quarterly Journal of Economics},</span>
+<span id="cb1-9">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">author</span> = {McCall, J. J.},</span>
+<span id="cb1-10">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">year</span> = {1970},</span>
+<span id="cb1-11">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">note</span> = {Publisher: Oxford University Press},</span>
+<span id="cb1-12">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">pages</span> = {113--126},</span>
+<span id="cb1-13">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">file</span> = {JSTOR Full Text PDF:/Users/hungchichao/Zotero/storage/FJSJBXUK/McCall - 1970 - Economics of Information and Job Search.pdf:application/pdf},</span>
+<span id="cb1-14">}</span></code></pre></div>
+</section>
+<section id="書目管理系統-zotero" class="level3">
+<h3 class="anchored" data-anchor-id="書目管理系統-zotero">書目管理系統 Zotero</h3>
+<p>要怎麼取得.bib檔呢？當然最暴力的做法可以自己創建一個文字檔手動輸入。大部分的期刊網站(e.g.&nbsp;JSTOR)都可以幫你生成bib file所需的格式。不過這麼做非常沒有效率。我自己（以及大部分認識的人）都是使用免費的書目管理系統Zotero。這個系統有幾個主要功能：</p>
+<ol type="1">
+<li>在系統中創建不同資料夾搜集參考文獻</li>
+<li>提供瀏覽器的外掛，讓你直接把網路上看到的paper加入資料庫</li>
+<li>自動下載pdf，可以瀏覽文件與做筆記</li>
+<li>自動輸出bib file</li>
+</ol>
+<p>其中第四個功能大大降低了我們編輯latex中引用書目的門檻。（其實Zotero也可以搭配Microsoft Word使用，不過我不會用word寫論文就是）。</p>
+<p>要安裝Zotero非常簡單，只要到<a href="https://www.zotero.org">官網</a>下載就行了。同時要打開瀏覽器的Zotero外掛(這是我很久以前設定的，網路上有非常多如何使用Zotero的教學)。</p>
+</section>
+<section id="better-bibtex" class="level3">
+<h3 class="anchored" data-anchor-id="better-bibtex">Better BibTex</h3>
+<p>Zotero雖然強大，但在輸出bib file上還是稍微缺乏彈性。我們可以下載<a href="https://retorque.re/zotero-better-bibtex/">Better Bibtex</a>這個Zotero的plug-in。Better BibTex可以做到幾件原本做不到的事：</p>
+<ol type="1">
+<li>自訂citation key：Zotero自動生成的citation key似乎有可能發生重複的問題，或是有時候你就是想自己訂citation key。Better BibTex可以當你做到這點。</li>
+<li>選擇bib file中需要的field： 原始的Zotero會自動把所有資訊都放入bib file，其中有些非常沒必要，例如abstract(誰會特別打開.bib看abstract?)。Better BibTex 可以自己設定需要排除的field，讓bib file保持一個極簡風。</li>
+<li>自動更新：當你把新文章加入資料庫時，自動幫你更新bib file，這樣就不用一直按輸出。</li>
+</ol>
+<p>使用Better Zotero可以參考這個<a href="https://www.youtube.com/watch?v=CYbiDFqCdOs">YouTube影片</a>。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://hungchichao.github.io/posts/0124-bibtex/betterbibtex1.png" class="img-fluid figure-img"></p>
+<figcaption>使用Better BibTex外掛設定輸出的field</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://hungchichao.github.io/posts/0124-bibtex/betterbibtex2.png" class="img-fluid figure-img"></p>
+<figcaption>輸出.bib file</figcaption>
+</figure>
+</div>
+</section>
+<section id="bibliography-style" class="level3">
+<h3 class="anchored" data-anchor-id="bibliography-style">Bibliography Style</h3>
+<p>雖然關聯不是很緊密，不過我還是順便紀錄一樣如何在Latex中進行引用。首先需要使用處理引用書目的套件，我使用的是<a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib">natbib</a>。接著設定ibliographystyle，我使用aer bibliography style。aer 顧名思義就是美國經濟學會發行的American Economics Review所使用的格式，據說跟Chicago style比較接近（我無法驗證就是）。事實上經濟學的主流期刊都有自己的style可以用，例如Econometrics的ecta與Journal of Political Economy 的jpe。關於各種style詳情可以參考這個<a href="https://www.bibtex.com/bibliography-styles-author-date/">網站</a>。此例中我從zotero輸出的bib file叫做<code>labor_ref.bib</code>，只要把這個檔案放在與本文相同資料夾中並在結尾處加上<code>\bibliography{bib file name}</code>即可。以下是一個非常簡單的例子。</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">\documentclass</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">article</span>}</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">\usepackage</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">natbib</span>}</span>
+<span id="cb2-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">\bibliographystyle</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">aer</span>}</span>
+<span id="cb2-5"></span>
+<span id="cb2-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">\title</span>{Labor II: Model Proposal}</span>
+<span id="cb2-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">\author</span>{R13323021 Hung, Chi-Chao}</span>
+<span id="cb2-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">\date</span>{Octobor 2024}</span>
+<span id="cb2-9"></span>
+<span id="cb2-10"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">document</span>}</span>
+<span id="cb2-11"></span>
+<span id="cb2-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">\maketitle</span></span>
+<span id="cb2-13"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\section</span>{Introduction}</span>
+<span id="cb2-14"></span>
+<span id="cb2-15">This model follows the ``search" framework established by <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\citep</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">mccall_economics_1970</span>}.</span>
+<span id="cb2-16"></span>
+<span id="cb2-17"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">\bibliography</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">labor_ref</span>}</span>
+<span id="cb2-18"></span>
+<span id="cb2-19"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">document</span>}</span></code></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://hungchichao.github.io/posts/0124-bibtex/bib_example.png" class="img-fluid figure-img"></p>
+<figcaption>輸出結果</figcaption>
+</figure>
+</div>
+</section>
+<section id="在本地端執行bibtex" class="level3">
+<h3 class="anchored" data-anchor-id="在本地端執行bibtex">在本地端執行BibTex</h3>
+<p>我一開始在本地端complie的時候，無論如何citation都跑不出來。經過研究才發現原來我誤解了BibTex的運作原理。事實上，當你在一篇latex文章中加入引用時，發生的事情如下：</p>
+<p>當你按下complie的時候，你使用的編輯器（通常是pdflatex或xelatex）會先將所有的引用資訊記錄在一個auxiliary file(name.aux)。接著，BibTex會去讀取這個aux file, bib file跟所需的.bst file(記錄你選擇的style的設定)，生成出一個.bbl的檔案，這時候要再實行一次（或兩次）的pdflatex將.bbl的資訊讀進去，才會顯示出引用書目。</p>
+<p>我之前都是在Overleaf上編輯，Overleaf會自動幫你處理好這一切，所以我從來都沒有意識到背後這些運作。不過在本地端的編輯器(我使用的是Visual Studio Code)他並不一定知道你要執行BibTex。解決方法就是在VScode LaTex Workshop裡面build LaTex project底下選擇正確的recipe（例如 pdflatex -&gt; bibtex -&gt; pdflatex*2），VScode就會正確執行所有步驟了。</p>
+</section>
+<section id="參考資料" class="level3">
+<h3 class="anchored" data-anchor-id="參考資料">參考資料</h3>
+<hr>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/BibTeX#Processor">BibTex Wikipedia</a></li>
+<li><a href="https://guides.lib.uchicago.edu/c.php?g=992088&amp;p=7228303">UChicago Library Guide for LaTex</a></li>
+<li><a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex#Bibliography:_just_a_list_of_\bibitems">Bibliography management with bibtex</a></li>
+<li><a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib">Bibliography management with natbib</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Tools</category>
+  <guid>https://hungchichao.github.io/posts/0124-bibtex/</guid>
+  <pubDate>Sun, 26 Jan 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>關於當經原TA的一些心得</title>
+  <dc:creator>H.C.C </dc:creator>
+  <link>https://hungchichao.github.io/posts/0119-econ101/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>這學期我在林老師的「個體經濟學原理暨實習」班上擔任助教，平時的工作是出作業、改作業跟回答同學的問題。</p>
+<p>期末考之前，有一個經濟系的同學來Office Hour問問題。結束之後又留下來跟我們聊了一陣子。同學的問題大致上是說，覺得經濟學原理有些「不切實際」，好像不確定之後學了可以做什麼。那時跟他講了一些自己的想法，講的有些發散，這次整理整理記錄下來，也給自己參考。</p>
+<section id="對知識的簡單分類" class="level2">
+<h2 class="anchored" data-anchor-id="對知識的簡單分類">對「知識」的簡單分類</h2>
+<p>我猜想，大一同學來修經濟學原理，可能有三種不同的想像。第一種是想學一些<strong>定義或規則</strong>，諸如GDP怎麼算、通膨跟失業率的定義、聯準會決定升降息的依據之類的知識。</p>
+<p>這類知識通常是一些由人們制定的規則或是標準，學習這類知識明顯「有用」，至少可以判讀一些數據跟表格。不過這類的知識在個體經濟的部分佔比不高，在系上全部必修課中也只佔很小一部分。提供這類知識的課程反而是民法、會計學、貨幣銀行學等等。</p>
+<p>第二種是想知道一些<strong>現象或趨勢</strong>，例如最近通膨如何變化、國際能源價格走勢、對哪些國家貿易有順差逆差等等。</p>
+<p>這類知識通常是一些「社會或經濟現象」，經常在報章雜誌、網路上被討論。學習這些「應該」有用，至少掛在嘴邊能讓人感覺「你很懂」（相反地，某些經濟學教授在餐廳被服務的阿姨問到最近經濟如何時只能尷尬地笑一笑）。不過，這類的知識在經濟學原理課程中也不太多，尤其若使用國際版的教科書，看到的是美國的通膨、就業、貿易趨勢，對台灣發生什麼也不太了解。「現象」固然相當重要，但世界很紛亂，光是看著一些趨勢線很難講出什麼，所以大概也沒花很多時間著墨。著重這類知識的課程可能有「頤賢講座」等。</p>
+<p>第三種則最接近經濟學原理與其他課程要教的，是<strong>解釋現象的理論</strong>，而且是「經過極度簡化的」理論。</p>
+<p>在經濟學裡這些理論多數時候以「模型」的形式出現，這些模型有一些需要被解釋的「變量」例如價格或數量，還有一些基本假設（e.g.邊際效用遞減）。其實要說服學生這些模型「有用」不是容易的事。首先，跟前兩種知識類型不一樣，這些模型定義在一些抽象的概念上（邊際效用是啥？），並且進行極度的簡化（物理學習題常被人笑說假設動物都是球型，其實經濟學也不遑多讓：一個消費者就是「一組偏好跟預算限制式」，不需要眼睛鼻子嘴巴。）再者，這些模型並不「如實描述」現實世界，我們很難想像有一個人的大腦中會計算「邊際效用」、賣水果的小販知道需求線並且讓「邊際成本等於邊際收益」。這類型的知識，其實才是整個經濟學原理，包含大二必修個體與總體的大部分內容。</p>
+</section>
+<section id="事實工具" class="level2">
+<h2 class="anchored" data-anchor-id="事實工具">事實?工具？</h2>
+<p>那究竟學生為什麼需要花大部分的時間學習第三種知識呢？這大概是困惑的來源。某些人對經濟學理論做出此類辯護：「雖然模型很假，但能夠很好的預測人類的行為，所以某種程度還是在描述真實」，我個人不喜歡這類論點。我自己的觀點是從某種實用主義出發，把這些模型看成是經濟學家的工具。經濟學家的工作大概可以分成幾個步驟：</p>
+<ol type="1">
+<li>將現實世界簡化成抽象的模型（通常是由變數與函數組成的數理模型）</li>
+<li>分析這個模型</li>
+<li>將分析的結論帶回現實中做出推論或預測</li>
+</ol>
+<p>之所以需要「簡化」是因為現象往往過於複雜，在完全不簡化的狀況下難以解釋所有的機制跟因果關係，那就無法建構任何一般性的「理論」。而經濟學原理（包含之後的課程）其實是在示範過去的經濟學家如何從事這類「簡化」、「建模」的活動。</p>
+<p>不過多數時候經濟學教育花很多時間在做第二個步驟，也就是「分析模型」。有些模型相對簡單，例如說供給需求，兩條線，解二元一次就分析完了；有些模型供的工具比較複雜，例如說使用連續函數跟微積分，分析起來就麻煩一點；有些模型使用一些很高深的工具（像是上學期在seminar聽到什麼Markov Perfect Bayesian Nash Equilibrium），沒有足夠數學基礎還沒辦法分析。大多數的考試和習題都屬於第二步驟。</p>
+<p>反倒是第一個步驟，我認為是建構理論最核心的步驟。經濟學家使用這一套工具來為社會現象「建模」，這些方法反映出經濟學家的一些預設立場（最主要是「方法論的個體主義」，大部分的時候也會預設「理性」、「偏好穩定」等等）。所以某種程度來說更像是一副眼鏡，也可能是紅外線感測儀。戴上去之後，看見的世界是紅外線的世界。我們的工具凸顯了某些面向，同時也隱藏了一些面相。如何取捨決定了我們理論的結果（所以正確來說，模型跟理論是不一樣的，模型建構理論的工具，一種模型可以為很多理論服務）</p>
+<p>缺乏對於「建模」過程的了解，單純反覆練習分析模型求解，是我認為造成困惑跟缺乏學習動機的主要原因。</p>
+</section>
+<section id="通靈" class="level2">
+<h2 class="anchored" data-anchor-id="通靈">通靈？</h2>
+<p>不可否認在教學上會遇到很明顯的困境是「建模」的能力非常難以測驗，說實話這學期我自己上「勞動經濟學」要自己寫模型時也感到非常生疏。有些時候經濟學原理的出題者想要出一些「生活化」的題目，引導學生從情境中寫出類似課本的模型，但一不小心就有可能讓經原考試變成為人詬病的「通靈大賽」。學生對同一個情境如何建模可能有多種想像（可能一個情境就容許多種詮釋），題目沒說請楚的話只好用猜的。當然學生也知道要透過寫考古體來學習「猜」出題者的想法，盡量符合出題者的意思。不過確實就是本末倒置了。</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>寫了這麼多，其實很多也是我當TA的這學期才慢慢體會。我想我跟其他三個助教們（學生似乎都還分不清楚誰是誰）有盡量在降低「通靈」的成分，但有沒有達到效果就不得而知了。至少看選課人數好像沒什麼影響XD</p>
+
+
+</section>
+
+ ]]></description>
+  <category>NTU</category>
+  <guid>https://hungchichao.github.io/posts/0119-econ101/</guid>
+  <pubDate>Sat, 18 Jan 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>開張！</title>
+  <dc:creator>H.C.C </dc:creator>
+  <link>https://hungchichao.github.io/posts/0112-welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p><img src="https://hungchichao.github.io/posts/0112-welcome/JapanSky.jpeg" class="img-fluid"></p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>架部落格是我長久以來的夢想。這個部落格是使用 開源的發布系統<a href="https://quarto.org">Quarto</a>架設的，他可以協助將類似Markdown的檔案轉換成HTML並提供網頁的模板。 感謝Ting-Chih Hung的Quarto教學讓此部落格能夠順利開張。</p>
+</section>
+<section id="計畫" class="level2">
+<h2 class="anchored" data-anchor-id="計畫">計畫</h2>
+<p>這個blog目前主要分成四個主題：</p>
+<ul>
+<li>研究生系列：關於讀研究所經歷的大小事</li>
+<li>台北生活系列：關於在台北賃居走跳的故事</li>
+<li>加州回憶系列：關於去年在UC Berkeley交換的紀錄</li>
+<li>經濟小白系列：一些關於經濟學的東西</li>
+</ul>
+<p>有任何建議歡迎告訴我！</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://hungchichao.github.io/posts/0112-welcome/</guid>
+  <pubDate>Sat, 11 Jan 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>In Search of Lost Time</title>
+  <link>https://hungchichao.github.io/posts/0000-pastwritings/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>時間與內容無關。</p>
+<p>***</p>
+<p>腸胃炎後的第四天，午餐是吐司配小黃瓜跟玉米。早上把吐司裝進保鮮盒裡，搭上晨間的綠線列車。上次這麼做是在往Downtown Berkeley的列車上。今天的耳機選播李榮浩的「模特」專輯，出道即巔峰，忍不住這樣想著。</p>
+<p>胃痛的這幾天，被迫直接面對身體不適的時候，學會了大口呼吸，也許是藏在記憶深處的什麼被喚醒，也許是無計可施。深深的吸氣，吐氣，竟然真的就好過一些。</p>
+<p>沒有辦法寫出什麼，如朴作家<sup>1</sup>一樣令人會心一笑的情節，沒有辦法寫出像是李榮浩出道作那樣的歌詞，想要留下的感覺終究留不住。總還是想要被人關愛，也許對象不應該是朋友圈？也許回去Medium寫作？</p>
+<p>不能吃零食，今天的我竟然直接去水果攤買了一顆蘋果。從美國回來之後，似乎就再也沒削過蘋果了。技術一如往常的差，而且沒有專門將蘋果切瓣的刀具，切出來的蘋果歪七扭八。不知道怎麼竟被自己給逗笑了。</p>
+<p>在書桌前吃著剛泡玩鹽水的蘋果，想著要為明天去財稅做一點準備還是再閱讀一次朴作家的新書《信任的模樣》。吃完水果還是好餓啊，好想吃雞排（？）從來沒有減肥需求的我經然也被迫面臨「想吃但不能吃」的困擾。（今天至今為止吃了兩片吐司，一碗粥，跟一片蘋果，我是什麼苦行僧嗎）。但吃了那種東西我可能還要再多躺兩天。</p>
+<p>還是先閱讀朴作家的書吧。 我有多久沒有在房間看書了？</p>
+<p>我不常待在萬隆住處的原因，是因為沒有一張像樣的辦公椅嗎？ 今天從八點就待在家的我，這樣想著。</p>
+<p>在社科院的辦公室跟Lab都有裝上輪子，可以滑動的椅子。自己的房間裡是一張普通的木製餐桌椅。想想卻又覺得不對，以我這樣過動的個性，要是在房間裡也擺上一張辦公椅，肯定到處滾來滾去滾到底下鄰居受不了，也罷也罷。還是木頭椅就好。（這可是B還在萬隆的時候我們四個人一起去IKEA搬回來的，我自己組起來的椅子…）</p>
+<p>或是是今天確實有點早回家。其實前幾天待在家的時間更長，但主要是躺在床上。莫名奇妙得了腸胃炎直接讓兩個整天報銷，醫生說最近確實流行過一波，難不成是那天去桃機送機<sup>2</sup>回程的路上沒帶口罩？</p>
+<p>不知道為什麼才看了一點點朴作家的書，現在竟然變成在寫作。講到寫作，我最近一直在反省我的文字並不怎麼的「真誠」。我平時就會寫一些簡單紀錄想法的文字，有時候就會想寫長一點。但到底為什麼想寫？事實上對我來說寫作沒有很舒壓，也沒有什麼非寫不可的理由。想到頭來唯一合理的解釋是「討好自己」。確實，就是在討好自己。</p>
+<p>***</p>
+<p>今天我去活大點了碗酸辣湯，外面下以了暴雨，所以我躲進圖書館。躲進圖書館就跑去二樓看《天才的責任》<sup>3</sup>。一看又花了一個小時。覺得太久了。花太多時間去想哲學問題，從一開始就與維根斯坦背道而馳。不過這本傳記幾乎可以當作理解維根斯坦的入門書。他說，棕皮書（接近於之後出現在哲學研究前一百多節的內容）並不是給其他哲學家看的，而是給跟他具有同樣困惑的人看的。如果單純只是想知道維根斯坦說了什麼而去看哲學研究，那會發現它根本什麼都沒有說。</p>
+<p>還有另一段值得討論的話，在於維根斯坦似乎認為自己的哲學方法就是蘇格拉底的相反。我們很常在接觸哲學的一開始被引導去思考一些日常生活中常見的詞彙，例如「正義」、「善良」的意思，然後被引導而發現一般人並不了解者些詞語的意思，產生許多相互矛盾之處，進而評判一個未經反思的大腦對慨念的理解是混亂的、需要被哲學家加以釐清。但真是這樣嗎？會不會其實只有哲學家不懂什麼是正義？在接觸哲學之前，我們大部分的人在使用正義這個詞時也沒有遇到太多困難，當然每個人指的意思不太一樣，但在與身邊的人溝通上未必有什麼問題。當哲學家跳進來，一切才變得如此讓人困惑。會是這樣嗎？</p>
+<p>今天下午算是比較接近在工作的一個日子。但說實話仍舊什麼也沒有做成。我沒有真的理解Collective Labor Supply<sup>4</sup>，循著找了幾篇文章也沒有細讀。 我自己想像了一個我有興趣的經濟學：How to model? 但並沒有在很多的研究中看到這樣的影子。大部分的人都在測量某種elasticity 。可以說都是的reduced form。How to model is like how to design a board game. As long as you are internally consistent, no one can say you are wrong. However, just as some games are extremely boring, so are some models. 我可以說一直對這件事感到困惑又著迷。但這是一個很小眾的研究興趣嗎？畢竟這本質上不是一個非常科學的問題。但確實是重要的吧，代表說有某種重要無法化約到機制必須保留在模型裡。</p>
+<p>***</p>
+<p>星期六的晚上，研究室的窗戶上還是充滿霧氣。開著冷氣的室內跟潮濕的陽台好像兩個截然不同的世界。不知為何，我把手邊的工作放下了。我想要把事情想清楚。</p>
+<p>過去一週極度缺乏生活感。我完全沒有認真想過自己要怎麼樣生活。體現在衣櫃裡塞的完全沒有折的衣服，體現在每一餐吃的漫不經心，也體現在每個決定要提早入睡但還是在床上滑手機滑到眼睛乾澀的晚上。因為白天的事情很多，於是每天就這樣起床上班回家睡覺，也就沒有再思考要怎麼生活。這是個問題，當我在星期五晚上，試著靜下心來，想讓自己休息，卻始終感到很煩躁。很想要一個擁抱，一個就好，讓我能夠好好進入夢鄉。</p>
+<p>會覺得對生活不滿意，很大一部份來自於似乎我沒辦法掌控我的心情。我靜不下來，滿腦子想一些關於工作（計量、財稅）或是這個世界亂糟糟的事（川普、柯文哲案、匯率）。我並不真的想要想這些事情。不只是被事情追著跑，更是好像思緒被挾持著沒辦法想清楚。</p>
+<p>我覺得現在的我進入一個狀態。我對情緒的感知變得敏感，但我沒有動力去做任何事。開始變得非常需要情緒的照顧。或是說讓自己照顧自己。變得想要得到溫暖。還是害怕孤單。</p>
+<p>溫暖是什麼？在愛意的圍繞之下展開新的工作又是什麼樣子？我不想要在像無頭蒼蠅一樣到處亂飛然後用很粗淺的眼光攻擊自己活得不夠好。我不想要攻擊自己活得不夠好，所以我要活得很好。</p>
+<p>星期六的晚上給自己一些鼓勵的話。</p>
+<p>***</p>
+<p>一個夢想成為歌手的人，在多久都默默無名之後應該選擇放棄？不可能完全脫離利弊的考量。</p>
+<p>或許認清並不是所有事情都能有一個完美的標準。由時就任意的定宜個標準：如果XXX我就放棄。例如：如果申請不到有獎學金的program我就放棄。或是再高一點：如果我申請不到Top 20我就放棄，或是低一點：如果我申請不到任何學校我就放棄。決定這個標準很困難，但同時再怎麼想都還是非常任意，除非擬定一個超寬鬆或超嚴格的標準。</p>
+<p>總之，無論從什麼角度看，現在都跟放棄八竿子打不著。比較大的問題是心理問題。改善心理問題本身就是一件改做的事。如果現在不該放棄，那很多煩惱都可以比較單純的被處理。就是：想辦法舒緩、停止這些想法就好了。不需要去理會他們的真實性。但同時，也應該要防止會導致這些想法產生的原因，阻止原因更加重要。</p>
+<p>***</p>
+<p>搬出來住的一個好處，就是可以在晚上的時候，把燈關了，留下一盞昏黃的小桌燈，播一些簡單的音樂。今天播的是Ariana Grande 的Eternal Sunshine Deluxe Version。新加入的幾首歌都非常喜歡。這些歌都有一種很真誠的感覺，能夠輕輕地將你包圍。</p>
+<p>有時候換個視角可以看到不同事情，所以我會躺著。租屋處的床很矮，天花板很高，就這樣盯著天花板聽音樂想事情。有時候我在想自己是不是想太多了，好像只要不想太多，事情都能迎刃而解吧，但還沒有想到要怎麼不要想太多（哭笑）。</p>
+<p>我有時候也想多紀錄自己平常的生活，但太多的思緒。記錄下來其實也是在將思緒一縷縷梳理開來，否則記下來的都是一些難以追溯的片段。</p>
+<p>星期三那天在社科院遇到S學長，索性就走到醉月湖去。那幾天的陽光真的是eternal sunshine ，我們在醉月湖畔看到鴨媽媽跟一群剛孵出來的小鴨，我覺得我可以花一整天看著他們。</p>
+<p>那天我順道去校史館買了一組積木（跟樂高很像但不是樂高）總圖。回來花了三天陸陸續續的將他拼好。可惜的是積木竟然沒有把鐘塔做出來，好像少了些什麼東西。我想如果我哪一天又要出國讀書，大概會把他一起帶走吧。有研究室的同學指著總圖前的平台上的樂高人說：「再放個望遠鏡這就是你了」。確實，這幾年來在總圖晃蕩的日子是沒少過，也許拼起來的其實也是我自己的回憶。</p>
+<p>Eternal Sunshine 的Deluxe Version 有一個副標題，Brighter Days Ahead. 我有時候會想，在永恆的陽光褪去之後，有什麼理由相信Brighter Days Ahead? 最近聽到今年在川普政府大幅減少預算的狀況下申請國外博士班便當更加艱困，我想我對未來的想像也變得越來越不確定。我該對自己要求些什麼？我能夠期待什麼？再想下去可能又太多了。</p>
+<p>這學期修洪俊教的實證賽局分析。洪俊教是去年剛來教書的韓國人，經過許多朋友都認證是系上最帥的男老師。他一直勸我們不要念PhD，說世界上的路還很寬廣。不過上次跟他還有KM去跟來訪的學者出發吃飯，又聊到不做學術要做什麼。我想了一下高中的自己，回答說想當獨立媒體的記者。他們聽完哈哈大笑，說那還是去走學術吧，一樣也能發journal。所以我想我是沒有退路了（苦笑）</p>
+<p>所謂的Brighter是什麼意思呢？我其實越來越不確定，說實話我並不期待再次回到美國讀書。有時候我覺得此時此刻或許已經是我人生最幸福的時刻了，我都是修自己有興趣的課，做喜歡的教書工作，跟一群合得來的人生活，應付老師的研究要求。但一切感覺都是在倒數著，我卻還沒找到真正的快樂（或許該說是平靜嗎）。未來似乎並不是一個追尋的目標。當下正在急速地向後退，未來以未曾預告過的速度撲面而來，只怕是要撞得頭破血流。</p>
+<p>於是我在想像一種生活，一種在意義結束了之後的生活。世界像是散落一地的樂高，我在廢墟裡面試著拼著自己想要守護的東西，然後等待金黃色的夕陽再次降臨。</p>
+<p>***</p>
+<p>近幾日的陽光很好，萬里無雲，在學校裡散步非常舒服，讓人想起在加州的日子。記憶模糊了，而我也越來越不確定應該要用什麼方式丈量過去和現在，自己的處境是怎麼樣的變化。我在Berkeley的時間並不能稱得上非常開心，但時間越久卻越讓人懷念。而在台灣的日子則是不知道該往哪裡去。</p>
+<p>我想像一種處在邊緣的處境。想像一種屬於弱者的敘事，在這裡我用一種承認自己已經認輸離開遊戲之後回過頭來的方式來思考我的人生。一切似乎開始清晰。 時間</p>
+<p>跟J在總圖後草坪曬太陽。</p>
+<p>那一天下午要去Brown Bag報告。不出所料的焦慮又發作，什麼事也做不了。試圖出去走走晃晃還是一樣。後來J傳了個訊息來說要不要曬太陽。</p>
+<p>J是高中的同班同學，上大學之後我們還當過兩年的室友。不過最近因為他要準備考試正在讀書的關係，好像有空能見面的時間更多了一些。</p>
+<p>沒想到草坪上陽光把手機曬熱了，曬到不能動，只好挪到比較陰涼的地方。</p>
+<p>***</p>
+<p>Stay with the flow.</p>
+<p>星期一來到學校要把論文的附錄給補上。還是經常忍不住要分心。儘管到了這個階段，還是覺得自己有很多是沒有盡到自己的責任。所以很不安。想要讓自己好好放鬆。其實非常的艱難。這一天基本上沒有發生任何有趣的事。我不敢說教書到底是不是讓我快樂。我覺得看到學生的眼神好像有懂會感覺很開心，但是想到他面臨著這麼大的考試而且在學這些沒有用的東西，就覺得一切其實挺沒有意義的（然後擔心自己沒有讓他考過之後也賺不到錢）。然後在感覺緊繃的時候就會很希望自己有戀愛可以談。有時候會想要玩弄一下自己的身體。其實只不過是因為不知道怎麼讓自己內心趨於平靜所做出的無謂舉動。感覺不到生活的flow。</p>
+<p>這樣說起來，你必須成承認，這一切就是這麼的無聊。我的人生就是做研究跟教書。這兩件事其實都還蠻無聊的。其實我是對這兩件事都有很高的熱情，但這才是問題所在：因為兩件事大多時候還是偏無聊。而似乎有些不滿就變成看手機了。好像是在那個世界也許、就那麼也許，可以突然找到一種感覺是自己正被關愛著。</p>
+<p>不要過度受制於想要被關愛的這種渴望，似乎是必要的。我其實需要高度社交。而且我其實不是不會社交，只是能聊的話題比較侷限，而且對陌生人防備心重。我需要感覺到自己被大家關愛來獲得一些正面的能量。</p>
+<p>不要強求。不要刻意去求別人的喜愛。但是可以望人多的地方去，可以更大方一點。或是也許我就是要更接受現在的工作型態。事情還有非常多沒做完。</p>
+<p>某種程度上需要記錄每日的思考狀態，畢竟今天狀態不是太好。沒有吃飯，感覺早上上課也提不起勁。覺得自己其實很廢（害怕被看破手腳）又來了，無端的生出一堆麻煩事。我解決事情的方式還是太慢，可能又充滿內耗吧。</p>
+<p>***</p>
+<p>最近的生活稱不上苦，其實就是悶。唯一的起伏大概就是每天在研究室裡會有一些荒誕的事發生。例如今天一夥人在個論上課之前討論到底指導老師消失一週是不是去秘密結婚。有時候又在討論是不是應該在教師節送老師鼻毛剪。研究室裡有一把日式的長刀（塑膠做的），不止一次想要拿刀把這些荒誕的人砍了，然後再自盡。</p>
+<p>有時候在思考自己到底想做什麼。首先我完全無法當一個工程師，對於開發工具等之類的事情毫無興趣。也不喜歡處理一些技術細節，所以其實當經濟理論家也不行。</p>
+<p>我覺得自己到比較像是某種空想家（原本想說哲學但怕侮辱哲學家），或者應該說是魔法師？奇幻故事裡面最厲害的魔法師通曉世界運作背後最基礎的道理，並能夠運用「道」來施展魔法解決問題。某種程度經濟學也在標榜一種瞭解世界背後運作的道理，並且宣稱這些道理非常有用，跟這些魔法師的目標其實差不多。</p>
+<p>但在小說世界裡魔法是真的，在現實中經濟學是假的。現實中並沒有什麼「底層邏輯」或是「洞悉人性的經濟學」這類的東西，看似魔法師只不過是江湖術士。只可惜醒悟的晚了，沒有一技之長只好繼續追求成為一位表面上厲害的魔法師去向更多人販賣魔法。</p>
+<p>回家的路上，決定走進誠品逛逛。偶然之間就看到了新銳作家「寺尾哲也」的散文集《努力是癮》。翻了幾頁內心就想起現在的室友B，於是就把這本書買了回去送他。讀著裡面故事人物的人生，想到自己中年之後的樣子。其實我們終究不是天縱英才，而是平凡不過的人。四十歲的時候，如果確實活著的話，應該也是在過極為平凡的人生、煩惱著各種一般人都會煩惱的事情。我自認為還算是相信有「夢想」的人，只是最近也越來越不確定了。人生不都一樣，真有什麼值得追求的「夢」嗎？</p>
+<p>回家的路上，經過全家，去買買一送一的翡翠檸檬茶。廣播裡播著曼哈頓練習曲的電影主題曲Lost stars。突然之間心頭一陣翻湧，差點在大庭廣眾之下痛哭失聲…</p>
+<p>Just a speck of dust in the galaxy</p>
+<p>***</p>
+<p>事情是這樣的，我喝了一點酒。為什麼呢？因為有人在我的辦公桌上留了一瓶酒。那又是為什麼呢？因為前幾天有一群人在研究室喝酒看煙火，竟然就留下了一瓶酒沒喝完，真掃興。不是，你說，你避開了重點。喔喔，重點，好吧。重點是為什麼我，此時（一個確定的時間點，00:00）此地（一個確定的地點，羅斯福路四段一號臺灣大學社會科學院645室）存在。那又是一段冗長的故事，我想你也未必有興趣，但我知道此事自是無可迴避：</p>
+<p>我欠債欠太多了，所以現在正在還債。債主當然就是KM，還有博班的楊學長，我都不敢抬起頭來見他，他想必覺得我是個沒有的草莓族（不是小草）。不錯，一篇文章就然就這麼拖了一個學期沒有進度，我跟老師說我修課忙不過來，唉，老師也真好心，知道人有時必須得做consumption smoothing 。所以現在我就在這啦，時間少的時候欠債，時間多的時候還債，跨期替代，你懂的。</p>
+<p>或許你不曾想過，我總覺得夜裡的社科院彷彿一隻碩大的灰白色鯨魚，在名為臺北盆地的內陸海裡漂流。漆黑的海流中明滅著的絢爛的螢光（如果你有看過少年Pi可能有機會知道我在說什麼）同時又覺得這隻鯨魚是個大飯店（夫天地者 萬物之逆旅），我們如魚蝦蜉蝣，寄居於此。（這麼一說，那些拿到tenure 的教授不就成了藤壺？）所以我們不妨就用鯨魚飯店來稱呼吧。</p>
+<p>我的研究室在鯨魚飯店的六樓、北側。看得到101，半截。如果說就鯨魚飯店是飯店，那我們的研究室可說就是飯店中的飯店了。上至讀博班的學長，下至大三的學弟，都無不講這裡當作避風港，又或是茫茫大海中唯一的歸宿。所以你看，從上禮拜至今簽到本上已經有九個人簽名（啊忘記給魏珈銘簽了）不過最近會待到這麼晚的人也就只有我一個。上禮拜四，天冷，時間已經過了三更，於是就決定乾脆不回家，在鯨魚飯店住一晚。沒有客房服務但走幾步就有7-11。結論是還是別住好，半夜真快冷死了，要不是有蕭學長（不知道為什麼一位已經讀博班的學長竟然特別來給我們一台電暖爐）的暖爐，大概是活不下去。</p>
+<p>這幾天我也反覆思考，為什麼自己做事情這麼慢，一直欠債。有時候坐著想、有時候站著想、有時候一邊踱步一邊忖度，這樣一件重要的問題。這時候你就知道一個人的研究室有什麼迷人之處了。你可以自由的活動、在辦公桌之間踱步、偷偷坐到別人的椅子上滑來滑去、直接把音樂放出來。我總是非常困擾，到底工作的時候要不要聽音樂呢？有時候真需要一些流行樂當作興奮劑或抗憂鬱劑來讓自己繼續做下去，但有時候又會因為聽音樂而分心。跟著哼，或是聽到好喜歡的歌就站起來唱，360度的唱。例如今天就是完全屬於魏如萱的一夜。魏如萱的這張新專輯「珍珠刑」我超愛尤其是下半張抒情歌的部分真的是更上一層樓耶還有之前那張「藏著並不等於遺忘」今天唱了三遍的「星期三或禮拜三」。我媽媽在我小時候一直覺得我是不是有過動症（因為我作業寫到九點半都還寫不完）其實不無道理。不過必須先聲明這些是不可觀察的。雖然你現在知道研究室裡的這位仁兄可能處在某種又唱又跳的混沌疊加狀態，但若你打開研究室的門想要觀測的話，很不幸的，一切就會坍縮到一個人呆呆的坐在電腦桌前面。就是不想讓你看到呵。</p>
+<p>所以最近確實是過得比較辛苦一點，在學校待得晚就會想要吃宵夜。我也希望自己是那種朋友隨call隨來就去吃個鐵板燒之類的但可惜就不是。今天去吃了一碗麻油虱目魚湯哎呀天氣冷吃什麼熱的東西都是人間美味。如果是晴天的話我就會晃到總圖前面去數星星（都老朋友了）但天氣不好就只能先回飯店休息。</p>
+<p>你說酒是不是喝的有點多，這當然沒有。被放在我桌上的只不過是7-11賣的韓多露荔枝風味燒酒，12度。這點程度是不會醉的，何況有人醉了還會打字嗎？再說，不管怎麼樣你也不用擔這個心，有人說過這些從備忘錄的截圖寫的「我」真的是我嗎？唯一的請求，我會說，也許可以請你不要傳「你還好嗎」的之類的訊息給我。我想你能體諒，一個人如果真醉了亂講話可以推拖說我都不記得，但一個沒有醉的人做出像是喝醉酒的事那可真是沒臉見人了。</p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>朴相映，韓國小說家。著有《大都市的愛情法》、《無人知曉的藝術家之淚和宰桐義大利麵》、《信任的模樣》等書。↩︎</p></li>
+<li id="fn2"><p>一群人去日本玩六天五夜，但出於某些特殊原因竟然有人送機。↩︎</p></li>
+<li id="fn3"><p>哲學家維根斯坦的傳記。作者是雷伊．孟克。↩︎</p></li>
+<li id="fn4"><p>家庭經濟學的一種模型。假設家庭成員會互相分工，在家庭內達成帕雷托最優。↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>拼貼簿</category>
+  <guid>https://hungchichao.github.io/posts/0000-pastwritings/</guid>
+  <pubDate>Sun, 31 Dec 2023 16:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
