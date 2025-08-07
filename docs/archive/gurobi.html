@@ -431,7 +431,7 @@ window.Quarto = {
 <pre><code>Set parameter Username
 Set parameter LicenseID to value 2689162
 Academic license - for non-commercial use only - expires 2026-07-18
-Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 23.1.0 23B81)
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 24.6.0 24G84)
 
 CPU model: Apple M1
 Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
@@ -476,9 +476,6 @@ Best objective 3.000000000000e+00, best bound 3.000000000000e+00, gap 0.0000%</c
 <div class="cell" data-messege="false">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'data.table' was built under R version 4.2.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'data.table'</code></pre>
 </div>
@@ -489,15 +486,15 @@ Attaching package: 'data.table'</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>exm_dt <span class="ot">&lt;-</span> <span class="fu">data.table</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">rfn =</span> <span class="fu">c</span>(<span class="st">"0000001"</span>, <span class="st">"0000002"</span>, <span class="st">"0000003"</span>), <span class="co"># fake rfn</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fr_alive =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="co"># should be all identical</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">mo_alive =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>),  <span class="co"># should be all identical</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fr_effect =</span> <span class="fu">c</span>(<span class="dv">145500</span>, <span class="dv">145500</span>, <span class="dv">145500</span>),</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">mo_effect =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>)</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>exm_dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>exm_dt <span class="ot">&lt;-</span> <span class="fu">data.table</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">rfn =</span> <span class="fu">c</span>(<span class="st">"0000001"</span>, <span class="st">"0000002"</span>, <span class="st">"0000003"</span>), <span class="co"># fake rfn</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fr_alive =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="co"># should be all identical</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">mo_alive =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>),  <span class="co"># should be all identical</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fr_effect =</span> <span class="fu">c</span>(<span class="dv">145500</span>, <span class="dv">145500</span>, <span class="dv">145500</span>),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">mo_effect =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>exm_dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       rfn fr_alive mo_alive fr_effect mo_effect
     &lt;char&gt;    &lt;num&gt;    &lt;num&gt;     &lt;num&gt;     &lt;num&gt;
@@ -508,113 +505,113 @@ Attaching package: 'data.table'</code></pre>
 </div>
 <p>In our setting the objective function is not linear but piece-wise linear. So we use <code>pwlobj</code> instead of <code>obj</code>. Two vectors, <code>u</code> and <code>uy</code> should be supported beforehand. I did not make them arguments of the function because I use function factories.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>best_strategy_fm <span class="ot">&lt;-</span> <span class="cf">function</span>(Data){</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">copy</span>(Data)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      I <span class="ot">&lt;-</span> Data<span class="sc">$</span>true_income </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Whether their father/ mother still alive </span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      Has_father <span class="ot">&lt;-</span> Data<span class="sc">$</span>fr_alive[<span class="dv">1</span>]</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      Has_mother <span class="ot">&lt;-</span>  Data<span class="sc">$</span>mo_alive[<span class="dv">1</span>]</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Deduction</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>      fr_effect <span class="ot">&lt;-</span> Data<span class="sc">$</span>fr_effect[<span class="dv">1</span>]</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>      mo_effect <span class="ot">&lt;-</span> Data<span class="sc">$</span>mo_effect[<span class="dv">1</span>]</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>      K <span class="ot">&lt;-</span> <span class="fu">length</span>(I)</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>      n_variable <span class="ot">&lt;-</span> K<span class="sc">*</span><span class="dv">3</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Create Groubi Model</span></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>      model <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>modelsense <span class="ot">&lt;-</span> <span class="st">"min"</span></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>      <span class="co"># List of constraints</span></span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>,<span class="at">nrow =</span> K, <span class="at">ncol =</span> n_variable)</span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">numeric</span>(K)</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(I)) {</span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>        x_no_support <span class="ot">&lt;-</span> I[i]</span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>        x_support_father <span class="ot">&lt;-</span> x_no_support <span class="sc">-</span> fr_effect</span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>        x_support_mother <span class="ot">&lt;-</span> x_no_support <span class="sc">-</span> mo_effect</span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Equality Constraint i</span></span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support</span></span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span>] <span class="ot">&lt;-</span> x_no_support<span class="sc">-</span>x_support_father</span>
-<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>] <span class="ot">&lt;-</span> x_no_support<span class="sc">-</span>x_support_mother</span>
-<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>        rhs_vector[i] <span class="ot">&lt;-</span> <span class="fu">max</span>(x_no_support,<span class="dv">0</span>)</span>
-<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Piece-wise linear Objective function of Tax( xi)</span></span>
-<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span>u, <span class="at">y=</span>uy)</span>
-<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span><span class="dv">0</span>, <span class="at">y=</span><span class="dv">0</span>)</span>
-<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span><span class="dv">0</span>, <span class="at">y=</span><span class="dv">0</span>)</span>
-<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Father Dependency Constraint (Binary, Inequality)</span></span>
-<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>      sum_constraint <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_variable)</span>
-<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>      sum_constraint[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)] <span class="ot">&lt;-</span> Has_father</span>
-<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">rbind</span>(A_matrix,sum_constraint)</span>
-<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(rhs_vector,Has_father)</span>
-<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Mother Dependency Constraint (Binary, Inequality)</span></span>
-<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>      sum_constraint <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_variable)</span>
-<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>      sum_constraint[<span class="fu">seq</span>(<span class="dv">2</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)] <span class="ot">&lt;-</span>Has_mother</span>
-<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">rbind</span>(A_matrix,sum_constraint)</span>
-<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(rhs_vector,Has_mother)</span>
-<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>A <span class="ot">&lt;-</span> A_matrix</span>
-<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>rhs <span class="ot">&lt;-</span> rhs_vector</span>
-<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>      <span class="co"># 可以都不分配爸媽 </span></span>
-<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>sense <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"="</span>,K),<span class="fu">rep</span>(<span class="st">"&lt;="</span>,<span class="dv">2</span>))</span>
-<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Upper Bound And Lower Bound</span></span>
-<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>lb <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="cn">Inf</span>),K)</span>
-<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>ub <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(Has_father,Has_mother,<span class="cn">Inf</span>),K)</span>
-<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Variable Types: Variable Types, binary or continuous</span></span>
-<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>vtype <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"B"</span>,<span class="dv">2</span>),<span class="st">"C"</span>),K)</span>
-<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>      result <span class="ot">&lt;-</span> <span class="fu">gurobi</span>(model,<span class="at">params =</span> <span class="fu">list</span>( <span class="at">OutputFlag=</span><span class="dv">0</span>))</span>
-<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>      solution <span class="ot">&lt;-</span> result<span class="sc">$</span>x</span>
-<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>    Fr_distribution <span class="ot">&lt;-</span> solution[<span class="fu">seq</span>(<span class="dv">1</span>, <span class="at">by=</span><span class="dv">3</span>, <span class="at">length.out=</span>K)]</span>
-<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>    Mo_distribution <span class="ot">&lt;-</span> solution[<span class="fu">seq</span>(<span class="dv">2</span>, <span class="at">by=</span><span class="dv">3</span>, <span class="at">length.out=</span>K)]</span>
-<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>    D[,best_daddy <span class="sc">:</span><span class="er">=</span> Fr_distribution]</span>
-<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>    D[,best_mommy <span class="sc">:</span><span class="er">=</span> Mo_distribution]</span>
-<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>    D[,best_income_net_dis <span class="sc">:</span><span class="er">=</span> solution[<span class="fu">seq</span>(<span class="dv">3</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)]]</span>
-<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(D)</span>
-<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>best_strategy_fm <span class="ot">&lt;-</span> <span class="cf">function</span>(Data){</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">copy</span>(Data)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      I <span class="ot">&lt;-</span> Data<span class="sc">$</span>true_income </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Whether their father/ mother still alive </span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>      Has_father <span class="ot">&lt;-</span> Data<span class="sc">$</span>fr_alive[<span class="dv">1</span>]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>      Has_mother <span class="ot">&lt;-</span>  Data<span class="sc">$</span>mo_alive[<span class="dv">1</span>]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Deduction</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      fr_effect <span class="ot">&lt;-</span> Data<span class="sc">$</span>fr_effect[<span class="dv">1</span>]</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>      mo_effect <span class="ot">&lt;-</span> Data<span class="sc">$</span>mo_effect[<span class="dv">1</span>]</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>      K <span class="ot">&lt;-</span> <span class="fu">length</span>(I)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>      n_variable <span class="ot">&lt;-</span> K<span class="sc">*</span><span class="dv">3</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Create Groubi Model</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>      model <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>modelsense <span class="ot">&lt;-</span> <span class="st">"min"</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>      <span class="co"># List of constraints</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>,<span class="at">nrow =</span> K, <span class="at">ncol =</span> n_variable)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">numeric</span>(K)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(I)) {</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>        x_no_support <span class="ot">&lt;-</span> I[i]</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>        x_support_father <span class="ot">&lt;-</span> x_no_support <span class="sc">-</span> fr_effect</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>        x_support_mother <span class="ot">&lt;-</span> x_no_support <span class="sc">-</span> mo_effect</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Equality Constraint i</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span>] <span class="ot">&lt;-</span> x_no_support<span class="sc">-</span>x_support_father</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>] <span class="ot">&lt;-</span> x_no_support<span class="sc">-</span>x_support_mother</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        A_matrix[i,(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>        rhs_vector[i] <span class="ot">&lt;-</span> <span class="fu">max</span>(x_no_support,<span class="dv">0</span>)</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Piece-wise linear Objective function of Tax( xi)</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span>u, <span class="at">y=</span>uy)</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span><span class="dv">0</span>, <span class="at">y=</span><span class="dv">0</span>)</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>        model<span class="sc">$</span>pwlobj[[(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">1</span>]] <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">var=</span>(i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span>, <span class="at">x=</span><span class="dv">0</span>, <span class="at">y=</span><span class="dv">0</span>)</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Father Dependency Constraint (Binary, Inequality)</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>      sum_constraint <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_variable)</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>      sum_constraint[<span class="fu">seq</span>(<span class="dv">1</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)] <span class="ot">&lt;-</span> Has_father</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">rbind</span>(A_matrix,sum_constraint)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(rhs_vector,Has_father)</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Mother Dependency Constraint (Binary, Inequality)</span></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>      sum_constraint <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_variable)</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>      sum_constraint[<span class="fu">seq</span>(<span class="dv">2</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)] <span class="ot">&lt;-</span>Has_mother</span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>      A_matrix <span class="ot">&lt;-</span> <span class="fu">rbind</span>(A_matrix,sum_constraint)</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>      rhs_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(rhs_vector,Has_mother)</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>A <span class="ot">&lt;-</span> A_matrix</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>rhs <span class="ot">&lt;-</span> rhs_vector</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>      <span class="co"># 可以都不分配爸媽 </span></span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>sense <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"="</span>,K),<span class="fu">rep</span>(<span class="st">"&lt;="</span>,<span class="dv">2</span>))</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Upper Bound And Lower Bound</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>lb <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="cn">Inf</span>),K)</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>ub <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(Has_father,Has_mother,<span class="cn">Inf</span>),K)</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Variable Types: Variable Types, binary or continuous</span></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>      model<span class="sc">$</span>vtype <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"B"</span>,<span class="dv">2</span>),<span class="st">"C"</span>),K)</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>      result <span class="ot">&lt;-</span> <span class="fu">gurobi</span>(model,<span class="at">params =</span> <span class="fu">list</span>( <span class="at">OutputFlag=</span><span class="dv">0</span>))</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>      solution <span class="ot">&lt;-</span> result<span class="sc">$</span>x</span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>    Fr_distribution <span class="ot">&lt;-</span> solution[<span class="fu">seq</span>(<span class="dv">1</span>, <span class="at">by=</span><span class="dv">3</span>, <span class="at">length.out=</span>K)]</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>    Mo_distribution <span class="ot">&lt;-</span> solution[<span class="fu">seq</span>(<span class="dv">2</span>, <span class="at">by=</span><span class="dv">3</span>, <span class="at">length.out=</span>K)]</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>    D[,best_daddy <span class="sc">:</span><span class="er">=</span> Fr_distribution]</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>    D[,best_mommy <span class="sc">:</span><span class="er">=</span> Mo_distribution]</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>    D[,best_income_net_dis <span class="sc">:</span><span class="er">=</span> solution[<span class="fu">seq</span>(<span class="dv">3</span>,<span class="at">by=</span><span class="dv">3</span>,<span class="at">length.out=</span>K)]]</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(D)</span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>best_strategy_fm_yearly <span class="ot">&lt;-</span> <span class="cf">function</span>(yr){</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## 0 Set Up (By year) --------------------------------------------</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># functions for calculating tax</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  tax_cal <span class="ot">&lt;-</span> <span class="fu">tax_calculator</span>( tax_rate_table[[ yr <span class="sc">-</span> START_YR <span class="sc">+</span> <span class="dv">1</span>]] )</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  cutoff <span class="ot">&lt;-</span> tax_rate_table[[yr <span class="sc">-</span> START_YR <span class="sc">+</span> <span class="dv">1</span>]]</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  cutoff <span class="ot">&lt;-</span> cutoff[ <span class="sc">!</span> <span class="fu">is.na</span>(cutoff) ]</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Objective Function</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="sc">-</span><span class="dv">10000</span>, <span class="dv">0</span>, cutoff, <span class="dv">100000000</span>)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  uy <span class="ot">&lt;-</span> <span class="fu">sapply</span>(u,tax_cal)</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  best_strategy_fm <span class="ot">&lt;-</span> <span class="cf">function</span>(Data){</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(D)</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(best_strategy_fm)</span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>best_strategy_fm_yearly <span class="ot">&lt;-</span> <span class="cf">function</span>(yr){</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## 0 Set Up (By year) --------------------------------------------</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># functions for calculating tax</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  tax_cal <span class="ot">&lt;-</span> <span class="fu">tax_calculator</span>( tax_rate_table[[ yr <span class="sc">-</span> START_YR <span class="sc">+</span> <span class="dv">1</span>]] )</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  cutoff <span class="ot">&lt;-</span> tax_rate_table[[yr <span class="sc">-</span> START_YR <span class="sc">+</span> <span class="dv">1</span>]]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  cutoff <span class="ot">&lt;-</span> cutoff[ <span class="sc">!</span> <span class="fu">is.na</span>(cutoff) ]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Objective Function</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="sc">-</span><span class="dv">10000</span>, <span class="dv">0</span>, cutoff, <span class="dv">100000000</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  uy <span class="ot">&lt;-</span> <span class="fu">sapply</span>(u,tax_cal)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  best_strategy_fm <span class="ot">&lt;-</span> <span class="cf">function</span>(Data){</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(D)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(best_strategy_fm)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

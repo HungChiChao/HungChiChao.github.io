@@ -1,0 +1,44 @@
+---
+title: "Day 11"
+date: "2025-07-29"
+categories: [Memo]
+description: "RSS"
+---
+
+在學長Jesse Chen建議下，我幫這個Blog新增了RSS功能。RSS的全稱是Really Simple Synchronization ，是一種非常簡單的部落格訂閱工具。
+
+關於RSS的作用，我這兩天稍微研究了一下。如果你的網站支援RSS，它會在你更新網站的時候，把新文章內容打包到一個`.xml` file裡面。（這東西被稱作RSS Feed。）而訂閱者透過RSS Reader 去定期抓取這個file，把新文章抓到自己的Reader裡面。RSS Reader有網路版也有App，我目前註冊了最老牌的Feedly[^1]，並訂閱了自己的Blog XD
+
+[^1]: [**http://www.feedly.com/**](http://www.feedly.com/ "http://www.feedly.com/")
+
+據說這種古老的訂閱方法是源自於還沒有社群媒體的年代，很多人都會寫Blog。如果要一直點擊各種連結去查看有沒有人寫新文章就太麻煩了。透過RSS很簡便的讓大家在自己的閱讀器內一次讀完想讀的Blog。大部分的Blog平台（例如Google Blogger)都有內建提供RSS Feed，我的網站是用Quarto架的，他們也很好心的提供了這個功能。
+
+當然，這個做法似乎已經快被時代淘汰了。但我自認為是個戀舊的人，而RSS讓我重新思考了自己應該怎麼接收資訊。以下是我覺得RSS的三個獨特之處：
+
+1.  RSS訂閱是讀者主動去抓內容，所以跟電子報不同，原則上版主不會知道有誰訂閱。
+2.  另外一個跟電子報不同之處在於RSS Reader直接幫你把所有文章放在一起，所以不會因為訂閱十家電子報就要收十次email。
+3.  跟社群平台相比最大的差別就是沒有演算法，所有的文章都是自己訂閱的。也不會有短影音。（其實最早的Facebook不就是這樣嗎？）
+
+後來也有人開發了RSS by Mail的服務，你只要把網址寄到以下信箱 [add\@rssby.email](add@rssby.email)，他就會像是電子報一樣發送信件給你RAS Feed。例如說你想要訂閱我的Blog，只要輸入<https://hungchichao.github.io/index.xml>給這個信箱，他就會在有新文章的時候寄信給你。[^2]
+
+[^2]: 目前不建議大家這麼做，除非你真的很關心我每日的生活，不然應該會覺得挺煩的。單純要找這個網站的話是<https://hungchichao.github.io>
+
+目前我幫自己另外訂閱了一些部落格，包括：
+
+-   Paul Krugman’s blog （老人家現在每天一篇文章罵川普）
+
+-   Vox
+
+-   巷子口社會學
+
+-   白經濟
+
+-   Suppose that People [^3]
+
+-   出洋肄習錄[^4]
+
+[^3]: 流傳在經濟系、經研所學生甚至是教授之間之間的傳奇部落格。跟白經濟的作者群有所重疊。
+
+[^4]: Jesse Chen讀博士班的一些紀錄，RSS by mail就是在那裡看到的。
+
+先這樣。

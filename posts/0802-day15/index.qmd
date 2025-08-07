@@ -1,0 +1,35 @@
+---
+title: "Day 15"
+date: "2025-08-02"
+categories: [Memo]
+description: "行為認知療法"
+---
+
+最近在網路上看到有人在介紹「認知行為療法」CBT。據說是治療輕度憂鬱症、焦慮症、強迫症等問題的有效方法。
+
+我跟心理學很不熟，所以就先抄書。根據美國心理學會的說法：
+
+CBT is based on several core principles, including:
+
+1. Psychological problems are based, in part, on faulty or unhelpful ways of thinking.
+2. Psychological problems are based, in part, on learned patterns of unhelpful behavior.
+3. People suffering from psychological problems can learn better ways of coping with them, thereby relieving their symptoms and becoming more effective in their lives.
+
+我的理解是，CBT說我們的「問題行為」是來自「不理性的想法」。不理性的想法通常是出現了一些思考謬誤，這些謬誤常常以「自動化思考」的方式主導我們的思緒，進而使我們做出有問題的行為。所以要改善問題就要先糾正不理性的想法。常見的謬誤有：
+
+- 全有或全無思維（黑白思考）
+- 災難化思維
+- 過度概括
+- 負面過濾
+- 貶低正向
+- 應該語句（"我應該..."）
+- 心靈閱讀（替別人猜想）
+- 個人化（把問題全歸咎自己）
+
+當我們檢視自己是否犯下思考謬誤之後，可能發現我們的一些「核心信念」經常也建構在思考謬誤之上。我們必須抓出這些謬誤，認清他們，並依照修正過後的思維來執行自己的行為。
+
+---
+
+我的焦慮問題和隨之而來的拖延/癱瘓一直都存在。過去的我的確也覺得我的行為跟理性有關，所以我總是想要再花時間把事情想通，感覺把事情想通問題就解決了。但通常都是自己的思緒越理越亂。我現在偶爾會請Chat GPT擔任類似諮商者的角色。我將我的原始想法打進去，請AI分析出可能已經犯的思考謬誤。我認為AI在這件事情上還算稱職。但還是要很小心。
+
+
