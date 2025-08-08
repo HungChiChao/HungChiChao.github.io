@@ -2,9 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/0807-day20/index.html",
+      "/posts/0805-day18/index.html",
       "/posts/0804-day17/index.html",
       "/posts/0803-day16/index.html",
       "/posts/0802-day15/index.html",
+      "/posts/0801-day14/index.html",
       "/posts/0731-day13/index.html",
       "/posts/0730-day12/index.html",
       "/posts/0729-day11/index.html",
@@ -21,6 +24,7 @@
       "/posts/0124-bibtex/index.html",
       "/posts/0119-econ101/index.html",
       "/posts/0112-welcome/index.html",
+      "/posts/0000-Jimmy/index.html",
       "/posts/0000-pastwritings/index.html"
     ]
   }

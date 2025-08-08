@@ -2,7 +2,7 @@
 title: "Day 10"
 date: "2025-07-28"
 categories: [Memo]
-description: "一步一步，慢慢走"
+description: "一步一步"
 ---
 
 There are always some days when things don't go well.
