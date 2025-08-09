@@ -38,6 +38,26 @@
   <pubDate>Wed, 06 Aug 2025 16:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Day 19</title>
+  <link>https://hungchichao.github.io/posts/0806-Day19/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>今天與幾位同學一起回高中拜訪高中導師依貞，在國文科辦公室跟老師聊天。老師暑假剛從土耳其旅遊回來，帶了土耳其來的軟糖，另外有同學去日本的、去越南的，也都帶伴手禮來，讓國文科辦充滿歡快的氣息。</p>
+<p>依貞老師現在是專任，不用帶班，所以空堂時間也多。大家竟聊了將近四個小時。六點一到，教官室的廣播響起，一群人像當年那樣，趕在鐵門拉下之前離開。走在校門前的路上想起許多往事。沒有什麼值得在這提起的。</p>
+
+
+
+ ]]></description>
+  <category>Memo</category>
+  <guid>https://hungchichao.github.io/posts/0806-Day19/</guid>
+  <pubDate>Tue, 05 Aug 2025 16:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Day 18</title>
   <link>https://hungchichao.github.io/posts/0805-day18/</link>
   <description><![CDATA[ 
@@ -54,7 +74,7 @@
 <hr>
 <p>這是一段在日曆紙背面寫的文字。這次我很確定描述的是2020年1月19日，學測過後一天。我和J約好考完去東海大學閒晃一整天。</p>
 <blockquote class="blockquote">
-<p>我們就只是走走，在偌大的校園裡閒逛著。儘管有目標卻隨時都可停下。仰望天空，雲很高，很稀疏，一副事不關己的樣子。我們躺在大草皮上吹風，在一顆兩人也無法合抱的大樹下，躺著看樹頂枝條隨風搖著，像波浪，層層疊疊，像歌，像心情。來來回回，無所事事。</p>
+<p>我們就只是走走，在偌大的校園裡閒逛著。儘管有目標卻隨時都可停下。仰望天空，雲很高，很稀疏，一副事不關己的樣子。我們躺在大草皮上吹風，在一棵兩人也無法合抱的大樹下，躺著看樹頂枝條隨風搖著，像波浪，層層疊疊，像歌，像心情。來來回回，無所事事。</p>
 </blockquote>
 <p>來來回回，無所事事。<sup>1</sup></p>
 <p>我持續練習著，去想像一種更遼闊的「我」。</p>
@@ -644,193 +664,6 @@
   <category>Memo</category>
   <guid>https://hungchichao.github.io/posts/0719-day1/</guid>
   <pubDate>Fri, 18 Jul 2025 16:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>使用Zotero和Better BibTex生成引用書目</title>
-  <dc:creator>H.C.C </dc:creator>
-  <link>https://hungchichao.github.io/posts/0124-bibtex/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<p>這篇文章沒什麼大道理，就是記錄一下最近摸索出的新知識。</p>
-<section id="bibtex" class="level3">
-<h3 class="anchored" data-anchor-id="bibtex">BibTex</h3>
-<p>LaTex文件中的書目引用是透過名為BibTex的編輯器生成。基本用法是要提供一個bib file。這個檔案就像是為了這篇文章所創建的一個書櫃，放著所有可能用到的書目的資訊。當你在latex文件中提及bib file裡的某篇文章，BibTex就會去把那篇文章的資訊抓出來放加入文件中。下面是一個簡單的bib file範例。</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">@article</span>{<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">mccall_economics_1970</span>,</span>
-<span id="cb1-2">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">title</span> = {Economics of {Information} and {Job} {Search}},</span>
-<span id="cb1-3">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">volume</span> = {84},</span>
-<span id="cb1-4">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">issn</span> = {0033-5533},</span>
-<span id="cb1-5">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">abstract</span> = {I. Introduction, 113.--II. A simple model of job search, 115.--III. A more general model of job search, 123.--IV. An adaptive search model, 125.},</span>
-<span id="cb1-6">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">number</span> = {1},</span>
-<span id="cb1-7">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">urldate</span> = {2024-10-26},</span>
-<span id="cb1-8">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">journal</span> = {The Quarterly Journal of Economics},</span>
-<span id="cb1-9">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">author</span> = {McCall, J. J.},</span>
-<span id="cb1-10">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">year</span> = {1970},</span>
-<span id="cb1-11">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">note</span> = {Publisher: Oxford University Press},</span>
-<span id="cb1-12">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">pages</span> = {113--126},</span>
-<span id="cb1-13">    <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">file</span> = {JSTOR Full Text PDF:/Users/hungchichao/Zotero/storage/FJSJBXUK/McCall - 1970 - Economics of Information and Job Search.pdf:application/pdf},</span>
-<span id="cb1-14">}</span></code></pre></div>
-</section>
-<section id="書目管理系統-zotero" class="level3">
-<h3 class="anchored" data-anchor-id="書目管理系統-zotero">書目管理系統 Zotero</h3>
-<p>要怎麼取得.bib檔呢？當然最暴力的做法可以自己創建一個文字檔手動輸入。大部分的期刊網站(e.g.&nbsp;JSTOR)都可以幫你生成bib file所需的格式。不過這麼做非常沒有效率。我自己（以及大部分認識的人）都是使用免費的書目管理系統Zotero。這個系統有幾個主要功能：</p>
-<ol type="1">
-<li>在系統中創建不同資料夾搜集參考文獻</li>
-<li>提供瀏覽器的外掛，讓你直接把網路上看到的paper加入資料庫</li>
-<li>自動下載pdf，可以瀏覽文件與做筆記</li>
-<li>自動輸出bib file</li>
-</ol>
-<p>其中第四個功能大大降低了我們編輯latex中引用書目的門檻。（其實Zotero也可以搭配Microsoft Word使用，不過我不會用word寫論文就是）。</p>
-<p>要安裝Zotero非常簡單，只要到<a href="https://www.zotero.org">官網</a>下載就行了。同時要打開瀏覽器的Zotero外掛(這是我很久以前設定的，網路上有非常多如何使用Zotero的教學)。</p>
-</section>
-<section id="better-bibtex" class="level3">
-<h3 class="anchored" data-anchor-id="better-bibtex">Better BibTex</h3>
-<p>Zotero雖然強大，但在輸出bib file上還是稍微缺乏彈性。我們可以下載<a href="https://retorque.re/zotero-better-bibtex/">Better Bibtex</a>這個Zotero的plug-in。Better BibTex可以做到幾件原本做不到的事：</p>
-<ol type="1">
-<li>自訂citation key：Zotero自動生成的citation key似乎有可能發生重複的問題，或是有時候你就是想自己訂citation key。Better BibTex可以當你做到這點。</li>
-<li>選擇bib file中需要的field： 原始的Zotero會自動把所有資訊都放入bib file，其中有些非常沒必要，例如abstract(誰會特別打開.bib看abstract?)。Better BibTex 可以自己設定需要排除的field，讓bib file保持一個極簡風。</li>
-<li>自動更新：當你把新文章加入資料庫時，自動幫你更新bib file，這樣就不用一直按輸出。</li>
-</ol>
-<p>使用Better Zotero可以參考這個<a href="https://www.youtube.com/watch?v=CYbiDFqCdOs">YouTube影片</a>。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://hungchichao.github.io/posts/0124-bibtex/betterbibtex1.png" class="img-fluid figure-img"></p>
-<figcaption>使用Better BibTex外掛設定輸出的field</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://hungchichao.github.io/posts/0124-bibtex/betterbibtex2.png" class="img-fluid figure-img"></p>
-<figcaption>輸出.bib file</figcaption>
-</figure>
-</div>
-</section>
-<section id="bibliography-style" class="level3">
-<h3 class="anchored" data-anchor-id="bibliography-style">Bibliography Style</h3>
-<p>雖然關聯不是很緊密，不過我還是順便紀錄一樣如何在Latex中進行引用。首先需要使用處理引用書目的套件，我使用的是<a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib">natbib</a>。接著設定ibliographystyle，我使用aer bibliography style。aer 顧名思義就是美國經濟學會發行的American Economics Review所使用的格式，據說跟Chicago style比較接近（我無法驗證就是）。事實上經濟學的主流期刊都有自己的style可以用，例如Econometrics的ecta與Journal of Political Economy 的jpe。關於各種style詳情可以參考這個<a href="https://www.bibtex.com/bibliography-styles-author-date/">網站</a>。此例中我從zotero輸出的bib file叫做<code>labor_ref.bib</code>，只要把這個檔案放在與本文相同資料夾中並在結尾處加上<code>\bibliography{bib file name}</code>即可。以下是一個非常簡單的例子。</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">\documentclass</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">article</span>}</span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">\usepackage</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">natbib</span>}</span>
-<span id="cb2-4"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">\bibliographystyle</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">aer</span>}</span>
-<span id="cb2-5"></span>
-<span id="cb2-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">\title</span>{Labor II: Model Proposal}</span>
-<span id="cb2-7"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">\author</span>{R13323021 Hung, Chi-Chao}</span>
-<span id="cb2-8"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">\date</span>{Octobor 2024}</span>
-<span id="cb2-9"></span>
-<span id="cb2-10"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">document</span>}</span>
-<span id="cb2-11"></span>
-<span id="cb2-12"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">\maketitle</span></span>
-<span id="cb2-13"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">\section</span>{Introduction}</span>
-<span id="cb2-14"></span>
-<span id="cb2-15">This model follows the ``search" framework established by <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">\citep</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">mccall_economics_1970</span>}.</span>
-<span id="cb2-16"></span>
-<span id="cb2-17"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">\bibliography</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">labor_ref</span>}</span>
-<span id="cb2-18"></span>
-<span id="cb2-19"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">\end</span>{<span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">document</span>}</span></code></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://hungchichao.github.io/posts/0124-bibtex/bib_example.png" class="img-fluid figure-img"></p>
-<figcaption>輸出結果</figcaption>
-</figure>
-</div>
-</section>
-<section id="在本地端執行bibtex" class="level3">
-<h3 class="anchored" data-anchor-id="在本地端執行bibtex">在本地端執行BibTex</h3>
-<p>我一開始在本地端complie的時候，無論如何citation都跑不出來。經過研究才發現原來我誤解了BibTex的運作原理。事實上，當你在一篇latex文章中加入引用時，發生的事情如下：</p>
-<p>當你按下complie的時候，你使用的編輯器（通常是pdflatex或xelatex）會先將所有的引用資訊記錄在一個auxiliary file(name.aux)。接著，BibTex會去讀取這個aux file, bib file跟所需的.bst file(記錄你選擇的style的設定)，生成出一個.bbl的檔案，這時候要再實行一次（或兩次）的pdflatex將.bbl的資訊讀進去，才會顯示出引用書目。</p>
-<p>我之前都是在Overleaf上編輯，Overleaf會自動幫你處理好這一切，所以我從來都沒有意識到背後這些運作。不過在本地端的編輯器(我使用的是Visual Studio Code)他並不一定知道你要執行BibTex。解決方法就是在VScode LaTex Workshop裡面build LaTex project底下選擇正確的recipe（例如 pdflatex -&gt; bibtex -&gt; pdflatex*2），VScode就會正確執行所有步驟了。</p>
-</section>
-<section id="參考資料" class="level3">
-<h3 class="anchored" data-anchor-id="參考資料">參考資料</h3>
-<hr>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/BibTeX#Processor">BibTex Wikipedia</a></li>
-<li><a href="https://guides.lib.uchicago.edu/c.php?g=992088&amp;p=7228303">UChicago Library Guide for LaTex</a></li>
-<li><a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex#Bibliography:_just_a_list_of_\bibitems">Bibliography management with bibtex</a></li>
-<li><a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib">Bibliography management with natbib</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>Tools</category>
-  <guid>https://hungchichao.github.io/posts/0124-bibtex/</guid>
-  <pubDate>Sun, 26 Jan 2025 16:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
