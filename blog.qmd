@@ -1,0 +1,13 @@
+---
+title: "My Blog"
+title-block-banner: true
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, author, description, categories]
+  categories: true
+  filter-ui: true
+  sort-ui: false
+  feed: true
+---

@@ -1,0 +1,152 @@
+---
+title: "相片集：澎湖"
+format:
+  html:
+    theme: cosmo
+    css: photostyles.css
+    toc: false
+---
+
+Chi-Chao Hung\
+January 2026
+
+-------------------------------------------------------------
+
+想分享這次去澎湖拍的照片，弄了一個極簡的網頁。還沒有想得很清楚排版要怎麼擺，文字暫時先寫著。但照片都是我覺得很有趣的照片。
+
+## 輯一：浪花
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769620954/IMG_1933_ge5uy4.jpg)
+**泡沫**\
+林投公園外的沙灘上，偶爾出現大塊的珊瑚礁岩石，也像是凝固的泡沫。
+:::
+
+
+::: photo-vertical
+**泡泡雲鞦韆 **\
+泡泡雲是我隨意取的名字，像雲也像泡沫。還記得那天在沙灘上這座鞦韆毫無預警的出現，跟藍天、沙灘莫名地匹配。當天在這裡拍了數十張，整理照片時才意識到這個角度確實該拍成剪影。最喜歡的細節是在眼鏡裡也看得到海。
+
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613007/IMG_3888_yh47fm.jpg)
+:::
+
+::: photo-left
+**鯨魚洞 **\
+在網路上翻了一下，鯨魚洞最好拍的時候應該是在漲潮時海水淹過底下的碎石，拍打著洞口激起浪花。這張將前景的裸露岩石與漸層的海浪一同納入，讓色彩不過於單調。 
+
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613330/IMG_2236_zmkox5.jpg)
+:::
+
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769620775/IMG_2238_zil85m.jpg)
+
+**漸層海** \
+攝於鯨魚洞旁。細看澎湖的海，每一道浪間的顏色都在變換。
+:::
+
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613291/IMG_2481_w6yk0r.jpg)
+**七美島：小台灣**\
+在騎往雙心石滬的路上，風大到幾乎沒辦法走直線了。雖然擔心著無法準時回去搭船，但遇到小台灣的時候還是停下來狂按快門。
+:::
+
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/f_auto,q_auto/v1769613445/IMG_2497_fnvlw0.jpg)
+
+**七美島：雙心石滬**\
+在強風之下拍了這張照片。很幸運剛好在漲潮的過程中抵達雙心石滬，由近到遠的顏色變化讓我非常喜歡。
+:::
+
+
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613120/IMG_2534_p4ngkk.jpg)
+**望安島：鴛鴦窟**\
+到望安在民宿放下行李後出門環島一圈。鴛鴦窟是日治時代的軍事基地，畫面左邊往外有一些廢棄的軍事建築。雖然風大到一點都不想打開鏡頭蓋，但眼前的救生圈跟海岸線形成的奇特構圖還是讓我決定冒著被吹走的風險按下快門。
+:::
+
+
+## 輯二：時光
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769620947/IMG_2008_uszuky.jpg)
+
+**擱淺**\
+隘門沙灘上的碉堡。不確定究竟多少部分露出在外。
+:::
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769620700/IMG_2206_evwh6z.jpg)
+
+**停泊**\
+通梁古榕外的漁港，一張形狀與色彩有趣的照片。後方是連接西嶼的跨海大橋。
+:::
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613162/IMG_1870_jc54yr.jpg)
+
+**佇立**\
+龍門陣地迷彩消波塊。原本沒有特別想拍這面牆，整理照片時發現高低電線竿與你的站位十分有趣。
+:::
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769697777/IMG_2141_hgjxot.jpg)
+**吉貝島一隅**\
+記得你說鋪完水泥後一定會有狗會走過去。
+:::
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613216/IMG_2093_kififv.jpg)
+**鎮守**\
+出現在侯孝賢「風櫃來的人」裡的小廟。在電影裡海堤尚未築起，水泥地都還是草地，廟也只有一間。遠方的雞籠嶼一直都在。
+:::
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613375/IMG_2599_rl4qmu.jpg)
+
+**望安島：花宅聚落**\
+走進花宅聚落像是走進失落的時空，裡頭的房子比二坎聚落破敗得多，這間是少數非常完整的。聚落裡一個人也沒有，只有貓。
+:::
+
+
+
+
+## 輯三：海角天涯
+
+:::photo-vertical
+**盡頭的盡頭**\
+望安島上的最高點天台山，上面有一塊仙跡岩，據說是呂洞賓留下的腳印。實際踏訪才知道仙跡岩就是很小一塊石頭上的一個凹痕（畫面上的平台有標示）。
+
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769703342/IMG_4061_y0t4di.jpg)
+:::
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769697815/IMG_2427_tz1q9x.jpg)
+**燈塔行**\
+通往七美燈塔的路上只有羊、沒有人。
+:::
+
+::: photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613141/IMG_2578_u5g6dj.jpg){width="70%"}
+**望安島：天台山遠望**\
+從島嶼西岸的天台山海崖上往北看，眼前是西北側的海岬深入台灣海峽（我有騎到海岬底部的燈塔，放大一點可以見到）。海平面上依稀可見虎井嶼。當這座廢棄的掩體出現在步道左側，我立刻就知道我想要這個構圖。這是我最喜歡的照片之一。
+:::
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769697825/IMG_2600_jzwut5.jpg)
+**通往海的小路**\
+望安島的花宅聚落，是在台灣很難見到的早期漢人移民建立的聚落建築群。如今人都散去了，我獨自向大海走去時按下快門拍了這張照片，總結了我在此地的所有感受。
+:::
+
+
+:::photo-block
+![](https://res.cloudinary.com/dplcbcxbz/image/upload/v1769613358/IMG_2097_jjqrro.jpg)
+**剪影**\
+風櫃的海堤上與太陽的最終道別。
+:::
+
+
+

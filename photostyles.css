@@ -1,0 +1,123 @@
+/* css styles */
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #555555;
+  --rule: #eaeaea;
+}
+
+body {
+  font-family:
+    "Noto Serif TC", "Source Han Serif TC", "Songti TC", "PMingLiU",
+    serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 56px 18px;
+}
+
+/* Default images: responsive only */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p { margin: 0 0 18px 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 28px 0;
+}
+
+strong { font-weight: 650; }
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+a:hover { border-bottom-color: var(--fg); }
+
+
+
+:root { --block-width: 820px; }
+
+/* same outer width */
+.photo-block,
+.photo-vertical,
+.photo-left{
+  width: min(100%, var(--block-width));
+  margin: 26px auto 42px;
+}
+
+/* photo-block */
+.photo-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin: 0 auto;   /* centers when width < 100% */
+}
+.photo-block p { 
+  margin: 10px 0 0 0; }
+
+
+
+/* photo-vertical */
+.photo-vertical {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* left sentence */
+.photo-vertical p {
+  flex: 0 1 360px;   /* fixed left column */
+  margin: 0;
+  color: var(--muted, #555);
+}
+
+/* right photo fills the remaining space */
+.photo-vertical img {
+  flex: 1 1 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border-radius: 6px;
+}
+
+
+.photo-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+/* left sentence */
+.photo-left p {
+  flex: 0 1 360px;   /* fixed left column */
+  margin: 0;
+  color: var(--muted, #555);
+}
+
+/* right photo fills the remaining space */
+.photo-left img {
+  flex: 1 1 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border-radius: 6px;
+}
+
+

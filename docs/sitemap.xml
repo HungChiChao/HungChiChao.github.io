@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hungchichao.github.io/about.html</loc>
-    <lastmod>2025-07-28T15:34:48.010Z</lastmod>
+    <loc>https://hungchichao.github.io/blog.html</loc>
+    <lastmod>2025-07-28T17:54:45.436Z</lastmod>
   </url>
   <url>
-    <loc>https://hungchichao.github.io/index.html</loc>
-    <lastmod>2025-07-28T17:54:45.436Z</lastmod>
+    <loc>https://hungchichao.github.io/penghu.html</loc>
+    <lastmod>2026-01-29T16:59:11.577Z</lastmod>
   </url>
   <url>
     <loc>https://hungchichao.github.io/posts/0721-Day3/index.html</loc>
@@ -119,5 +119,17 @@
   <url>
     <loc>https://hungchichao.github.io/posts/0124-bibtex/index.html</loc>
     <lastmod>2025-01-27T10:20:45.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hungchichao.github.io/index.html</loc>
+    <lastmod>2026-01-29T05:52:28.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hungchichao.github.io/about.html</loc>
+    <lastmod>2025-07-28T15:34:48.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hungchichao.github.io/photo.html</loc>
+    <lastmod>2026-01-29T06:07:59.494Z</lastmod>
   </url>
 </urlset>

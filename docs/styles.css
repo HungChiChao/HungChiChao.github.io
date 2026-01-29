@@ -1,2 +1,16 @@
 /* css styles */
 
+/* page container */
+main {
+  max-width: 850px;
+  padding: 56px 18px;
+}
+
+/* images: responsive + consistent size */
+img {
+  display: block;
+  width: min(100%, 850px);  /* cap image width on large screens */
+  height: auto;
+  margin: 18px auto 10px;   /* center */
+  border-radius: 6px;       /* optional */
+}

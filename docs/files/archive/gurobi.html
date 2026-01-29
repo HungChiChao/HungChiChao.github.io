@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hung Chi-Chao 洪啟超 – HungChiChao</title>
+<title>README_script.qmd – HungChiChao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,11 +73,40 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="quarto:status" content="draft">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -242,11 +271,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HungChiChao</span>
     </a>
   </div>
@@ -257,12 +286,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../photo.html"> 
+<span class="menu-text">Photography</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/HungChiChao"> <i class="bi bi-github" role="img">
@@ -270,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -283,46 +312,202 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Hung Chi-Chao 洪啟超</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">README_script.qmd</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-<p><img src="./figures/cover.jpeg" class="img-fluid"></p>
-<p><em>Taken on Sep.&nbsp;7, 2021 at 昆陽停車場</em></p>
-<p>Welcome to my website.</p>
-<section id="economics-and-other-social-science" class="level2">
-<h2 class="anchored" data-anchor-id="economics-and-other-social-science">Economics and other Social Science</h2>
-<p>I’m currently studying economics and also interested a broad spectrum of social science topics. Stay tuned for more updates.</p>
-<section id="notes-for-introductory-econometrics-2025-spring" class="level3">
-<h3 class="anchored" data-anchor-id="notes-for-introductory-econometrics-2025-spring">Notes for Introductory Econometrics 2025 Spring</h3>
+
+<p>This is the documentation for R codes that works on tax filing efficiency.</p>
+<section id="calculate-optimal-tax-using-gurobi" class="level1">
+<h1>1 Calculate optimal tax using Gurobi</h1>
+<section id="intro-to-gurobi" class="level2">
+<h2 class="anchored" data-anchor-id="intro-to-gurobi">1.1 Intro to Gurobi</h2>
+<p>Installation.</p>
+<p>See</p>
 <ul>
-<li><a href="./files/review01-1.pdf">Statistics: Conditional Expectation</a></li>
-<li><a href="./files/review02.pdf">Statistics: Point Estimation</a></li>
+<li><p><a href="https://docs.gurobi.com/projects/optimizer/en/current/reference/r/setup.html">Installing the R package</a></p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/prioritizr/vignettes/gurobi_installation_guide.html">CRAN- Gurobi Installation Guide</a></p></li>
 </ul>
+<pre><code>library(gurobi)</code></pre>
+<p>A Gurobi model are composed of the following components.</p>
+<ul>
+<li>constraint matrix <code>A</code></li>
+<li>sense of each constraint <code>sense</code></li>
+<li>right hand side of the constraints <code>rhs</code></li>
+<li>coefficients of the objective function <code>obj</code></li>
+<li>model sense</li>
+<li>variable type</li>
+</ul>
+<p>Here is an simple example provide by <a href="https://docs.gurobi.com/projects/optimizer/en/current/reference/r/setup.html">Installing the R package</a>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\max_{x_1, x_2, x_3} \quad &amp; x_1 + x_2 + 2x_3 \\
+\text{s.t.} \quad
+&amp; x_1 + 2x_2 + 3x_3 \leq 4 \\
+&amp; x_1 + x_2 \geq 1 \\
+&amp; x_1, x_2, x_3 \in \{0, 1\}
+\end{aligned}
+\]</span></p>
+<p>The following code solve the problem.</p>
+<pre><code># create optimization problem
+model &lt;- list()
+model$obj        &lt;- c(1, 1, 2)
+model$modelsense &lt;- "max"
+model$rhs        &lt;- c(4, 1)
+model$sense      &lt;- c("&lt;", "&gt;")
+model$vtype      &lt;- "B"
+model$A          &lt;- matrix(c(1, 2, 3, 1, 1, 0), nrow = 2, ncol = 3,
+                           byrow = TRUE)
+
+# solve the optimization problem using Gurobi
+result &lt;- gurobi(model, list())
+
+print(result$objval) # objective
+print(result$x)</code></pre>
+</section>
+<section id="solving-optimal-tax-filing-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="solving-optimal-tax-filing-strategy">Solving Optimal Tax Filing Strategy</h2>
+<p>The following function create a <code>gurobi model</code> and solve the model. The input data should be a <code>data.table</code> like:</p>
+<pre><code>#| messege = FALSE
+
+library(data.table)</code></pre>
+<pre><code>exm_dt &lt;- data.table(
+  rfn = c("0000001", "0000002", "0000003"), # fake rfn
+  fr_alive = c(1,1,1), # should be all identical
+  mo_alive = c(0,0,0),  # should be all identical
+  fr_effect = c(145500, 145500, 145500),
+  mo_effect = c(0,0,0)
+)
+
+exm_dt</code></pre>
+<p>In our setting the objective function is not linear but piece-wise linear. So we use <code>pwlobj</code> instead of <code>obj</code>. Two vectors, <code>u</code> and <code>uy</code> should be supported beforehand. I did not make them arguments of the function because I use function factories.</p>
+<pre><code>best_strategy_fm &lt;- function(Data){
+    D &lt;- copy(Data)
+    
+    {
+      I &lt;- Data$true_income 
+      
+      # Whether their father/ mother still alive 
+      Has_father &lt;- Data$fr_alive[1]
+      Has_mother &lt;-  Data$mo_alive[1]
+      
+      # Deduction
+      fr_effect &lt;- Data$fr_effect[1]
+      mo_effect &lt;- Data$mo_effect[1]
+      K &lt;- length(I)
+      n_variable &lt;- K*3
+      
+      # Create Groubi Model
+      model &lt;- list()
+      model$modelsense &lt;- "min"
+      
+      # List of constraints
+      A_matrix &lt;- matrix(0,nrow = K, ncol = n_variable)
+      rhs_vector &lt;- numeric(K)
+      
+      for (i in 1:length(I)) {
+        
+        x_no_support &lt;- I[i]
+        x_support_father &lt;- x_no_support - fr_effect
+        x_support_mother &lt;- x_no_support - mo_effect
+        
+        # Equality Constraint i
+        # xi= fi*support + mi*support_mother + (1-fi-mi)*x_no_support
+        
+        A_matrix[i,(i-1)*3+1] &lt;- x_no_support-x_support_father
+        A_matrix[i,(i-1)*3+2] &lt;- x_no_support-x_support_mother
+        A_matrix[i,(i-1)*3+3] &lt;- 1
+        rhs_vector[i] &lt;- max(x_no_support,0)
+        
+        # Piece-wise linear Objective function of Tax( xi)
+        model$pwlobj[[(i-1)*3+3]] &lt;- list(var=(i-1)*3+3, x=u, y=uy)
+        model$pwlobj[[(i-1)*3+2]] &lt;- list(var=(i-1)*3+3, x=0, y=0)
+        model$pwlobj[[(i-1)*3+1]] &lt;- list(var=(i-1)*3+3, x=0, y=0)
+      }
+      
+      # Father Dependency Constraint (Binary, Inequality)
+      sum_constraint &lt;- numeric(n_variable)
+      sum_constraint[seq(1,by=3,length.out=K)] &lt;- Has_father
+      A_matrix &lt;- rbind(A_matrix,sum_constraint)
+      rhs_vector &lt;- c(rhs_vector,Has_father)
+      
+      # Mother Dependency Constraint (Binary, Inequality)
+      sum_constraint &lt;- numeric(n_variable)
+      sum_constraint[seq(2,by=3,length.out=K)] &lt;-Has_mother
+      A_matrix &lt;- rbind(A_matrix,sum_constraint)
+      rhs_vector &lt;- c(rhs_vector,Has_mother)
+      
+      
+      model$A &lt;- A_matrix
+      model$rhs &lt;- rhs_vector
+      
+      # 可以都不分配爸媽 
+      model$sense &lt;- c(rep("=",K),rep("&lt;=",2))
+      
+      # Upper Bound And Lower Bound
+      model$lb &lt;- rep(c(0,0,-Inf),K)
+      model$ub &lt;- rep(c(Has_father,Has_mother,Inf),K)
+      
+      # Variable Types: Variable Types, binary or continuous
+      model$vtype &lt;- rep(c(rep("B",2),"C"),K)
+      
+      
+      result &lt;- gurobi(model,params = list( OutputFlag=0))
+      
+      solution &lt;- result$x
+      
+    }
+    Fr_distribution &lt;- solution[seq(1, by=3, length.out=K)]
+    Mo_distribution &lt;- solution[seq(2, by=3, length.out=K)]
+    
+    D[,best_daddy := Fr_distribution]
+    D[,best_mommy := Mo_distribution]
+    D[,best_income_net_dis := solution[seq(3,by=3,length.out=K)]]
+    
+    return(D)
+  }</code></pre>
+<pre><code>best_strategy_fm_yearly &lt;- function(yr){
+  
+  ## 0 Set Up (By year) --------------------------------------------
+  
+  # functions for calculating tax
+  tax_cal &lt;- tax_calculator( tax_rate_table[[ yr - START_YR + 1]] )
+  cutoff &lt;- tax_rate_table[[yr - START_YR + 1]]
+  cutoff &lt;- cutoff[ ! is.na(cutoff) ]
+  
+  # Objective Function
+  u &lt;- c( -10000, 0, cutoff, 100000000)
+  uy &lt;- sapply(u,tax_cal)
+  
+  best_strategy_fm &lt;- function(Data){
+    ...
+    return(D)
+  }
+  
+  return(best_strategy_fm)
+}</code></pre>
 
 
 </section>

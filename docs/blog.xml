@@ -6,9 +6,9 @@
       version="2.0">
 <channel>
 <title>HungChiChao</title>
-<link>https://hungchichao.github.io/</link>
-<atom:link href="https://hungchichao.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<description>ChiCHao&#39;s Pensieve</description>
+<link>https://hungchichao.github.io/blog.html</link>
+<atom:link href="https://hungchichao.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>ChiChao&#39;s Pensieve</description>
 <generator>quarto-1.7.32</generator>
 <lastBuildDate>Thu, 25 Sep 2025 16:00:00 GMT</lastBuildDate>
 <item>

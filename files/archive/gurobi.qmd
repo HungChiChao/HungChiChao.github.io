@@ -18,7 +18,7 @@ See
 
 -   [CRAN- Gurobi Installation Guide](https://cran.r-project.org/web/packages/prioritizr/vignettes/gurobi_installation_guide.html)
 
-```{r}
+```
 library(gurobi)
 ```
 
@@ -45,7 +45,7 @@ $$
 
 The following code solve the problem.
 
-```{r}
+```
 # create optimization problem
 model <- list()
 model$obj        <- c(1, 1, 2)
@@ -67,13 +67,13 @@ print(result$x)
 
 The following function create a `gurobi model` and solve the model. The input data should be a `data.table` like:
 
-```{r}
+```
 #| messege = FALSE
 
 library(data.table)
 ```
 
-```{r}
+```
 exm_dt <- data.table(
   rfn = c("0000001", "0000002", "0000003"), # fake rfn
   fr_alive = c(1,1,1), # should be all identical
@@ -87,7 +87,7 @@ exm_dt
 
 In our setting the objective function is not linear but piece-wise linear. So we use `pwlobj` instead of `obj`. Two vectors, `u` and `uy` should be supported beforehand. I did not make them arguments of the function because I use function factories.
 
-```{r}
+```
 best_strategy_fm <- function(Data){
     D <- copy(Data)
     
@@ -175,7 +175,7 @@ best_strategy_fm <- function(Data){
   }
 ```
 
-```{r}
+```
 best_strategy_fm_yearly <- function(yr){
   
   ## 0 Set Up (By year) --------------------------------------------
