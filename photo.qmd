@@ -5,4 +5,5 @@ title: "My Photos"
 I'm a beginner in photography. I primarily use a CANON 5D Mark II to capture moments and landscapes. Here’s a glimpse of my work:
 
 - [Yosemite Album](https://flic.kr/s/aHBqjBjcmZ)
+- [Feb. 2025 眠月線](mount_ali.qmd)
 - [Jan. 2026 in 澎湖](penghu.qmd)
