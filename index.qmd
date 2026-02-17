@@ -10,7 +10,8 @@ title-block-banner: true
 
 Welcome to my website.
 
-
+## 線性回歸筆記
+- [【計量經濟學】線性回歸筆記1：Population Regression](LinearRegression1.qmd)
 
 
 ## Notes for Introductory Econometrics 2025 Spring

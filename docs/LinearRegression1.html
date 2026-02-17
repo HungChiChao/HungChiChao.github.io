@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="洪啟超">
+<meta name="dcterms.date" content="2026-02-23">
+
+<title>【計量經濟學】線性回歸筆記1：Population Regression – HungChiChao</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">HungChiChao</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./photo.html"> 
+<span class="menu-text">Photography</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HungChiChao"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#母體分配與i.i.d.樣本" id="toc-母體分配與i.i.d.樣本" class="nav-link active" data-scroll-target="#母體分配與i.i.d.樣本">1 母體分配與I.I.D.樣本</a></li>
+  <li><a href="#期望值用一個數字摘要一個機率分配" id="toc-期望值用一個數字摘要一個機率分配" class="nav-link" data-scroll-target="#期望值用一個數字摘要一個機率分配">2 期望值：用一個數字摘要一個機率分配</a>
+  <ul>
+  <li><a href="#最佳預測問題" id="toc-最佳預測問題" class="nav-link" data-scroll-target="#最佳預測問題">最佳預測問題</a></li>
+  </ul></li>
+  <li><a href="#條件期望值用一條函數摘要x與y的關係" id="toc-條件期望值用一條函數摘要x與y的關係" class="nav-link" data-scroll-target="#條件期望值用一條函數摘要x與y的關係">3 條件期望值：用一條函數摘要X與Y的關係</a>
+  <ul>
+  <li><a href="#條件期望值函數-conditional-expectation-function" id="toc-條件期望值函數-conditional-expectation-function" class="nav-link" data-scroll-target="#條件期望值函數-conditional-expectation-function">條件期望值函數 (Conditional Expectation Function)</a></li>
+  <li><a href="#雙重期望值定理" id="toc-雙重期望值定理" class="nav-link" data-scroll-target="#雙重期望值定理">雙重期望值定理</a></li>
+  <li><a href="#cef是最佳預測式" id="toc-cef是最佳預測式" class="nav-link" data-scroll-target="#cef是最佳預測式">CEF是「最佳預測式」</a></li>
+  </ul></li>
+  <li><a href="#母體回歸簡潔有力的最佳線性預測式" id="toc-母體回歸簡潔有力的最佳線性預測式" class="nav-link" data-scroll-target="#母體回歸簡潔有力的最佳線性預測式">4 母體回歸：簡潔有力的「最佳線性」預測式</a>
+  <ul>
+  <li><a href="#最佳線性預測問題" id="toc-最佳線性預測問題" class="nav-link" data-scroll-target="#最佳線性預測問題">最佳線性預測問題</a></li>
+  </ul></li>
+  <li><a href="#回歸線是cef的最佳近似" id="toc-回歸線是cef的最佳近似" class="nav-link" data-scroll-target="#回歸線是cef的最佳近似">5 回歸線是CEF的最佳近似</a>
+  <ul>
+  <li><a href="#線性cef模型" id="toc-線性cef模型" class="nav-link" data-scroll-target="#線性cef模型">線性CEF模型</a></li>
+  </ul></li>
+  <li><a href="#多變量回歸一網打盡" id="toc-多變量回歸一網打盡" class="nav-link" data-scroll-target="#多變量回歸一網打盡">6 多變量回歸：一網打盡</a></li>
+  <li><a href="#兩種誤差項cef-error-與-projection-error" id="toc-兩種誤差項cef-error-與-projection-error" class="nav-link" data-scroll-target="#兩種誤差項cef-error-與-projection-error">7 兩種誤差項：CEF Error 與 Projection Error</a></li>
+  <li><a href="#什麼時候不適合使用線性回歸" id="toc-什麼時候不適合使用線性回歸" class="nav-link" data-scroll-target="#什麼時候不適合使用線性回歸">8 什麼時候不適合使用線性回歸？</a>
+  <ul>
+  <li><a href="#線性函數過於侷限" id="toc-線性函數過於侷限" class="nav-link" data-scroll-target="#線性函數過於侷限">線性函數過於侷限</a></li>
+  <li><a href="#線性回歸對因果性保持沈默" id="toc-線性回歸對因果性保持沈默" class="nav-link" data-scroll-target="#線性回歸對因果性保持沈默">線性回歸對因果性保持沈默</a></li>
+  <li><a href="#cef-未必是研究者的目標" id="toc-cef-未必是研究者的目標" class="nav-link" data-scroll-target="#cef-未必是研究者的目標">CEF 未必是研究者的目標</a></li>
+  </ul></li>
+  <li><a href="#下集預告" id="toc-下集預告" class="nav-link" data-scroll-target="#下集預告">下集預告</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">【計量經濟學】線性回歸筆記1：Population Regression</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>洪啟超 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>「線性回歸筆記」系列文章是我自己擔任<strong>計量經濟學原理暨實習</strong>助教時，整理出的筆記，主要參考Bruce Hansen的教科書 Econometrics。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>計量經濟學（或社會科學領域的量化方法）介紹線性回歸的方式與從<strong>機器學習</strong>的角度出發有些不同，但在網路上並沒有見到繁體中文的相關資源，我想不如自己來寫。</p>
+<p>這份筆記預設讀者已經有學過「微積分」和「機率與統計」。文中還有用到少量的線性代數，但沒有相關基礎的讀者可以直接跳過。</p>
+<p><strong>Let’s Go !</strong></p>
+<section id="母體分配與i.i.d.樣本" class="level2">
+<h2 class="anchored" data-anchor-id="母體分配與i.i.d.樣本">1 母體分配與I.I.D.樣本</h2>
+<p>在做量化研究時，我們將資料視為「樣本」，抽樣自於某個「母體」。在接下來的討論中，我們將採取一種簡化的觀點。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>我們的樣本符合以下兩條件：</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Independently and Identically Distributed (I.I.D)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I.I.D. 樣本是指<span class="math inline">\(n\)</span>筆樣本<span class="math inline">\(\{X_i\}_{i= 1}^n\)</span></p>
+<ol type="1">
+<li>獨立地 (independently)，</li>
+<li>從相同的分配中所抽出 (identically distributed)。</li>
+</ol>
+</div>
+</div>
+<p><strong>從母體開始</strong></p>
+<p>隨機樣本來源的共同的機率分布就是母體分布。母體分布通常是未知的；統計學的核心任務，是<strong>利用樣本去推論母體的一些性質</strong>。</p>
+<p>研究者可能會對母體分配作出一些假設，例如假設某變數呈<span class="math inline">\(\mathcal{N}(\mu, \sigma^2)\)</span>（期望值為<span class="math inline">\(\mu\)</span>、變異數<span class="math inline">\(\sigma^2\)</span>為的常態分布）。此時研究者的目標是從樣本<strong>猜測</strong>母體參數(<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma^2\)</span> )。母體分配也被稱為<strong>統計模型</strong>(statistical model)，或是<strong>資料生成分配</strong>(data generating distribution)。</p>
+<p>但在學習線性回歸時，先從母體出發反而更容易釐清目標。因此接下來我會先假設我們已經知道母體分配，來介紹本文的核心概念：<strong>母體回歸</strong> (Population Regression)。<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</section>
+<section id="期望值用一個數字摘要一個機率分配" class="level2">
+<h2 class="anchored" data-anchor-id="期望值用一個數字摘要一個機率分配">2 期望值：用一個數字摘要一個機率分配</h2>
+<p>假設我們想研究臺灣人的薪資（用隨機變數<span class="math inline">\(Y\)</span>表示），並且已經知道薪資的母體機率分配<span class="math inline">\(F_Y(\cdot)\)</span>。我們有沒有辦法用「一個數字」描述這個分配呢？學過統計的同學心裡一定立刻想到<strong>期望值</strong>。</p>
+<p>直觀上，期望值就是將各種可能的結果，用機率當權重算出來的「加權平均」。</p>
+<p><span class="math display">\[
+\mathbb{E}(Y) = \int_{- \inf}^{\inf} yf_Y(y)dy
+\]</span></p>
+<p>一個支持期望值可以作為最佳代表的理由：期望值是<strong>最佳常數預測式</strong>。</p>
+<section id="最佳預測問題" class="level4">
+<h4 class="anchored" data-anchor-id="最佳預測問題">最佳預測問題</h4>
+<p>給定研究者需用一個數字預測一個隨機變數<span class="math inline">\(Y\)</span>的實現值。假設<span class="math inline">\(c\)</span>是我的預測，我們定義<span class="math inline">\(Y-c\)</span>是誤差(error)。此處誤差也是個隨機變數。我們可以計算<strong>均方誤</strong>(Mean Squared Error, MSE)：誤差平方後的期望值。 <span class="math display">\[
+MSE(c) := \mathbb{E}[(Y-c)^2]
+\]</span> MSE越小代表預測越準確。</p>
+<p>以下定理說明期望值是在所有數字中，能讓均方誤達到最小的。</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 期望值為最佳常數預測式
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{align*}
+&amp;\mathbb{E}\!\left[(X-c)^2\right]\\
+&amp;= \mathbb{E}\!\left[\Bigl(\bigl(X-\mathbb{E}[X]\bigr)+\bigl(\mathbb{E}[X]-c\bigr)\Bigr)^2\right] \\
+&amp;= \mathbb{E}\!\left[(X-\mathbb{E}[X])^2\right] + 2\bigl(\mathbb{E}[X]-c\bigr)\mathbb{E}\!\left[X-\mathbb{E}[X]\right] + \bigl(\mathbb{E}[X]-c\bigr)^2 \\
+&amp;= \mathbb{E}\!\left[(X-\mathbb{E}[X])^2\right] + \bigl(c-\mathbb{E}[X]\bigr)^2
+\qquad \text{since }\mathbb{E}[X-\mathbb{E}[X]] = 0.
+\end{align*}\]</span>
+<p>因爲不論c的值為何，</p>
+<p><span class="math display">\[
+\bigl(c-\mathbb{E}[X]\bigr)^2 \ge 0
+\]</span></p>
+<p>所以</p>
+<p><span class="math display">\[
+\mathbb{E}\!\left[(X-c)^2\right]  \ge \mathbb{E}\!\left[(X-\mathbb{E}[X])^2\right],
+\]</span></p>
+<p>當<span class="math inline">\(c=\mathbb{E}[X]\)</span>，等式成立，MSE達到最小。</p>
+</div>
+</div>
+<p>綜上所述，對研究薪資分配的研究者而言，期望值有兩個功用：</p>
+<ol type="1">
+<li>期望值可以用一個數字描述整個隨機變數的「平均狀態」；</li>
+<li>期望值可以對這個隨機變數的結果作出「最好的預測」。</li>
+</ol>
+<p>我們很快就會看到，<strong>線性回歸</strong>跟<strong>期望值</strong>扮演極為類似的角色。</p>
+</section>
+</section>
+<section id="條件期望值用一條函數摘要x與y的關係" class="level2">
+<h2 class="anchored" data-anchor-id="條件期望值用一條函數摘要x與y的關係">3 條件期望值：用一條函數摘要X與Y的關係</h2>
+<p>經濟學研究通常不只是研究某個變數的分配，而是某個變數與其他變數的關係。其他的變數稱作解釋變數，通常以<span class="math inline">\(X\)</span>表示。舉例來說，我們將性別也納入考慮，以<span class="math inline">\(X\)</span>代表性別的隨機變數。</p>
+<p>假設每一個樣本的薪資與性別<span class="math inline">\((Y_i,X_i)\)</span>都是I.I.D抽樣自聯合機率分配<span class="math inline">\(f_{YX}(y,x)\)</span>。定義男性的條件薪資分配為</p>
+<p><span class="math display">\[
+f_{Y \mid X}(y \mid X= \text{male})
+\]</span></p>
+<p>同時女性的條件薪資分配</p>
+<p><span class="math display">\[
+f_{Y \mid X}(y \mid X= \text{female})
+\]</span> 用條件機率分配計算的期望值就是「條件期望值」：</p>
+<p><span class="math display">\[
+\mathbb{E}[Y \mid X = x] = \int_{-\infty}^{\infty} y \cdot f_{Y \mid X}(y \mid X = x) \, dy,
+\]</span></p>
+<p><span class="math inline">\(X\)</span>也可以是類別變數。舉例來說，<span class="math inline">\(X\)</span>代表居住區域的隨機變數。我們用四個條件期望值：</p>
+<p><span class="math display">\[\begin{align*}
+E[Y| Region = 北部], \\
+E[Y| Region = 中部], \\
+E[Y| Region = 南部], \\
+E[Y| Region = 東部]
+\end{align*}\]</span></p>
+<p>來描述不同區域的薪資。<span class="math inline">\(X\)</span>也可以是取值在實數上的隨機變數。例如年齡、身高、受教育年數等等。</p>
+<section id="條件期望值函數-conditional-expectation-function" class="level4">
+<h4 class="anchored" data-anchor-id="條件期望值函數-conditional-expectation-function">條件期望值函數 (Conditional Expectation Function)</h4>
+<p>我們將「由X對應到條件期望值」的這個函數稱為「條件期望值函數」。在這個例子中可以寫成： <span class="math display">\[
+m(x) = E[Y|X =x]
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="LinearRegression1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+研究者為何需要條件期望值？
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>描述</strong>：如同期望值是以一個數字對整個分配做摘要，條件期望值是針對不同的條件機率分配，各以一個數字進行摘要。整個條件期望值函數，則是用一個函數描述<span class="math inline">\(X\)</span>與<span class="math inline">\(Y\)</span>的關係。</li>
+<li><strong>比較</strong>：研究者可能想要比較男性與女性的薪資。比較兩個機率分配並不容易，但研究者可以計算男性女性的條件薪資期望值，並計算兩者的差距，代表「平均而言男女的薪資差距」。也可以推廣到<span class="math inline">\(X\)</span>是類別或是連續變數的情形。</li>
+<li><strong>預測</strong>：研究者可能希望根據已知的資訊（如性別）預測某隨機變數的值。給定條件<span class="math inline">\(X=x\)</span>，條件期望值函數產生的就是在此條件下對於<span class="math inline">\(Y\)</span>的預測。</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="雙重期望值定理" class="level4">
+<h4 class="anchored" data-anchor-id="雙重期望值定理">雙重期望值定理</h4>
+<p>期望值與條件期望值有何關係？讓我們介紹鼎鼎大名的<strong>雙重期望值定理</strong>。</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 雙重期望值定理(Law of Iterated Expectation, LIE)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{equation*}
+\mathbb{E}_Y[Y] = \mathbb{E}_X[\mathbb{E}_{Y\mid X}[Y \mid X]].
+\end{equation*}
+\]</span></p>
+</div>
+</div>
+<p>根據雙重期望值定理，如果我們要計算整體的薪資期望值<span class="math inline">\(\mathbb{E}[Y]\)</span>，可以拆解成以下兩步：</p>
+<ol type="1">
+<li>對所有性別計算條件期望值（e.g. <span class="math inline">\(\mathbb{E}[Y| Male], \mathbb{E}[Y|Female]\)</span>）</li>
+<li>使用性別的機率分佈(例如機率<span class="math inline">\(p\)</span>為男性、<span class="math inline">\(1-p\)</span>為女性)對條件期望值取期望值。<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+</ol>
+<p><span class="math display">\[
+\mathbb{E}[Y] = p \mathbb{E}[Y| Male] + (1-p)\mathbb{E}[Y|Female]
+\]</span></p>
+<p><strong>條件期望值的隨機性</strong></p>
+<p>假設X的實現值已知（性別已知），m(X)就是一個數字，如男性的薪資期望值。反之如果X的實現值未知，$E[Y|X]$（將隨機變數X帶入m(X))，本身是一個隨機變數。這也是第二步取期望值的依據。</p>
+</section>
+<section id="cef是最佳預測式" class="level3">
+<h3 class="anchored" data-anchor-id="cef是最佳預測式">CEF是「最佳預測式」</h3>
+<p>先前我們介紹期望值是「最佳常數預測式」。一旦擁有解釋變數X，我們就可以更進一步，用<span class="math inline">\(X\)</span>的函數來預測<span class="math inline">\(Y\)</span>。於是我們將前面的最佳預測問題改寫成：「給定<span class="math inline">\(X\)</span>，我們能做出最好的預測為何？」</p>
+<p>根據以下定理，條件期望值函數(CEF)是所有函數中，均方誤最小的預測式。</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 條件期望值函數是給定<span class="math inline">\(X\)</span>對<span class="math inline">\(Y\)</span>的最佳預測式
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The CEF <span class="math inline">\(\mathbb{E}[Y \mid X]\)</span> minimizes the MSE among all predictors that are functions of ( X ).</p>
+<p>讓<span class="math inline">\(g(X)\)</span>表示任意一個是X的函數的預測式，<span class="math inline">\(m(X)\)</span>為條件期望值函數。並定義 <span class="math display">\[
+e := Y - m(x)
+\]</span></p>
+<p>計算<span class="math inline">\(g(X)\)</span>的MSE： <span class="math display">\[
+\begin{align}
+&amp;\mathbb{E}\left[ (Y - g(X))^2 \right]   \\
+&amp;= \mathbb{E}\left[ (Y - m(X) + m(X) - g(X))^2 \right] \\
+&amp;= \mathbb{E}\left[ (e + m(X) - g(X))^2 \right] \\
+&amp;= \mathbb{E}\left[ e^2 + 2e (m(X) - g(X)) + (m(X) - g(X))^2 \right] \\
+&amp;= \mathbb{E}\left[ e^2 \right] + 2 \mathbb{E}\left[ e (m(X) - g(X)) \right] + \mathbb{E}\left[ (m(X) - g(X))^2 \right]
+\end{align}
+\]</span></p>
+<p>這裏我們用到一個性質：</p>
+<p><span class="math display">\[
+\mathbb{E}[eh(X)] = \mathbb{E}[h(X)\mathbb{E}[e|X]]= \mathbb{E}[0h(X)] = 0
+\]</span> 因此上式中的第二項為0，留下第一項與第三項。</p>
+<p><span class="math display">\[
+\mathbb{E}\left[ e^2 \right] + \mathbb{E}\left[ (m(X) - g(X))^2 \right]
+\]</span></p>
+<p>與常數預測式的證明相仿，第三項恆大於0。我們得到</p>
+<p><span class="math display">\[\begin{align*}
+\mathbb{E}\left[ (Y - g(X))^2 \right] \ \geq \mathbb{E}\left[ e^2 \right] = \mathbb{E}\left[ (Y - m(X))^2 \right]
+\end{align*}\]</span></p>
+<p>當<span class="math inline">\(g(x)\)</span>為<span class="math inline">\(m(X)\)</span>，MSE有最小值。</p>
+</div>
+</div>
+<p>給定我們有Ｘ的資訊，我們能做出的最佳預測就是CEF給出的預測了。顯然，條件期望值可說就是期望值的「加強版」。</p>
+</section>
+</section>
+<section id="母體回歸簡潔有力的最佳線性預測式" class="level2">
+<h2 class="anchored" data-anchor-id="母體回歸簡潔有力的最佳線性預測式">4 母體回歸：簡潔有力的「最佳線性」預測式</h2>
+<p>我們回到分析薪資的例子。在勞動經濟學中，討論薪資差異或許是最重要的變數：教育程度。設<span class="math inline">\(X\)</span>代表就學的年數，在樣本中從12到18年不等。研究者可以針對該年數的薪資條件機率分配計算出條件期望值。</p>
+<p>條件期望值函數作為預測式性質良好，不過並沒有特定的形式。上面的例子裡，我們用了7個數字描述薪資對就學年數。如果X的取值更多，我們需要更多資訊來描述。研究者為了適度簡化，通常會作出函數形式上的限制。最常見的例子，就是限制預測式必須是線性的：<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p><span class="math display">\[
+\begin{align*}
+            \hat Y = \underset{\text{截距}}{\underbrace{\beta_0}} + \underset{\text{斜率}}{\underbrace{\beta_1}}X
+\end{align*}
+\]</span></p>
+<p>延續就學年數的例子。這個預測式中只有兩個「參數」：</p>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span>表示當就學年數為0，應該做出的薪資預測是多少</li>
+<li><span class="math inline">\(\beta_1\)</span>表示整體而言，就學差距一年，在薪資上差距多大</li>
+</ul>
+<p>對照之前CEF的三項功能，線性的形式有幾個好處：</p>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+使用「線性」形式的可能理由（包括但不限於）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>描述</strong>：描述X跟Y關係需要使用的參數數量大幅縮減到2個。</li>
+<li><strong>比較</strong>：研究者可以直接透過<span class="math inline">\(\beta_1\)</span>的大小來比較「平均而言，多上跟沒有多上一年學的人相比，薪資差距多大」。<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></li>
+<li><strong>預測</strong>：研究者可以用這個線性預測式根據X預測Y。雖然表現未必如CEF優秀，但下面的討論將會說明這個線性的預測式計算上簡便許多。</li>
+</ol>
+</div>
+</div>
+<p><strong>無截距模型</strong></p>
+<p>當然研究者也可以設定其他函數形式，例如只使用截距項(intercept)，這就回到最早的單變數期望值。或是研究者設定沒有截距項： <span class="math display">\[
+Y = \beta_1 X
+\]</span> 這被稱作無截距模型，仍然是線性的。</p>
+<p>如上所述，限制函數形式的目的只是為了簡化，因此並沒有說一般模型跟無截距模型孰是孰非。 不過，取消截距項將預測式限制在<strong>通過原點</strong>的直線，無疑大幅降低預測的能力。 除非有特殊理由，我們以下都討論含截距項的函數形式。</p>
+<section id="最佳線性預測問題" class="level4">
+<h4 class="anchored" data-anchor-id="最佳線性預測問題">最佳線性預測問題</h4>
+<p>我們可以將極小化均方誤的問題重新改寫，這次問的是說，假設要求這個函數要是「線性的」，最好的預測式是什麼？ <span class="math display">\[
+\begin{align*}
+(\beta_0, \beta_1) = \arg \min \mathbb{E}\left[ (Y - \beta_0 - \beta_1X )^2 \right].
+\end{align*}
+\]</span></p>
+<p>根據以下定理，這個問題的答案就是我們的主角：線性回歸。</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 線性最佳估計式(Best Linear Pedictor)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<span class="math display">\[\begin{align*}
+&amp; S(\beta_0,\beta_1):=\mathbb{E}\!\left[(Y-\beta_0-\beta_1X)^2\right].\\[4pt]
+\frac{\partial S}{\partial \beta_0}
+&amp;= \mathbb{E}\!\left[\frac{\partial}{\partial \beta_0}(Y-\beta_0-\beta_1X)^2\right]
+= \mathbb{E}\!\left[2(Y-\beta_0-\beta_1X)(-1)\right]
+= -2\,\mathbb{E}\!\left[Y-\beta_0-\beta_1X\right],\\
+\frac{\partial S}{\partial \beta_1}
+&amp;= \mathbb{E}\!\left[\frac{\partial}{\partial \beta_1}(Y-\beta_0-\beta_1X)^2\right]
+= \mathbb{E}\!\left[2(Y-\beta_0-\beta_1X)(-X)\right]
+= -2\,\mathbb{E}\!\left[X(Y-\beta_0-\beta_1X)\right].
+\end{align*}\]</span>
+<p>使用一階微分條件：</p>
+<span class="math display">\[\begin{align*}
+\frac{\partial Q}{\partial \beta_0}=0
+&amp;\iff \mathbb{E}[Y-\beta_0-\beta_1X]=0
+\iff \beta_0 = \mathbb{E}[Y]-\beta_1\mathbb{E}[X],\\
+\frac{\partial Q}{\partial \beta_1}=0
+&amp;\iff \mathbb{E}[X(Y-\beta_0-\beta_1X)]=0
+\iff \mathbb{E}[XY]-\beta_0\mathbb{E}[X]-\beta_1\mathbb{E}[X^2]=0.
+\end{align*}\]</span>
+<p>將第一式帶入第二式</p>
+<span class="math display">\[\begin{align*}
+0 &amp;= \mathbb{E}[XY]-(\mathbb{E}[Y]-\beta_1\mathbb{E}[X])\mathbb{E}[X]-\beta_1\mathbb{E}[X^2]\\
+&amp;= \mathbb{E}[XY]-\mathbb{E}[Y]\mathbb{E}[X]+\beta_1(\mathbb{E}[X])^2-\beta_1\mathbb{E}[X^2]\\
+&amp;= \Cov(X,Y)-\beta_1\Var(X).
+\end{align*}\]</span>
+<p>最終求得：</p>
+<span class="math display">\[\begin{align*}
+\beta_1^*
+&amp;= \frac{\Cov(X,Y)}{\Var(X)} \qquad (\Var(X)&gt;0),\\
+\beta_0^*
+&amp;= \mathbb{E}[Y]-\beta_1^*\,\mathbb{E}[X]
+= \mathbb{E}[Y]-\frac{\Cov(X,Y)}{\Var(X)}\,\mathbb{E}[X].
+\end{align*}\]</span>
+</div>
+</div>
+<p>課本是用Best Linear Predictor來稱呼，並使用以下符號：</p>
+<p><span class="math display">\[
+\mathcal{P}(Y|X)= \beta_0 + \beta_1X
+\]</span></p>
+<p><strong>Linear Projection</strong></p>
+<p>有時後也會把<span class="math inline">\(\mathcal{P}(Y|X)\)</span>稱作線性投影Linear Projection；將<span class="math inline">\(\beta\)</span>稱作投影係數(Regression Coefficients)。<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+</section>
+</section>
+<section id="回歸線是cef的最佳近似" class="level2">
+<h2 class="anchored" data-anchor-id="回歸線是cef的最佳近似">5 回歸線是CEF的最佳近似</h2>
+<p>Linear Regression跟期望值的關係:</p>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>如果有回歸式包含截句項，則此回歸式通過<span class="math inline">\((E[X],E[Y])\)</span>。</p>
+</div>
+</div>
+<p>只要將其帶入即可得：</p>
+<p><span class="math display">\[
+\mathbb{E}[Y] = \beta_0 + \beta_1 \mathbb{E}[X]
+\]</span> 可見回歸是期望值概念的延伸。</p>
+<p>這條線性回歸線，跟之前提到的CEF有何關係呢？</p>
+<ol type="1">
+<li><strong>Linear CER Theorem:</strong> 如果CEF本身就是線性的，那線性回歸線跟CEF就是同一個函數。</li>
+<li><strong>Rregression-CEF Theorem:</strong> 就算不是線性的，我們可以定義近似誤差，線性回歸線也是CEF的最佳近似。</li>
+</ol>
+<p>第一項的證明非常直觀：已知CEF是最佳預測式（考慮所有預測式的集合），那如果CEF同時存在一個比較小的集合（線性預測式）中，CEF當然也是該集合內的最佳。</p>
+<p>第二項的證明也不難：</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 線性回歸是CEF的最佳近似
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\beta_0, \beta_1 = argmin \mathbb{E}[(m(X)- \beta_0 - \beta_1X)^2]
+\]</span></p>
+<p>證明： 觀察前述問題的MSE分解</p>
+<p><span class="math display">\[\begin{align*}
+\mathbb{E}\left[ Y^2 \right] + 2 \mathbb{E}\left[ (Y - m(X)) (m(X) - \beta_0 - \beta_1X)^2 \right] + \mathbb{E}\left[ (m(X) -  \beta_0 - \beta_1X )^2 \right]
+\end{align*}\]</span></p>
+<p>此處的目標函數正好是第三項。而第一項與參數無關，第二項恆為零。所以此問題的解與best Linear Predictor問題的解相同。</p>
+</div>
+</div>
+<p>對社會科學的研究者來說，線性回歸讓我們預測維持在「簡單」的線性形式，方便進行比較、詮釋。從預測的角度，雖然線性模型未必能提供最好的預測，但因為跟CEF密切相關，也可以視為一種基礎的門檻（其他更酷炫的機器學習方法至少要表現得更好），因此使用十分廣泛。</p>
+<section id="線性cef模型" class="level4">
+<h4 class="anchored" data-anchor-id="線性cef模型">線性CEF模型</h4>
+<p>讀者會發現，至此我們並沒有對CEF的函數形式作出任何假設。不過許多介紹線性回歸的書籍會直接將線性CEF是做一項假設：</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+線性CEF模型（線性CEF作為一項模型假設）
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\mathbb{E}[Y|X] = \beta_0 + \beta_1X
+\]</span> 如果定義<span class="math inline">\(e := Y - \mathbb{E}[Y\mid X]\)</span>，則<span class="math inline">\(\mathbb{E}[e|X]=0\)</span>。因此模型也可以下列二式呈現：</p>
+<span class="math display">\[\begin{align*}
+    Y = \mathbb{E}[Y\mid X] + e = \beta_0 + \beta_1X + e \\
+    \mathbb{E}[e|X]=0
+\end{align*}\]</span>
+</div>
+</div>
+<p>根據此假設，該式自然也是最佳線性預測式。而我們可以用很簡便的方法推得同樣的係數：</p>
+<p>Let <span class="math inline">\(e := Y - \mathbb{E}[Y\mid X]\)</span>. Under the linear CEF assumption, we have</p>
+<span class="math display">\[\begin{align*}
+    Y = \mathbb{E}[Y\mid X] + e = X'\beta + e
+\end{align*}\]</span>
+<p>由於<span class="math inline">\(\mathbb{E}[e|X]=0\)</span>，</p>
+<span class="math display">\[\begin{align*}
+      \mathbb{E}[XY] = \mathbb{E}[X(X'\beta + e)] = \mathbb{E}[XX']\beta + \mathbb{E}[Xe] = \mathbb{E}[XX']\beta.
+\end{align*}\]</span>
+<p>As a result, <span class="math inline">\(\beta = \mathbb{E}[XX']^{-1}\mathbb{E}[XY]\)</span> as in the BLP.</p>
+<p>我們在後續討論估計式性質的時候，為了推倒一些理論上的性質，也會採用線性CEF的假設。不過此處我們對CEF的函數形式保持開放：CEF未必要是線性的。如果不是，我們就將母體回歸是做CEF的近似即可。</p>
+</section>
+</section>
+<section id="多變量回歸一網打盡" class="level2">
+<h2 class="anchored" data-anchor-id="多變量回歸一網打盡">6 多變量回歸：一網打盡</h2>
+<p>當然我們可能取得不只一個可以預測、比較的變數。例如說我們除了教育年數還有資歷、成績等變數。我們將變數重新編號成<span class="math inline">\(X_1, X_2, X_3\)</span>，一個多變量的線性函數可以寫成</p>
+<p><span class="math display">\[
+\beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3
+\]</span></p>
+<p>或者是用向量內積表示：</p>
+<p>我們可以依樣畫葫蘆求解最佳線性預測式，結果是：</p>
+<p><span class="math display">\[
+\beta = E[X'X]^{-1}E[XY]
+\]</span></p>
+<p>如果只有一個變數跟常數，可以推導出前面的公式。</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Theorem 多變量線性最佳估計式(Multivariate Best Linear Pedictor)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{align*}
+S(\beta) := \mathbb{E}[e^2] = \mathbb{E}\left[ (Y - X' \beta)^2 \right].
+\end{align*}
+\]</span></p>
+<p>Expanding the square:</p>
+<span class="math display">\[\begin{align*}
+
+S(\beta)&amp;=\mathbb{E}\left[ Y^2 - 2 Y X' \beta + \beta' X X' \beta \right] \\
+
+&amp;= \mathbb{E}[Y^2] - 2 \beta' \mathbb{E}[X Y] + \beta' \mathbb{E}[X X'] \beta.
+
+\end{align*}\]</span>
+<p>Taking the derivative with respect to <span class="math inline">\(\beta\)</span>, the first-order condition is</p>
+<span class="math display">\[\begin{align*}
+
+\underset{(k \times 1)}{\frac{\partial}{\partial \beta}S(\beta)}= -2 \underset{(k \times 1)}{\mathbb{E}[X Y]} + 2 \underset{(k \times k)}{\mathbb{E}[X X']} \underset{(k \times 1)}{\beta} = \underset{(k \times 1)}{0}.
+
+\end{align*}\]</span>
+<p>Solving for :</p>
+<span class="math display">\[\begin{align*}
+&amp;\underset{(k \times k)}{\mathbb{E}[X X']}\underset{(k \times 1)}{ \beta} = \underset{(k \times 1)}{\mathbb{E}[X Y]}
+\end{align*}\]</span>
+<p>If ( [XX’] ) is invertible, the solution for the best linear predictor is:</p>
+<p><span class="math display">\[\begin{align*}
+\beta = \underset{(k \times k)}{\mathbb{E}[XX]^{-1}} \underset{(k \times 1)}{\mathbb{E}[XY]}.
+\end{align*}\]</span></p>
+<p>Using the notation <span class="math inline">\(\mathbf{Q}_{XX} = \mathbb{E}\[X X'\]\)</span> and <span class="math inline">\(\mathbf{Q}{XY} = \mathbb{E}\[X Y\]\)</span>, we rewrite:</p>
+<span class="math display">\[\begin{align*}
+
+\beta = \mathbf{Q}_{XX}^{-1} \mathbf{Q}_{XY}.
+
+\end{align*}\]</span>
+</div>
+</div>
+<p>如果只有兩個解釋變數，多變量的回歸得到的預測式可以想像成一個平面。超過兩項就沒辦法在三維空間中畫出來了。這也再次顯示回歸統整資料的強大能力：如過想看X跟Y的關係，還可以用散佈圖，XYZ還能用三維的圖，在更多變數就沒有辦法視覺化了。回歸係數提個一個很簡便的統整讓你快速掌握「當其他變數相同，某變數跟Y的關係」</p>
+</section>
+<section id="兩種誤差項cef-error-與-projection-error" class="level2">
+<h2 class="anchored" data-anchor-id="兩種誤差項cef-error-與-projection-error">7 兩種誤差項：CEF Error 與 Projection Error</h2>
+<p>上面我們介紹了CEF與Population Regression(a.k.a Best Linear Predictor a.k.a Linear Projection)。我們可以依此定義兩種「誤差」的概念：</p>
+<p><span class="math display">\[\begin{align*}
+\textbf{(CEF error)}\quad e_{\text{cef}}
+&amp;:= Y - \mathbb{E}[Y\mid X],\\
+\textbf{(Projection error)}\quad e_{\text{proj}}
+&amp;:= Y - \mathcal{P}(Y\mid X).
+\end{align*}\]</span></p>
+<p>兩者的區別可以從以下圖中看出：對於任意一組<span class="math inline">\((Y, X)\)</span>，CEF error就是該點到CEF黑線的直線距離，而Projection Error就是該點到Regression Line藍線的距離。</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="LinearRegression1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>很容易看出，對於任意X下的條件分配，必定是以m(X)為中心，所以CEF Error的條件期望值應當是0，但Regression Line未必通過每個條件分布的中心，條件期望值一般而言不為零。</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+CEF error 的性質
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>性質1</strong> <span class="math display">\[\begin{align*}
+\mathbb{E}[e_{\text{cef}}]
+&amp;= \mathbb{E}\!\left[Y-\mathbb{E}[Y\mid X]\right]
+= \mathbb{E}[Y]-\mathbb{E}\!\left[\mathbb{E}[Y\mid X]\right]
+= 0.
+\end{align*}\]</span></p>
+<p><strong>性質2</strong> <span class="math display">\[\begin{align*}
+\mathbb{E}[e_{\text{cef}}\mid X]
+&amp;= \mathbb{E}\!\left[Y-\mathbb{E}[Y\mid X]\mid X\right]
+= \mathbb{E}[Y\mid X]-\mathbb{E}[Y\mid X]
+= 0.
+\end{align*}\]</span></p>
+<p><strong>性質3</strong></p>
+<p>對任何函數 <span class="math inline">\(h(\cdot)\)</span>，就有 <span class="math display">\[\begin{align*}
+\mathbb{E}[h(X)e_{\text{cef}}]
+&amp;= \mathbb{E}\!\left(\mathbb{E}[h(X)e_{\text{cef}}\mid X]\right)
+= \mathbb{E}\!\left(h(X)\mathbb{E}[e_{\text{cef}}\mid X]\right)
+= 0.
+\end{align*}\]</span> 特別地，若取 <span class="math inline">\(h(X)=X\)</span>（向量函數），就得到 <span class="math inline">\(\mathbb{E}[Xe_{\text{cef}}]=0\)</span>。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Projection error 的性質
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>性質1</strong></p>
+<p>線性投影可寫成 <span class="math display">\[\begin{align*}
+\mathcal{P}(Y\mid X)=X'\beta,
+\qquad
+\beta := \arg\min_{b}\ \mathbb{E}[(Y-X'b)^2],
+\end{align*}\]</span> 因此 <span class="math inline">\(e_{\text{proj}}=Y-X'\beta\)</span>。由一階條件（或稱 normal equations）可得 <span class="math display">\[\begin{align*}
+0
+= \frac{\partial}{\partial b}\mathbb{E}[(Y-X'b)^2]\Big|_{b=\beta}
+\ \Longrightarrow\
+\mathbb{E}\!\left[X(Y-X'\beta)\right]
+= \mathbb{E}[Xe_{\text{proj}}]
+= 0.
+\end{align*}\]</span>\end{align*} 這常被稱為「正交條件」：投影誤差與每一個解釋變數（線性）不相關。</p>
+<p><strong>性質2</strong></p>
+<p>若 <span class="math inline">\(X\)</span> 包含常數項 <span class="math inline">\(1\)</span>，把上式中的 <span class="math inline">\(X\)</span> 的其中一個分量取為 <span class="math inline">\(1\)</span>，立刻得到 <span class="math display">\[\begin{align*}
+\mathbb{E}[e_{\text{proj}}]=0.
+\end{align*}\]</span> 進一步，若 <span class="math inline">\(X\)</span> 包含常數項，則對每一個分量 <span class="math inline">\(X_j\)</span>， <span class="math display">\[\begin{align*}
+\Cov(X_j,e_{\text{proj}})
+&amp;= \mathbb{E}[X_je_{\text{proj}}]-\mathbb{E}[X_j]\mathbb{E}[e_{\text{proj}}]
+= 0- \mathbb{E}[X_j]\cdot 0
+= 0.
+\end{align*}\]</span> （注意：若 <span class="math inline">\(X\)</span> 常數項，仍有 <span class="math inline">\(\mathbb{E}[Xe_{\text{proj}}]=0\)</span>，但不一定能推出 <span class="math inline">\(\mathbb{E}[e_{\text{proj}}]=0\)</span>。）</p>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>CEF error</th>
+<th>Projection error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>定義</td>
+<td><span class="math inline">\(e := Y - \mathbb{E}[Y\mid X]\)</span></td>
+<td>$ := Y - (YX)$</td>
+</tr>
+<tr class="even">
+<td>性質</td>
+<td><span class="math inline">\(E[e|X]=0\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\mathbb{E}[h(e)X]=0\)</span></td>
+<td><span class="math inline">\(\mathbb{E}[X\epsilon]=0\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="math inline">\(\mathbb{E}[e_{\text{cef}}]=0\)</span>（一般都成立）</td>
+<td>若<span class="math inline">\(X\)</span>含常數項，則 <span class="math inline">\(\mathbb{E}[\epsilon]=0\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="什麼時候不適合使用線性回歸" class="level2">
+<h2 class="anchored" data-anchor-id="什麼時候不適合使用線性回歸">8 什麼時候不適合使用線性回歸？</h2>
+<section id="線性函數過於侷限" class="level4">
+<h4 class="anchored" data-anchor-id="線性函數過於侷限">線性函數過於侷限</h4>
+</section>
+<section id="線性回歸對因果性保持沈默" class="level4">
+<h4 class="anchored" data-anchor-id="線性回歸對因果性保持沈默">線性回歸對因果性保持沈默</h4>
+<p>到目前為止，我們都還沒有談到因果性。事實上，線性迴歸本身並不是一個因果模型，而是一個統計模型。</p>
+<p>為什麼統計模型無法表示因果？我們舉一個很基本的要求：對於因果關係，我們應該要區分是 <span class="math inline">\(X\)</span> 造成了 <span class="math inline">\(Y\)</span>，還是 <span class="math inline">\(Y\)</span> 影響了 <span class="math inline">\(X\)</span>，也就是因果具有方向性。CEF與Linear Regression並不能告訴我們因果的方向：沒有人阻止我們反過來用<span class="math inline">\(Y\)</span>預測<span class="math inline">\(X\)</span>。</p>
+<p>老話一句，<strong>相關不等於因果</strong>。<span class="math inline">\(\beta\)</span>反應的只是<span class="math inline">\(X, Y\)</span>之間的相關性。在沒有設定因果模型(Causal Model)之前，「我們應該對不能說的事物保持沈默」。</p>
+<p>那究竟什麼模型能夠稱作因果模型呢？未來我們會介紹「潛在結果架構」（Potential Outcome Framework），它提供一套進行因果推論的框架。屆時我們可以用potential outcome的語言重新詮釋線性關係。</p>
+</section>
+<section id="cef-未必是研究者的目標" class="level4">
+<h4 class="anchored" data-anchor-id="cef-未必是研究者的目標">CEF 未必是研究者的目標</h4>
+<p>不論CEF本身是線性或是我們使用Linear Regression近似CEF，CEF都是回歸分析的最終目標。因此， 研究者應該詢問自己，我所需要的（或是在理論上重要的）真的是CEF嗎？</p>
+<p>一個著名的例子是所謂長短回歸Long-Short Regression。假設我們關心以下長回歸裡的<span class="math inline">\(\beta_1\)</span>：</p>
+<p><span class="math display">\[
+Y = \beta_0 +\beta_1 X + \beta_2 Ability + \epsilon
+\]</span> 此處我們假設線性CEF，<span class="math inline">\(\epsilon\)</span>是CEF error。</p>
+<p>但我們無法觀察到Ability，所以將其納入誤差項： <span class="math display">\[\begin{align*}
+Y &amp;  = \beta_0 +\beta_1 X + (\beta_2 Ability + \epsilon) \\
+&amp; = \beta_0 +\beta_1 X + + \nu
+\end{align*}\]</span></p>
+<p>一般而言，因為<span class="math inline">\(\mathbb{E}[Ability|X]\neq 0\)</span>，所以<span class="math inline">\(\beta_0 +\beta_1 X\)</span>並不是<span class="math inline">\(\mathbb{E}[Y|X]\)</span>， <span class="math inline">\(\mathbb{E}[Y|X]\)</span>另有其人：</p>
+<p><span class="math display">\[\begin{align*}
+\mathbb{E}[Y|X]  = b_0 + b_1 X + u
+\end{align*}\]</span></p>
+<p><span class="math inline">\(u\)</span>是CEF Error，但<span class="math inline">\(\nu\)</span>不是。一般而言<span class="math inline">\(b_1 \neq \beta_1\)</span>。如果我們直接求X對Y的CEF，我們雖然可以得到「正確」的回歸係數<span class="math inline">\(b_1\)</span>，但並不是研究者的目標<span class="math inline">\(\beta_1\)</span>。關於Long-Short Regression與所謂「遺漏變數問題」我們會在未來專門寫一篇做講解。</p>
+<p>總之，如果CEF並不是你的目標，用再多的樣本進行回歸分析也是緣木求魚。</p>
+</section>
+</section>
+<section id="下集預告" class="level2">
+<h2 class="anchored" data-anchor-id="下集預告">下集預告</h2>
+<p>在這篇筆記中，我們完全假設母體分配已知。然而真實的應用中我們需要透過樣本去估計CEF或是Population Regression。最常見的估計式就是Ordinary Least Squares。下集我們會帶大家推導OLS estimator。</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>如果有讀者想問，為什麼大二必修<strong>計量經濟學原理暨實習</strong>會用一本經典的研究所教科書呢？Well, welcome to NTU… (準確來說應該要去問某位老師）<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>有些人會對於使用母體資料，例如已經包含全台灣人口的稅務資料，是否還需要考量隨機性感到困惑。從本文的立場，不論台灣有多少人，每個人的薪資都是抽取自未知的母體分配，因此仍然是隨機的，仍然可以進行假設檢定。反之，如果你並不假設有未知的母體分配，則行政資料確實窮盡了所有可能的取值，也就沒有任何隨機性可言。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>本文中「母體回歸」與「線性回歸」有時會交互使用，然而不同作者使用「線性回歸」一詞中指涉的事物不盡相同。population regression一詞在Hansen中沒有出現，但我認為這個用詞有助於釐清母體與樣本的區別，因此還是採用。不過「母體回歸」無法避免的人想到駭客任務…<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>要小心的技術修細節是有可能Y期望值不存在，以及性別未必只有兩種。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>此處線性指的是對於係數來說是線性的，因此<span class="math inline">\(\beta_0+ \beta_1X + \beta_2X^2\)</span>也可以視為線性。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>就我自己（淺薄）的經驗，「比較」是社科類量化研究裡回歸最主要的用途。就算是進到因果推論的領域，回歸還是做比較最方便的工具（如果正確的使用的話）。這個想法是來自於某天在X上看到一位計量教授的說法 <a href="https://x.com/instrumenthull/status/1775147492029436180?s=20">Regression is a tool for making comparisons</a>。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>這是因為上述的最小化MSE問題在數學上可以被視為「投影問題」。此處的投影是指一個隨機變數到另一個隨機變數上的投影，詳細說明的話需要較深入的數學工具。後面講OLS Estimator時會介紹一個向量投影到一個空間，則是有簡單線性代數的知識就可理解。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hungchichao\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
+            }
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
