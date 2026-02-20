@@ -12,6 +12,7 @@ Welcome to my website.
 
 ## 線性回歸筆記
 - [【計量經濟學】線性回歸筆記1：Population Regression](LinearRegression1.qmd)
+- [【計量經濟學】線性回歸筆記2：Ordinary Least Squares](OLS.qmd)
 
 
 ## Notes for Introductory Econometrics 2025 Spring
